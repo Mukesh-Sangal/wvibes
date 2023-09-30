@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ .spacing {
+    @apply lg:py-60 py-30;
+  }
