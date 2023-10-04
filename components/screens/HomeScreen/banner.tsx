@@ -1,0 +1,51 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import urlExtractor from "@/utils/urlExtractor";
+
+interface BannerData {
+  field_home_banner_title: string;
+  field_home_banner_link: string;
+  field_home_banner_know_more_link: string;
+  field_home_page_subheading: string;
+}
+
+interface BannerLayoutProps {
+  data: BannerData[];
+}
+
+export default function BannerLayout({ data }: BannerLayoutProps) {
+  return (
+    <div
+      className="lg:h-[90vh] h-screen relative bg-no-repeat bg-cover"
+      style={{ backgroundImage: `url('/banne.png')` }}
+    >
+      <div>
+        <div className="inner-banner absolute lg:top-20 top-1/3 p-6 md:p-0 2xl:top-40 md:left-12 w-full md:w-1/2 lg:w-1/3 xl:w-2/5 2xl:w-1/4">
+          <h1 className="font-bold text-white w-8/12 md:w-full xl:text-4xl lg:text-3xl md:text-2xl text-1-xl leading-snug relative">
+            {data[0].field_home_banner_title}
+          </h1>
+          <div className="banner_link flex justify-start lg:pt-8 pt-4 gap-9 absolute 2xl:bottom-[-7rem] md:bottom-[-6rem] bottom:[-7rem] ">
+            {/* <Link
+              href={urlExtractor(data[0].field_home_banner_link)[1]}
+              className="text-white text-center font-bold 2xl:text-1-xl lg:text-1xl text-base 2xl:w-80 md:w-56 w-36  bg-[#DC248B] p-4  rounded"
+            >
+              {urlExtractor(data[0].field_home_banner_link)[0]}
+            </Link>
+            <Link
+              href={urlExtractor(data[0].field_home_banner_know_more_link)[1]}
+              className="text-white text-center font-bold 2xl:text-1-xl lg:text-1xl text-base 2xl:w-80 md:w-56 w-36 bg-[#6A5ACD] p-4  rounded"
+            >
+              {urlExtractor(data[0].field_home_banner_know_more_link)[0]}
+            </Link> */}
+          </div>
+        </div>
+      </div>
+      <div className="digital-transformation absolute bottom-0 left-0 w-full bg-[#009CDE] bg-opacity-25 p-8">
+        <h1 className="text-white xl:text-3xl lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity">
+          {data[0].field_home_page_subheading}
+        </h1>
+      </div>
+    </div>
+  );
+}
