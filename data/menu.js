@@ -1,7 +1,7 @@
 const menu = [
   {
     title: 'Home',
-    url: '/home',
+    url: '/',
   },
   {
     title: 'About',

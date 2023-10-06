@@ -6,7 +6,7 @@ const Header = () => {
  const menu = [
    {
      title: 'Home',
-     url: '/home',
+     url: '/',
    },
    {
      title: 'Our Services',
@@ -17,13 +17,17 @@ const Header = () => {
      url: '/about',
    },
    {
+     title: 'Technologies',
+     url: '/technologies',
+   },
+   {
      title: 'Contact Us',
      url: '/contact',
    },
  ]
   return (
     <>
-      <div className='flex justify-between items-center px-8 py-4'>
+      <div className='md:flex justify-between items-center px-8 py-4 hidden'>
         <div className='logo-container'>
           <Link href={'/'}>
             <Image unoptimized src='/logo.png' width={200} height={200} />

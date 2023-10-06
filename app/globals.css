@@ -5,3 +5,21 @@
  .spacing {
     @apply lg:py-60 py-30;
   }
+  .image-bg  {
+    @apply before:content-[''] w-full h-full absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:opacity-['0.75'] 
+  }
+  .about {
+     @apply before:content-[''] w-full h-full absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:opacity-['0.75']  
+  }
+  .back {
+    background-color: rgba(0,0,0,0.5);
+  }
+  .about-opacity {
+    background-color: rgba(106, 90, 205, 0.53)
+  }
+  .logo {
+    @apply relative before:content-[''] before:absolute xl:before:top-28 xl:before:left-56 before:right-0 lg:before:bottom-0 before:bg-[url('/drupal.png')]  before:bg-no-repeat before:bg-contain before:w-40 before:h-40 lg:before:top-12 lg:before:left-48 before:left-44 before:bottom-32
+  }
+  .power {
+    @apply relative before:content-[''] before:absolute md:before:top-2 xl:before:right-0 md:before:right-14 before:right-0  before:top-[0.1rem] before:bottom-0 before:bg-[url('/icon-east.png')]  before:bg-no-repeat before:bg-contain before:w-8 before:h-8
+  }

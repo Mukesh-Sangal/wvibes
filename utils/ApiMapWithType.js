@@ -19,6 +19,7 @@ async function getPageData(apiPageUrl) {
     'About Digital Experiences': `http://free.lndo.site:8000/about-digital-experiences/`,
     'Our Team': `http://free.lndo.site:8000/our-team/`,
     'About lando today': `http://free.lndo.site:8000/about-start-with-lando/`,
+    'Technologies We Serve': `http://free.lndo.site:8000/tech-we-serve/`,
   }
   // console.log(result.data,'result')
   let { data } = result
