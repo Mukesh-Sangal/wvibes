@@ -12,7 +12,7 @@ const LetsStartTopNotch = ({data}) => {
         <div>
           <Image
             unoptimized
-            src={`http://free.lndo.site:8000/${data[0].field_lets_build_image}`}
+            src={`https://dev-growwives.pantheonsite.io/${data[0].field_lets_build_image}`}
             width={1920}
             height={100}
           />

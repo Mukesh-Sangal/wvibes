@@ -9,7 +9,7 @@ import TopFooter from './TopFooter'
 const Technologies = () => {
   const [data, setData] = useState([])
   console.log(data,'Data')
-  const backend_url = 'http://free.lndo.site:8000'
+  const backend_url = 'https://dev-growwives.pantheonsite.io'
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/technologies`

@@ -11,7 +11,7 @@ import DigitalGrowDiscover from './DigitalGrowDiscover'
 import TopFooter from './TopFooter'
 const Home = () => {
   const [data, setData] = useState([])
-  const backend_url = 'http://free.lndo.site:8000'
+  const backend_url = 'https://dev-growwives.pantheonsite.io'
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/home%20page`

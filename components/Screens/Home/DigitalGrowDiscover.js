@@ -16,7 +16,7 @@ const DigitalGrowDiscover = ({data}) => {
             <div className='item rounded py-7 px-3 bg-white xl:w-[30%] lg:w-[46%] w-full lg:m-4 flex flex-col items-center h-full lg:min-h-[395px] mb-4'>
               <Image
                 unoptimized
-                src={`http://free.lndo.site:8000/${item.field_service_logo}`}
+                src={`https://dev-growwives.pantheonsite.io/${item.field_service_logo}`}
                 width={100}
                 height={100}
               />

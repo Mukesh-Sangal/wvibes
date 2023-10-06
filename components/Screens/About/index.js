@@ -10,7 +10,7 @@ import OurTeam from './OurTeam'
 import StartWithLando from './StartWithLando'
 const About = () => {
   const [data, setData] = useState([])
-  const backend_url = 'http://free.lndo.site:8000'
+  const backend_url = 'https://dev-growwives.pantheonsite.io'
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/about`

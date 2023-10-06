@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 
 const TopFooter = (props) => {
-  const backend_url = 'http://free.lndo.site:8000'
+  const backend_url = 'https://dev-growwives.pantheonsite.io'
   return (
     <div className='container'>
       <div className='banner flex flex-wrap justify-between align-center pt-20'>
