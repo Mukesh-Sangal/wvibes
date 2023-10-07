@@ -27,7 +27,7 @@ const Header = () => {
  ]
   return (
     <>
-      <div className='md:flex justify-between items-center px-8 py-4 hidden'>
+      <div className='lg:flex justify-between items-center px-8 py-4 hidden'>
         <div className='logo-container'>
           <Link href={'/'}>
             <Image unoptimized src='/logo.png' width={200} height={200} />
