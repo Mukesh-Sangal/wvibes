@@ -14,7 +14,7 @@ const TechDesign = ({ data, design }) => {
         >
           {data[0].field_cta_section_heading}
         </h1>
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-28 lg:gap-x-14 lg:gap-y-10 gap-6'>
+        <div className='grid lg:grid-cols-3 grid-cols-2 xl:gap-28 lg:gap-x-14 lg:gap-y-10 gap-6'>
           {data.map((item) => (
             <div
               className={`lg:text-1-xl text-1xl font-bold ${

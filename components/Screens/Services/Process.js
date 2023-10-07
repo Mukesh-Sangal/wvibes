@@ -4,28 +4,35 @@ const Process = (props) => {
   return (
     <div>
       {props.desc !== '' ? (
-        <div className='container py-8'>
-          <h2 className='mb-8 font-semibold text-5xl'>{props.title}</h2>
-          <p className='text-2xl mb-10'>{props.desc}</p>
-          <div className='flex flex-wrap justify-between items-center'>
+        <div className='container spacing'>
+          <h2 className='mb-8 font-semibold lg:text-4xl md:text-3xl text-2xl'>
+            {props.title}
+          </h2>
+          <p className='lg:text-2xl text-xl mb-10'>{props.desc}</p>
+          <div className='flex flex-wrap justify-between items-center md:gap-0 gap-4'>
             {props?.list.map((el, index) => (
-              <div className='text-5xl font-bold mb-8 basis-[30%]' key={index}>
+              <div
+                className='lg:text-5xl md:text-2xl text-1-xl  font-bold mb-8 basis-[30%]'
+                key={index}
+              >
                 {el}
               </div>
             ))}
           </div>
         </div>
       ) : (
-        <div className='bg-black py-20'>
+        <div className='bg-black lg:py-20 py-8'>
           <div className='container'>
             <div className='flex flex-wrap justify-between items-center'>
-              <div className='basis-[25%]'>
-                <h2 className='font-bold text-4xl text-white'>{props.title}</h2>
+              <div className='lg:basis-[25%] basis-[100%]'>
+                <h2 className='font-bold lg:text-4xl md:text-3xl text-2xl text-white'>
+                  {props.title}
+                </h2>
               </div>
-              <div className='basis-[70%] flex flex-wrap justify-between items-center'>
+              <div className='lg:basis-[70%] basis-[100%] flex flex-wrap justify-between items-center'>
                 {props?.list.map((el, index) => (
                   <div
-                    className='text-3xl font-[500] my-10 basis-[45%] text-white'
+                    className='lg:text-3xl md:text-2xl text-1xl font-[500] my-10 basis-[45%] text-white'
                     key={index}
                   >
                     {el}

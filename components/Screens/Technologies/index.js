@@ -6,9 +6,9 @@ import TechDesign from './TechDesign'
 import TechGrow from './TechGrow'
 import TechWeServe from './TechWeServe'
 import TopFooter from './TopFooter'
+import { Skeleton } from '../../../components/ui/skeleton'
 const Technologies = () => {
   const [data, setData] = useState([])
-  console.log(data,'Data')
   const backend_url = 'https://dev-growwives.pantheonsite.io'
   useEffect(() => {
     const fetchData = async () => {
@@ -48,7 +48,13 @@ const Technologies = () => {
           }
         })
       ) : (
-        <div className='flex items-center space-x-4 h-[70vh] '>No Data</div>
+        <div className='flex items-center space-x-4 h-[70vh] '>
+          <Skeleton className='h-12 w-12 rounded-full' />
+          <div className='space-y-2'>
+            <Skeleton className='h-4 w-[250px]' />
+            <Skeleton className='h-4 w-[200px]' />
+          </div>
+        </div>
       )}
     </div>
   )

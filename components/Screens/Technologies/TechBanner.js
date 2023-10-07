@@ -32,7 +32,6 @@ const TechBanner = ({ data, imgDom }) => {
             src={`${imgDom}${data[0].field_home_banner_image}`}
             width={1920}
             height={500}
-            unoptimized
           />
         </div>
       </div>

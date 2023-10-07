@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-const LetsStartTopNotch = ({data}) => {
+const LetsStartTopNotch = ({data, imgDom}) => {
   return (
     <div className='container spacing'>
       <div className='grid md:grid-cols-2 grid-cols-1'>
@@ -11,8 +11,7 @@ const LetsStartTopNotch = ({data}) => {
         </div>
         <div>
           <Image
-            unoptimized
-            src={`https://dev-growwives.pantheonsite.io/${data[0].field_lets_build_image}`}
+            src={`${imgDom}/${data[0].field_lets_build_image}`}
             width={1920}
             height={100}
           />

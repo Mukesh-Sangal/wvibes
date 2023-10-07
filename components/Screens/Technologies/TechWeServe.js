@@ -24,7 +24,6 @@ const TechWeServe = ({data, imgDom}) => {
                   <div>
                     <Image
                       key={index}
-                      unoptimized
                       src={`${imgDom}/${image.trim()}`} // Remove leading/trailing spaces
                       width={100}
                       height={100}

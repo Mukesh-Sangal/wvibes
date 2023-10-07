@@ -8,6 +8,7 @@ import OurMission from './OurMission'
 import LetsStartTopNotch from './LetsStartTopNotch'
 import OurTeam from './OurTeam'
 import StartWithLando from './StartWithLando'
+import { Skeleton } from '../../../components/ui/skeleton'
 const About = () => {
   const [data, setData] = useState([])
   const backend_url = 'https://dev-growwives.pantheonsite.io'
@@ -30,12 +31,12 @@ const About = () => {
               return <InnerBanner data={item} />
             case 'About us First Section':
               return <AboutUs data={item} />
-            case 'Home Portfolio' :
-              return <AboutUsProjects data={item}/>
+            case 'Home Portfolio':
+              return <AboutUsProjects data={item} />
             case 'Our Mission':
               return <OurMission data={item} />
             case 'About Digital Experiences':
-              return <LetsStartTopNotch data={item} />
+              return <LetsStartTopNotch data={item} imgDom={backend_url} />
             case 'Our Team':
               return <OurTeam data={item} imgdom={backend_url} />
             case 'About lando today':
@@ -45,7 +46,13 @@ const About = () => {
           }
         })
       ) : (
-        <div className='flex items-center space-x-4 h-[70vh] '>No Data</div>
+        <div className='flex items-center space-x-4 h-[70vh] '>
+          <Skeleton className='h-12 w-12 rounded-full' />
+          <div className='space-y-2'>
+            <Skeleton className='h-4 w-[250px]' />
+            <Skeleton className='h-4 w-[200px]' />
+          </div>
+        </div>
       )}
     </div>
   )

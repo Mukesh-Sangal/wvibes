@@ -2,14 +2,10 @@
 const nextConfig = {
   experimental: { appDir: true },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'http',
-        hostname: 'free.lndo.site:8000',
-        port: '32769'
-      },
-    ],
+    domains: ['dev-growwives.pantheonsite.io'],
+    minimumCacheTTL: 60,
   },
+  trailingSlash: true,
 }
 
 module.exports = nextConfig

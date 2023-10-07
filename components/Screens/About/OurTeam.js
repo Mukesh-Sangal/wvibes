@@ -15,7 +15,6 @@ const OurTeam = ({data,imgdom}) => {
             <div className='text-center'>
               <Image
                 className='mx-auto mb-2 object-contain max-w-[100%]'
-                unoptimized
                 src={`${imgdom}${item.field_lets_build_image}`}
                 width={200}
                 height={200}

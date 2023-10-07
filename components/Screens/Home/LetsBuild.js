@@ -4,7 +4,6 @@ const LetsBuild = ({ data, imgDom }) => {
   return (
     <div className='relative w-full flex items-center justify-center'>
       <Image
-        unoptimized
         className='2xl:h-[60vh] lg:h-[65vh] h-[40] w-full object-cover flex items-center justify-center '
         src={`${imgDom}/${data[0].field_lets_build_image}`}
         width='1920'

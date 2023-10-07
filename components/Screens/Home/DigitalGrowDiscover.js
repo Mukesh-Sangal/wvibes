@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-const DigitalGrowDiscover = ({data}) => {
+const DigitalGrowDiscover = ({data, imgDom}) => {
   return (
     <div
       className='bg-cover w-full bg-'
@@ -15,8 +15,7 @@ const DigitalGrowDiscover = ({data}) => {
           {data.map((item) => (
             <div className='item rounded py-7 px-3 bg-white xl:w-[30%] lg:w-[46%] w-full lg:m-4 flex flex-col items-center h-full lg:min-h-[395px] mb-4'>
               <Image
-                unoptimized
-                src={`https://dev-growwives.pantheonsite.io/${item.field_service_logo}`}
+                src={`${imgDom}/${item.field_service_logo}`}
                 width={100}
                 height={100}
               />

@@ -12,7 +12,6 @@ const AboutUs = ({data}) => {
         </div>
         <div className='w-full'>
           <Image
-            unoptimized
             className=''
             src={`https://dev-growwives.pantheonsite.io/${data[0].field_lets_build_image}`}
             width={1920}

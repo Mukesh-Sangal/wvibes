@@ -22,7 +22,6 @@ const StartWithLando = ({data, imgdom}) => {
         <div>
           <Image
             className='object-cover'
-            unoptimized
             src={`${imgdom}${data[0].field_lets_build_image}`}
             width={1920}
             height={100}

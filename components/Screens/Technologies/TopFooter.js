@@ -4,12 +4,11 @@ import Link from 'next/link'
 import { Button } from '../../../components/ui/button'
 
 const TopFooter = (props) => {
-  const backend_url = 'http://free.lndo.site:8000'
   return (
     <div className='container'>
       <div className='banner flex flex-wrap justify-between align-center pt-20'>
         <div className='basis-[100%] font-bold flex flex-wrap justify-between'>
-          <h1 className='xl:text-5xl lg:text-3xl text-2xl  lg:basis-[60%] basis-[90%]'>
+          <h1 className='lg:text-5xl md:text-2xl text-1xl lg:basis-[60%] basis-[100%] '>
             {props.title}
           </h1>
           <Link href=''>
@@ -25,7 +24,6 @@ const TopFooter = (props) => {
             width={1590}
             height={250}
             priority
-            unoptimized
             loading='eager'
             className='max-w-[100%] w-[100%]  h-[250px] ml-auto object-cover'
           />
