@@ -5,7 +5,7 @@ const LetsStartTopNotch = ({data, imgDom}) => {
     <div className='container spacing'>
       <div className='grid md:grid-cols-2 grid-cols-1'>
         <div>
-          <h1 className='font-bold text-black text-3xl xl:w-[54%] md:w-[70%]'>
+          <h1 className='font-bold text-black md:text-3xl text-2xl xl:w-[54%] md:w-[70%]'>
             {data[0].field_title}
           </h1>
         </div>

@@ -8,7 +8,7 @@ const DigitalGrowDiscover = ({data, imgDom}) => {
       style={{ backgroundImage: `url('/digital.png')` }}
     >
       <div className='container spacing'>
-        <h1 className='xl:text-5xl lg:text-3xl text-2xl font-bold text-white text-left'>
+        <h1 className='xl:text-5xl lg:text-3xl text-1-xl font-bold text-white text-left lg:mb-12 mb-8'>
           {data[0].field_home_service_title}
         </h1>
         <div class='items-container flex justify-between flex-wrap text-center items-center'>
@@ -19,10 +19,10 @@ const DigitalGrowDiscover = ({data, imgDom}) => {
                 width={100}
                 height={100}
               />
-              <h1 className='font-medium text-1-xl pt-6'>
+              <h1 className='font-medium lg:text-1-xl text-1xl pt-6'>
                 {item.field_home_service_heading}
               </h1>
-              <h2 className='font-medium text-1-xl pt-4'>
+              <h2 className='font-medium lg:text-1-xl text-xl pt-4'>
                 {item.field_home_services_subheading}
               </h2>
             </div>
@@ -31,7 +31,7 @@ const DigitalGrowDiscover = ({data, imgDom}) => {
         <div className='text-center w-full pt-12 font-bold text-white '>
           <Link
             href='/contact'
-            className='px-6 py-3 border-2 rounded inline-block xl:text-2xl lg:text-1-xl text-1xl'
+            className='px-6 py-3 border-2 rounded inline-block xl:text-2xl lg:text-1-xl text-xl'
           >
             {data[0].field_home_service_link}
           </Link>

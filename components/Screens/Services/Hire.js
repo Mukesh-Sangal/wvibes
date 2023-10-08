@@ -8,7 +8,7 @@ const Hire = (props) => {
       <div className='container'>
         <div className='flex flex-wrap justify-between items-start'>
           <div className='xl:basis-[25%] basis-[100%]'>
-            <h2 className='font-bold lg:text-4xl text-3xl leading-[1.2] text-white'>
+            <h2 className='font-bold lg:text-4xl md:text-2xl text-1-xl leading-[1.2] text-white'>
               {props.title}
             </h2>
             <p>

@@ -8,7 +8,7 @@ import LetsBuild from './LetsBuild'
 import LinkWithTitle from './LinkWithTitle'
 import HireaDrupalDeveloper from './HireaDrupalDeveloper'
 import DigitalGrowDiscover from './DigitalGrowDiscover'
-import TopFooter from './TopFooter'
+import TopFooter from '../../TopFooter/TopFooter'
 import { Skeleton } from '../../../components/ui/skeleton'
 const Home = () => {
   const [data, setData] = useState([])

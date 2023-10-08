@@ -5,7 +5,7 @@ import TechBanner from './TechBanner'
 import TechDesign from './TechDesign'
 import TechGrow from './TechGrow'
 import TechWeServe from './TechWeServe'
-import TopFooter from './TopFooter'
+import TopFooter from '../../TopFooter/TopFooter'
 import { Skeleton } from '../../../components/ui/skeleton'
 const Technologies = () => {
   const [data, setData] = useState([])

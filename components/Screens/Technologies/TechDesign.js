@@ -8,7 +8,7 @@ const TechDesign = ({ data, design }) => {
     >
       <div className='container spacing'>
         <h1
-          className={`xl:text-4xl lg:text-4xl text-3xl text-left font-bold mb-8 ${
+          className={`xl:text-4xl lg:text-4xl md:text-3xl text-2xl text-left font-bold mb-8 ${
             data[0].field_section_5 !== '' ? 'text-white' : 'text-black'
           }`}
         >
@@ -25,7 +25,7 @@ const TechDesign = ({ data, design }) => {
             </div>
           ))}
         </div>
-        <div className='text-right'>
+        <div className='text-right mt-8'>
           <Link
             className={`${
               data[0].field_section_5 !== '' ? 'text-white' : 'text-black'

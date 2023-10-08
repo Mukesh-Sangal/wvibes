@@ -5,14 +5,14 @@ const Process = (props) => {
     <div>
       {props.desc !== '' ? (
         <div className='container spacing'>
-          <h2 className='mb-8 font-semibold lg:text-4xl md:text-3xl text-2xl'>
+          <h2 className='mb-8 font-semibold lg:text-4xl md:text-3xl text-1-xl'>
             {props.title}
           </h2>
           <p className='lg:text-2xl text-xl mb-10'>{props.desc}</p>
           <div className='flex flex-wrap justify-between items-center md:gap-0 gap-4'>
             {props?.list.map((el, index) => (
               <div
-                className='lg:text-5xl md:text-2xl text-1-xl  font-bold mb-8 basis-[30%]'
+                className='lg:text-3xl md:text-2xl text-1xl  font-bold mb-8 basis-[30%]'
                 key={index}
               >
                 {el}
@@ -25,7 +25,7 @@ const Process = (props) => {
           <div className='container'>
             <div className='flex flex-wrap justify-between items-center'>
               <div className='lg:basis-[25%] basis-[100%]'>
-                <h2 className='font-bold lg:text-4xl md:text-3xl text-2xl text-white'>
+                <h2 className='font-bold lg:text-4xl md:text-3xl text-1-xl text-white'>
                   {props.title}
                 </h2>
               </div>

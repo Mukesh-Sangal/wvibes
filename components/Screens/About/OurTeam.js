@@ -2,9 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 const OurTeam = ({data,imgdom}) => {
   return (
-    <div className='container pb-60 bg-white'>
+    <div className='container lg:pb-60 pb-30 lg:pt-30 pt-12 bg-white'>
       <div className=''>
-        <h1 className='text-black font-bold text-center text-3xl pb-6'>
+        <h1 className='text-black font-bold text-center md:text-3xl text-2xl pb-6'>
           {data[0].field_title}
         </h1>
         <p className='text-black text-center lg:text-2xl text-1-xl pb-6'>

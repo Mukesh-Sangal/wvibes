@@ -6,7 +6,7 @@ const ServicesSections = (props) => {
       className={`p-10 ${props.bgColor} flex flex-col justify-start flex-wrap`}
     >
       <h3
-        className={`md:text-2xl text-1-xl ${props.color} lg:mb-10 mb-4 font-semibold`}
+        className={`md:text-2xl text-1xl ${props.color} lg:mb-10 mb-4 font-semibold`}
       >
         {props.title}
       </h3>

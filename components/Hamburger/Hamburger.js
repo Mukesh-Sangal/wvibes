@@ -35,7 +35,9 @@ function HamburgerMenu() {
   return (
     <div className='lg:hidden flex justify-between items-center relative bg-white transition-all duration-500 ease-in-out p-2'>
       <div className='w-full'>
-        <Image src='/logo.png' width={150} height={150} />
+        <Link href='/'>
+          <Image src='/logo.png' width={150} height={150} />
+        </Link>
       </div>
       <div>
         <button
