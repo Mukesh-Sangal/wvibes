@@ -76,7 +76,7 @@ const Services = () => {
                     ))}
                   </div>
                   <div className='flex justify-center items-center lg:py-20 py-6'>
-                    <Link href=''>
+                    <Link href='/contact'>
                       <Button variant='outline' className='text-xl'>
                         {item[0].field_section_link}
                       </Button>

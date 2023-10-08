@@ -13,7 +13,7 @@ const StartWithLando = ({data, imgdom}) => {
             {data[0].field_home_page_subheading}
           </p>
           <Link
-            href='/sign-up'
+            href='/contact'
             className='bg-[#3164f4] text-white text-lg font-bold rounded px-6 py-4'
           >
             {data[0].field_cta_link}

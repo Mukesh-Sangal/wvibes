@@ -27,7 +27,7 @@ const Header = () => {
  ]
   return (
     <>
-      <div className='lg:flex justify-between items-center px-8 py-4 hidden'>
+      <div className='lg:flex justify-between items-center px-8 py-4 hidden w-full z-50 top-0 transition-all duration-500 ease-in-out bg-white shadow-md hover:shadow-lg'>
         <div className='logo-container'>
           <Link href={'/'}>
             <Image unoptimized src='/logo.png' width={200} height={200} />
@@ -38,7 +38,7 @@ const Header = () => {
             {menu.map((item, index) => (
               <li
                 key={index}
-                className='font-bold hover:text-red last:border-2 last:border-[#5a4da8] py-1 px-2 text-center last:rounded'
+                className='font-bold hover:text-red last:ml-28 last:border-2 last:border-[#5a4da8] py-1 px-2 text-center last:rounded'
               >
                 {item.url && <Link href={item && item?.url}>{item.title}</Link>}
               </li>

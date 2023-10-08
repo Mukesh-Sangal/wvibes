@@ -23,3 +23,6 @@
   .power {
     @apply relative before:content-[''] before:absolute md:before:top-2 xl:before:right-0 md:before:right-14 before:right-0  before:top-[0.1rem] before:bottom-0 before:bg-[url('/icon-east.png')]  before:bg-no-repeat before:bg-contain before:w-8 before:h-8
   }
+  .PhoneInputCountry {
+    @apply border-gray-500 p-1.5 border;
+  }

@@ -12,7 +12,7 @@ const Hire = (props) => {
               {props.title}
             </h2>
             <p>
-              <Link href=''>
+              <Link href='/contact'>
                 <Button
                   variant='outline'
                   className='bg-[transparent] text-white my-10'

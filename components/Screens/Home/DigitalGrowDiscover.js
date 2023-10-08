@@ -30,7 +30,7 @@ const DigitalGrowDiscover = ({data, imgDom}) => {
         </div>
         <div className='text-center w-full pt-12 font-bold text-white '>
           <Link
-            href='/'
+            href='/contact'
             className='px-6 py-3 border-2 rounded inline-block xl:text-2xl lg:text-1-xl text-1xl'
           >
             {data[0].field_home_service_link}

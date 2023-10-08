@@ -12,7 +12,7 @@ const LinkWithTitle = ({ data }) => {
         </div>
         <div className='w-[40%] text-end mt-16'>
           <Link
-            href='/jaiho'
+            href='/contact'
             className='py-3 px-3 font-medium xl:text-1-xl lg:text-1xl text-lg  border-2 rounded text-white'
           >
             {data[0].field_agencies_link}

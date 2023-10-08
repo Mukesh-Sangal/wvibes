@@ -13,7 +13,7 @@ const HireaDrupalDeveloper = ({data}) => {
         <div>
           <Link
             className='py-3 px-3 font-medium xl:text-1-xl md:text-1xl text-lg  border-2 rounded border-[#000]'
-            href='/connect'
+            href='/contact'
           >
             {data[0].field_cta_link}
           </Link>

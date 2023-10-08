@@ -25,7 +25,7 @@ const TechGrow = ({ data, imgDom }) => {
           <div className='text-right'>
             <Link
               className='text-white lg:text-2xl text-1xl font-bold'
-              href='lets-connect'
+              href='/contact'
             >
               LETSCONNECT
             </Link>

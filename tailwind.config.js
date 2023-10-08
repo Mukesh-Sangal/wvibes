@@ -54,7 +54,7 @@ module.exports = {
         '3xl-1': '3.5rem',
         '4xl': '4rem',
         '5xl': '4.5rem',
-        '6xl': '6rem'
+        '6xl': '6rem',
       },
       borderWidth: {
         3: '3px',
@@ -82,5 +82,7 @@ module.exports = {
       '2xl': '1536px',
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

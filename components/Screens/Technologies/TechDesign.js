@@ -30,7 +30,7 @@ const TechDesign = ({ data, design }) => {
             className={`${
               data[0].field_section_5 !== '' ? 'text-white' : 'text-black'
             } lg:text-2xl text-1xl font-bold`}
-            href='lets-connect'
+            href='/contact'
           >
             LETSCONNECT
           </Link>

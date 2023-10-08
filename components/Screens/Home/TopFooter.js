@@ -11,7 +11,7 @@ const TopFooter = (props) => {
           <h1 className='lg:text-5xl md:text-2xl text-1xl lg:basis-[60%] basis-[100%] '>
             {props.title}
           </h1>
-          <Link href=''>
+          <Link href='/contact'>
             <Button variant='outline' className='bg-[transparent] my-10'>
               {props.link}
             </Button>
