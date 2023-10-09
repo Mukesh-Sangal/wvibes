@@ -167,7 +167,7 @@ const Contact = () => {
           </form>
         </article>
       </div>
-      <p className='lg:mt-20 mt-8 text-[#030303] lg:text-1-xl text-1xl text-center'>
+      <p className='lg:mt-20 mt-2 text-[#030303] lg:text-1-xl text-1xl text-center'>
         Lets Connect to take a leap forward towards your digital growth
       </p>
     </section>

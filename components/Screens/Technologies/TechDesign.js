@@ -11,17 +11,20 @@ const TechDesign = ({ data, design }) => {
           className={`xl:text-4xl lg:text-4xl md:text-3xl text-2xl text-left font-bold mb-8 ${
             data[0].field_section_5 !== '' ? 'text-white' : 'text-black'
           }`}
-        >
-          {data[0].field_cta_section_heading}
-        </h1>
+          dangerouslySetInnerHTML={{
+            __html: data[0].field_cta_section_heading,
+          }}
+        ></h1>
         <div className='grid lg:grid-cols-3 grid-cols-2 xl:gap-28 lg:gap-x-14 lg:gap-y-10 gap-6'>
           {data.map((item) => (
             <div
               className={`lg:text-1-xl text-1xl font-bold ${
                 data[0].field_section_5 !== '' ? 'text-white' : 'text-black'
               }`}
+              dangerouslySetInnerHTML={{
+                __html: item.field_cta_subheading,
+              }}
             >
-              {item.field_cta_subheading}
             </div>
           ))}
         </div>

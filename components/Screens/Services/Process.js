@@ -4,7 +4,7 @@ const Process = (props) => {
   return (
     <div>
       {props.desc !== '' ? (
-        <div className='container spacing'>
+        <div className='container'>
           <h2 className='mb-8 font-semibold lg:text-4xl md:text-3xl text-1-xl'>
             {props.title}
           </h2>
@@ -14,9 +14,10 @@ const Process = (props) => {
               <div
                 className='lg:text-3xl md:text-2xl text-1xl  font-bold mb-8 basis-[30%]'
                 key={index}
-              >
-                {el}
-              </div>
+                dangerouslySetInnerHTML={{
+                  __html: el,
+                }}
+              ></div>
             ))}
           </div>
         </div>
@@ -34,9 +35,10 @@ const Process = (props) => {
                   <div
                     className='lg:text-3xl md:text-2xl text-1xl font-[500] my-10 basis-[45%] text-white'
                     key={index}
-                  >
-                    {el}
-                  </div>
+                    dangerouslySetInnerHTML={{
+                      __html: el,
+                    }}
+                  ></div>
                 ))}
               </div>
             </div>
