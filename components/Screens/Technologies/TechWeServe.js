@@ -8,12 +8,9 @@ const TechWeServe = ({data, imgDom}) => {
       <h1 className='xl:text-6xl lg:text-4xl md:text-3xl text-2xl font-bold mb-10'>
         {data[0].field_title}
       </h1>
-      <div class='grid lg:grid-rows-4 grid-cols-1 lg:w-auto w-full lg:grid-flow-col lg:gap-24 gap-6 mb-8'>
-        {data.map((item) => (
-          <div
-            key={item.field_tech_heading}
-            className='flex lg:gap-24 gap-8 items-center'
-          >
+      <div className='grid lg:grid-rows-4 grid-cols-1 lg:w-auto w-full lg:grid-flow-col lg:gap-24 gap-6 mb-8'>
+        {data.map((item, index) => (
+          <div key={index} className='flex lg:gap-24 gap-8 items-center'>
             <h2 className='lg:text-3xl text-1xl md:w-56 w-40'>
               {item.field_tech_heading}
             </h2>

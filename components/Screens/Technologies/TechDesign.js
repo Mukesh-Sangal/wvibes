@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import React from 'react'
 
-const TechDesign = ({ data, design }) => {
+const TechDesign = ({ data }) => {
   return (
     <div
       className={data[0].field_section_5 !== '' ? 'bg-[#6a5acd]' : 'bg-white'}
     >
       <div className='container spacing'>
         <h1
-          className={`xl:text-4xl lg:text-4xl md:text-3xl text-2xl text-left font-bold mb-8 ${
+          className={`xl:text-4xl lg:text-4xl md:text-3xl text-1-xl text-left font-bold mb-8 ${
             data[0].field_section_5 !== '' ? 'text-white' : 'text-black'
           }`}
           dangerouslySetInnerHTML={{
@@ -16,7 +16,7 @@ const TechDesign = ({ data, design }) => {
           }}
         ></h1>
         <div className='grid lg:grid-cols-3 grid-cols-2 xl:gap-28 lg:gap-x-14 lg:gap-y-10 gap-6'>
-          {data.map((item) => (
+          {data.map((item, index) => (
             <div
               className={`lg:text-1-xl text-1xl font-bold ${
                 data[0].field_section_5 !== '' ? 'text-white' : 'text-black'
@@ -24,6 +24,7 @@ const TechDesign = ({ data, design }) => {
               dangerouslySetInnerHTML={{
                 __html: item.field_cta_subheading,
               }}
+              key={index}
             >
             </div>
           ))}

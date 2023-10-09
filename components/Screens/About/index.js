@@ -28,19 +28,47 @@ const About = () => {
           const dataToShow = item[0]?.type
           switch (dataToShow) {
             case 'Banner':
-              return <InnerBanner data={item} />
+              return (
+                <div key={index}>
+                  <InnerBanner data={item} />
+                </div>
+              )
             case 'About us First Section':
-              return <AboutUs data={item} />
+              return (
+                <div key={index}>
+                  <AboutUs data={item} />
+                </div>
+              )
             case 'Home Portfolio':
-              return <AboutUsProjects data={item} />
+              return (
+                <div key={index}>
+                  <AboutUsProjects data={item} />
+                </div>
+              )
             case 'Our Mission':
-              return <OurMission data={item} />
+              return (
+                <div key={index}>
+                  <OurMission data={item} />
+                </div>
+              )
             case 'About Digital Experiences':
-              return <LetsStartTopNotch data={item} imgDom={backend_url} />
+              return (
+                <div key={index}>
+                  <LetsStartTopNotch data={item} imgDom={backend_url} />
+                </div>
+              )
             case 'Our Team':
-              return <OurTeam data={item} imgdom={backend_url} />
+              return (
+                <div key={index}>
+                  <OurTeam data={item} imgdom={backend_url} />
+                </div>
+              )
             case 'About lando today':
-              return <StartWithLando data={item} imgdom={backend_url} />
+              return (
+                <div key={index}>
+                  <StartWithLando data={item} imgdom={backend_url} />
+                </div>
+              )
             default:
               return null // Render nothing for unknown data-to-show values
           }

@@ -30,19 +30,47 @@ const Home = () => {
           const dataToShow = item[0]?.type
           switch (dataToShow) {
             case 'Home Page Banner':
-              return <BannerLayout data={item} />
+              return (
+                <div key={index}>
+                  <BannerLayout data={item} />
+                </div>
+              )
             case 'Home Portfolio':
-              return <DrupalProjects data={item} />
+              return (
+                <div key={index}>
+                  <DrupalProjects data={item} />
+                </div>
+              )
             case 'Drupal Power House Customizations':
-              return <PowerHouse data={item} />
+              return (
+                <div key={index}>
+                  <PowerHouse data={item} />
+                </div>
+              )
             case 'Lets Build head subhead img':
-              return <LetsBuild data={item} imgDom={backend_url} />
+              return (
+                <div key={index}>
+                  <LetsBuild data={item} imgDom={backend_url} />
+                </div>
+              )
             case 'Home Page We Help Agencies':
-              return <LinkWithTitle data={item} />
+              return (
+                <div key={index}>
+                  <LinkWithTitle data={item} />
+                </div>
+              )
             case 'Title Heading With Cta':
-              return <HireaDrupalDeveloper data={item} />
+              return (
+                <div key={index}>
+                  <HireaDrupalDeveloper data={item} />
+                </div>
+              )
             case 'Home Cta Services':
-              return <DigitalGrowDiscover data={item} imgDom={backend_url} />
+              return (
+                <div key={index}>
+                  <DigitalGrowDiscover data={item} imgDom={backend_url} />
+                </div>
+              )
             case 'Cta Heading Link Image':
               return (
                 <div key={index}>

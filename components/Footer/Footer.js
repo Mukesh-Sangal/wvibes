@@ -47,7 +47,7 @@ const Footer = () => {
   return (
     <div className='container spacing flex flex-wrap md:gap-12 gap-8 bg-white'>
         <div className='lg:basis-[25%] basis-[100%]'>
-          <Image width={300} height={300} src='/logo.png' />
+          <Image width={300} height={300} src='/logo.png' alt='footer-logo'/>
         </div>
         <div className='footer-links lg:basis-[70%] basis-[100%] text-left lg:mt-8 mt-4'>
           <div>

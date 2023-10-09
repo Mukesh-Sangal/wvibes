@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image';
 const PowerHouse = ({data}) => {
   return (
     <div className='bg-white'>
@@ -10,8 +9,8 @@ const PowerHouse = ({data}) => {
           </h1>
         </div>
         <div className='flex flex-col justify-evenly xl:w-1/2 w-full'>
-          {data.map((item) => (
-            <h2 className='font-medium 2xl:text-2xl lg:text-1-xl text-1xl text-[#009cde] power'>
+          {data.map((item, index) => (
+            <h2 className='font-medium 2xl:text-2xl lg:text-1-xl text-1xl text-[#009cde] power' key={index}>
               {item.field_power_house_items}
             </h2>
           ))}

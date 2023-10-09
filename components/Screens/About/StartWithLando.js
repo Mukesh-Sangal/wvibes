@@ -25,6 +25,7 @@ const StartWithLando = ({data, imgdom}) => {
             src={`${imgdom}${data[0].field_lets_build_image}`}
             width={1920}
             height={100}
+            alt={data[0].field_title}
           />
         </div>
       </div>

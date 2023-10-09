@@ -30,7 +30,7 @@ const Header = () => {
       <div className='lg:flex justify-between items-center px-8 py-4 hidden w-full z-50 top-0 transition-all duration-500 ease-in-out bg-white shadow-md hover:shadow-lg'>
         <div className='logo-container'>
           <Link href={'/'}>
-            <Image unoptimized src='/logo.png' width={200} height={200} />
+            <Image unoptimized src='/logo.png' width={200} height={200} alt='header logo'/>
           </Link>
         </div>
         <div className=''>

@@ -65,7 +65,9 @@ const Contact = () => {
     <section className='container spacing'>
       <div className='grid md:grid-cols-2 grid-cols-1'>
         <article className='w-full h-full'>
-          <Image src='/digital.png' width={1920} height={100} className='h-full object-cover' />
+          <Image src='/digital.png' width={1920} height={100} className='h-full object-cover' 
+          alt='contact us Image'
+          />
         </article>
         <article className='block lg:px-16 px-4 rounded w-full pb-10'>
           <form onSubmit={handleSubmit}>

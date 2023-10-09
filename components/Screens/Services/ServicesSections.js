@@ -3,7 +3,7 @@ import React from 'react'
 const ServicesSections = (props) => {
   return (
     <div
-      className={`p-10 ${props.bgColor} flex flex-col justify-start flex-wrap`}
+      className={`lg:p-10 p-7 ${props.bgColor} flex flex-col justify-start flex-wrap`}
     >
       <h3
         className={`md:text-2xl text-1xl ${props.color} lg:mb-10 mb-4 font-semibold`}

@@ -18,6 +18,7 @@ const LetsStartTopNotch = ({data, imgDom}) => {
             src={`${imgDom}/${data[0].field_lets_build_image}`}
             width={1920}
             height={100}
+            alt='Top Notch Image'
           />
         </div>
       </div>

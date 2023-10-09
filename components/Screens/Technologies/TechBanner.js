@@ -12,7 +12,7 @@ const TechBanner = ({ data, imgDom }) => {
           <p className='lg:text-1xl text-base font-bold text-[#dc248b] mb-3'>
             {data[0].field_home_page_subheading}
           </p>
-          <div class='flex w-full items-start text-center flex-wrap lg:gap-8 gap-2'>
+          <div className='flex w-full items-start text-center flex-wrap lg:gap-8 gap-2'>
             <Link
               className='md:p-4 p-2 lg:text-lg inline-block lg:w-52 w-40 text-base font-bold text-white bg-[#5856d6] rounded border-2 border-[#5856d6]'
               href='/contact'
@@ -32,6 +32,7 @@ const TechBanner = ({ data, imgDom }) => {
             src={`${imgDom}${data[0].field_home_banner_image}`}
             width={1920}
             height={500}
+            alt={data[0].field_home_banner_title}
           />
         </div>
       </div>

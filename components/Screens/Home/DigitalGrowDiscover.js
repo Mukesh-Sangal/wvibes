@@ -11,13 +11,17 @@ const DigitalGrowDiscover = ({data, imgDom}) => {
         <h1 className='xl:text-5xl lg:text-3xl text-1-xl font-bold text-white text-left lg:mb-12 mb-8'>
           {data[0].field_home_service_title}
         </h1>
-        <div class='items-container flex justify-between flex-wrap text-center items-center'>
-          {data.map((item) => (
-            <div className='item rounded py-7 px-3 bg-white xl:w-[30%] lg:w-[46%] w-full lg:m-4 flex flex-col items-center h-full lg:min-h-[395px] mb-4'>
+        <div className='items-container flex justify-between flex-wrap text-center items-center'>
+          {data.map((item, index) => (
+            <div
+              className='item rounded py-7 px-3 bg-white xl:w-[30%] lg:w-[46%] w-full lg:m-4 flex flex-col items-center h-full lg:min-h-[395px] mb-4'
+              key={index}
+            >
               <Image
                 src={`${imgDom}/${item.field_service_logo}`}
                 width={100}
                 height={100}
+                alt='Image Discover'
               />
               <h1
                 className='font-medium lg:text-1-xl text-1xl pt-6'

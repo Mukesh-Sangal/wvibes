@@ -26,13 +26,29 @@ const Technologies = () => {
           const dataToShow = item[0]?.type
           switch (dataToShow) {
             case 'Home Page Banner':
-              return <TechBanner data={item} imgDom={backend_url} />
+              return (
+                <div key={index}>
+                  <TechBanner data={item} imgDom={backend_url} />
+                </div>
+              )
             case 'Lets Build head subhead img':
-              return <TechGrow data={item} imgDom={backend_url} />
+              return (
+                <div key={index}>
+                  <TechGrow data={item} imgDom={backend_url} />
+                </div>
+              )
             case 'Title Heading With Cta':
-              return <TechDesign data={item} />
+              return (
+                <div key={index}>
+                  <TechDesign data={item} />
+                </div>
+              )
             case 'Technologies We Serve':
-              return <TechWeServe data={item} imgDom={backend_url} />
+              return (
+                <div key={index}>
+                  <TechWeServe data={item} imgDom={backend_url} />
+                </div>
+              )
             case 'Cta Heading Link Image':
               return (
                 <div key={index}>

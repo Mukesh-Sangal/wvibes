@@ -9,6 +9,7 @@ const TechGrow = ({ data, imgDom }) => {
         src={`${imgDom}/${data[0].field_lets_build_image}`}
         width={1920}
         height={500}
+        alt={data[0].field_lets_build_head}
       />
       <div className='image-bg back'>
         <div className='container spacing text-white'>
@@ -16,8 +17,8 @@ const TechGrow = ({ data, imgDom }) => {
             {data[0].field_lets_build_head}
           </h1>
           <div className='grid lg:grid-cols-3 grid-cols-2 xl:gap-28 gap-x-14 gap-y-10'>
-            {data.map((item) => (
-              <div className='md:text-1-xl text-1xl font-bold text-white'>
+            {data.map((item, index) => (
+              <div className='md:text-1-xl text-1xl font-bold text-white' key={index}>
                 {item.field_subhead}
               </div>
             ))}
