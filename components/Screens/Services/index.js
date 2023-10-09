@@ -28,6 +28,10 @@ const Services = () => {
     }
     fetchData()
   }, [])
+
+  function isEven(number) {
+    return number % 2 === 0
+  }
   return (
     <div>
       {data?.length ? (
@@ -58,18 +62,42 @@ const Services = () => {
                           desc={el.field_subheading}
                           bgColor={
                             i === 0 || i === 3 || i === 4 || i === 7 || i === 8
-                              ? 'bg-sky-600'
-                              : 'bg-white'
+                              ? `${
+                                  isEven(i)
+                                    ? 'bg-sky-600 md:bg-sky-600'
+                                    : 'bg-white md:bg-sky-600'
+                                }`
+                              : `${
+                                  isEven(i)
+                                    ? 'bg-sky-600 md:bg-white'
+                                    : 'bg-white md:bg-white'
+                                }`
                           }
                           color={
                             i === 0 || i === 3 || i === 4 || i === 7 || i === 8
-                              ? 'text-white'
-                              : 'text-sky-600'
+                              ? `${
+                                  isEven(i)
+                                    ? 'text-white md:text-white'
+                                    : 'text-sky-600 md:text-white'
+                                }`
+                              : `${
+                                  isEven(i)
+                                    ? 'text-white md:text-sky-600'
+                                    : 'text-sky-600 md:text-sky-600'
+                                }`
                           }
                           desColor={
                             i === 0 || i === 3 || i === 4 || i === 7 || i === 8
-                              ? 'text-white'
-                              : 'text-black'
+                              ? `${
+                                  isEven(i)
+                                    ? 'text-white md:text-white'
+                                    : 'text-black md:text-white'
+                                }`
+                              : `${
+                                  isEven(i)
+                                    ? 'text-white md:text-black'
+                                    : 'text-black md:text-black'
+                                }`
                           }
                         />
                       </div>

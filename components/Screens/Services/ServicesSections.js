@@ -10,7 +10,7 @@ const ServicesSections = (props) => {
       >
         {props.title}
       </h3>
-      <p className={`md:text-1xl text-xl ${props.desColor} mb-10`}>
+      <p className={`md:text-1xl text-xl ${props.desColor} lg:mb-10 mb-4 `}>
         {props.desc}
       </p>
     </div>
