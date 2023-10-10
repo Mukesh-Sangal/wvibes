@@ -46,7 +46,6 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body>
         <Header />
-        <HamburgerMenu />
         <main className={inter.className}>{children}</main>
         <Footer />
       </body>

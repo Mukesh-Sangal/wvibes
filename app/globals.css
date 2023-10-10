@@ -26,3 +26,34 @@
   .PhoneInputCountry {
     @apply border-gray-500 p-1.5 border;
   }
+  .active.menu-link {
+    border-radius: 0;
+    transition: all ease 0.5s;
+  }
+  @media screen and (max-width: 1023px) {
+  #menu {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    transition: transform 0.5s;
+    overflow: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+  }
+  #menu.open {
+    transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+  }
+}

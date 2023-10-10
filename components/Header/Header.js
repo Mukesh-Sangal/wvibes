@@ -1,52 +1,170 @@
-import React from 'react'
-import Image from 'next/image'
+'use client'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-// import menu from '../../data/menu'
-const Header = () => {
- const menu = [
-   {
-     title: 'Home',
-     url: '/',
-   },
-   {
-     title: 'Our Services',
-     url: '/services',
-   },
-   {
-     title: 'About us',
-     url: '/about',
-   },
-   {
-     title: 'Technologies',
-     url: '/technologies',
-   },
-   {
-     title: 'Contact Us',
-     url: '/contact',
-   },
- ]
+import Image from 'next/image'
+import { usePathname } from 'next/navigation'
+function Header() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolling, setIsScrolling] = useState(false)
+  const pathname = usePathname()
+  console.log(pathname,'pathname')
+  const menu = [
+    {
+      title: 'Home',
+      url: '/',
+    },
+    {
+      title: 'Our Services',
+      url: '/services',
+    },
+    {
+      title: 'About us',
+      url: '/about',
+    },
+    {
+      title: 'Technologies',
+      url: '/technologies',
+    },
+    {
+      title: 'Contact Us',
+      url: '/contact',
+    },
+  ]
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
+  //animate header on scroll
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      setIsScrolling(true)
+    } else {
+      setIsScrolling(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  // add active class to menu based on the route url
+  const activeRoute = (routeName) => {
+    // Remove trailing slash from the current pathname
+    const cleanPathname = pathname.endsWith('/')
+      ? pathname.slice(0, -1)
+      : pathname
+
+    return cleanPathname === routeName ? 'active' : ''
+  }
+  useEffect(() => {
+  }, [isScrolling, isOpen, pathname])
+
   return (
-    <>
-      <div className='lg:flex justify-between items-center px-8 py-4 hidden w-full z-50 top-0 transition-all duration-500 ease-in-out bg-white shadow-md hover:shadow-lg'>
-        <div className='logo-container'>
-          <Link href={'/'}>
-            <Image unoptimized src='/logo.png' width={200} height={200} alt='header logo'/>
-          </Link>
-        </div>
-        <div className=''>
-          <ul className='flex gap-6'>
-            {menu.map((item, index) => (
-              <li
-                key={index}
-                className='font-bold hover:text-red last:ml-28 last:border-2 last:border-[#5a4da8] py-1 px-2 text-center last:rounded'
+    <header
+      id='header'
+      className='fixed w-full z-50 top-0 transition-all duration-500 ease-in-out bg-white shadow-md lg:shadow-lg'
+    >
+      <nav className='relative'>
+        <div className='lg:flex items-center container mx-auto px-5 py-2'>
+          <div className='flex justify-between'>
+            <Link href='/' aria-label='Homepage'>
+              <Image
+                src='/logo.png'
+                className='h-14 image'
+                alt='logo'
+                height={200}
+                width={200}
+                unoptimized={true}
+              />
+            </Link>
+            <button
+              type='button'
+              className={`inline-flex z-50 lg:hidden items-center justify-center rounded-md p-2 focus:outline-none`}
+              aria-controls='Main menu'
+              aria-expanded='false'
+              aria-label='Main Menu'
+              id='menuBtn'
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <span className='sr-only'>Open main menu</span>
+              {/* <!-- Icon when menu is closed. Heroicon name: outline/bars-3 Menu open: "hidden", Menu closed: "block"--> */}
+              <svg
+                className='block h-6 w-6'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth='1.5'
+                stroke='currentColor'
+                aria-hidden='true'
               >
-                {item.url && <Link href={item && item?.url}>{item.title}</Link>}
-              </li>
-            ))}
-          </ul>
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d={
+                    isOpen
+                      ? 'M6 18L18 6M6 6l12 12'
+                      : 'M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+                  }
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            id='menu'
+            className={`ml-auto mt-5 lg:mt-0 hidden lg:block lg:bg-transparent bg-white ${
+              isOpen ? 'open' : ''
+            }`}
+          >
+            <Image
+              src='/logo.png'
+              className='lg:hidden mx-1 my-5 pl-3'
+              alt='logo'
+              height={100}
+              width={100}
+            />
+            <ul className='lg:flex camelcase lg:px-0 px-3'>
+              {menu.map((item, index) => (
+                <li
+                  className={`hover:bg-white" mx-1 xl:px-2 px-[0.3rem] relative group`}
+                  key={index}
+                >
+                  {item.url ? (
+                    <Link
+                      href={item && item?.url}
+                      className={`px-1 relative lg:inline-block block lg:rounded-md text-lg font-bold menu-link pt-3 pb-1 lg:border-0 border-b-[1px] border-solid border-b-red text-[#262626] transition-all duration-300 ease-in-out hover:text-[#e91b72]
+                                            ${
+                                              activeRoute(item?.url)
+                                                ? 'active lg:border-b-2 border-solid lg:border-b-red lg:before:border-0 before:border-l-2 before:border-l-solid before:border-l-red before:relative before:left-[-4px]'
+                                                : ''
+                                            }
+                                          `}
+                      onClick={closeMenu}
+                      aria-label={item && item?.url}
+                    >
+                      {item.title}
+                    </Link>
+                  ) : (
+                    <span
+                      className={`px-1 relative lg:inline-block block lg:rounded-md text-lg font-bold menu-link pt-3 pb-1 lg:border-0 border-b-[1px] border-solid border-b-text ${
+                        isScrolling
+                          ? 'lg:text-menuColor text-heading'
+                          : 'lg:text-white text-heading'
+                      }
+                      `}
+                    >
+                      {item.title}
+                    </span>
+                  )}
+                  {/* pass active route as props */}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
-    </>
+      </nav>
+    </header>
   )
 }
 
