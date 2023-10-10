@@ -1,17 +1,13 @@
-import './globals.css'
+import '../globals.css'
 import { Inter } from 'next/font/google'
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer/Footer'
-import HamburgerMenu from '../components/Hamburger/Hamburger'
 const inter = Inter({ subsets: ['latin'] })
 
 export async function generateMetadata() {
   // Generate a random cache-busting query parameter
   const cacheBuster = Math.random()
-
   // Build the URL with the cache-busting parameter
-  const apiUrl = `https://dev-growwives.pantheonsite.io/node_title/home%20page?cache=${cacheBuster}`
-
+  const apiUrl = `https://dev-growwives.pantheonsite.io/node_title/technologies?cache=${cacheBuster}`
+  
   try {
     // Fetch data with the cache-busting parameter
     const response = await fetch(apiUrl)
@@ -27,7 +23,6 @@ export async function generateMetadata() {
       product[0]?.field_meta_tags
     ) {
       const meta = JSON.parse(product[0].field_meta_tags)
-
       return {
         title: meta.title,
         description: meta.description,
@@ -41,15 +36,10 @@ export async function generateMetadata() {
     return null
   }
 }
-export default function RootLayout({ children }) {
+export default function ServicesLayout({ children }) {
   return (
-    <html lang='en'>
-      <body>
-        <Header />
-        <HamburgerMenu />
-        <main className={inter.className}>{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <>
+      <main className={inter.className}>{children}</main>
+    </>
   )
 }

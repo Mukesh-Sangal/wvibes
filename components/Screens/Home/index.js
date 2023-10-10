@@ -19,7 +19,6 @@ const Home = () => {
       const apis = await getPageData(apiPageUrl)
       setData(apis)
     }
-
     fetchData()
   }, [])
   return (

@@ -8,8 +8,12 @@ const DigitalGrowDiscover = ({data, imgDom}) => {
       style={{ backgroundImage: `url('/digital.png')` }}
     >
       <div className='container spacing'>
-        <h1 className='xl:text-5xl lg:text-3xl text-1-xl font-bold text-white text-left lg:mb-12 mb-8'>
-          {data[0].field_home_service_title}
+        <h1
+          className='xl:text-5xl lg:text-3xl text-1-xl font-bold text-white text-left lg:mb-12 mb-8'
+          dangerouslySetInnerHTML={{
+            __html: data[0].field_home_service_title,
+          }}
+        >
         </h1>
         <div className='items-container flex justify-between flex-wrap text-center items-center'>
           {data.map((item, index) => (
