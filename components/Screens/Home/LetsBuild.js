@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 const LetsBuild = ({ data, imgDom }) => {
+  // console.log(data)
   return (
     <div className='relative w-full flex items-center justify-center'>
       <Image

@@ -1,43 +1,69 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-const DigitalGrowDiscover = ({data, imgDom}) => {
+const DigitalGrowDiscover = ({ data, imgDom}) => {
+  // console.log(data, 'Digital')
   return (
     <div
-      className='bg-cover w-full bg-'
+      className='bg-cover w-full'
       style={{ backgroundImage: `url('/digital.png')` }}
     >
-      <div className='container spacing'>
+      <div className='spacing'>
         <h1
-          className='xl:text-5xl lg:text-3xl text-1-xl font-bold text-white text-left lg:mb-12 mb-8'
+          className='xl:text-5xl lg:text-3xl text-1-xl lg:pl-32 pl-16 font-bold text-white text-left lg:mb-12 mb-8'
           dangerouslySetInnerHTML={{
             __html: data[0].field_home_service_title,
           }}
-        >
-        </h1>
-        <div className='items-container flex justify-between flex-wrap text-center items-center'>
+        ></h1>
+        <div className='items-container flex justify-between flex-wrap '>
           {data.map((item, index) => (
             <div
-              className='item rounded py-7 px-3 bg-white xl:w-[30%] lg:w-[46%] w-full lg:m-4 flex flex-col items-center h-full lg:min-h-[395px] mb-4'
+              className='item services-item rounded py-7 px-3 bg-white flex items-center h-full lg:min-h-[395px] min-h-[300px] mb-4'
               key={index}
             >
-              <Image
-                src={`${imgDom}/${item.field_service_logo}`}
-                width={100}
-                height={100}
-                alt='Image Discover'
-              />
-              <h1
-                className='font-medium lg:text-1-xl text-1xl pt-6'
+              <div>
+                <div>
+                  <Image
+                    src={`${imgDom}${item.field_service_logo}`}
+                    width={100}
+                    height={100}
+                    alt='Image Discover'
+                    className='md:w-full'
+                  />
+                </div>
+                <div
+                  className={`${
+                    item.field_text_services.trim() == '' ? 'text-suuuuu' : ''
+                  }`}
+                >
+                  <h1
+                    className={` lg:text-1-xl text-lg pt-6 font-bold`}
+                    dangerouslySetInnerHTML={{
+                      __html: item.field_home_service_heading,
+                    }}
+                  >
+                    {/* {item.field_home_service_heading} */}
+                  </h1>
+                </div>
+              </div>
+              <div
+                className='font-bold xl:text-2xl lg:text-1xl text-xl pt-4'
                 dangerouslySetInnerHTML={{
-                  __html: item.field_home_service_heading,
+                  __html: item.field_home_services_subheading,
                 }}
               >
-                {/* {item.field_home_service_heading} */}
-              </h1>
-              <h2 className='font-medium lg:text-1-xl text-xl pt-4'>
-                {item.field_home_services_subheading}
-              </h2>
+                {/* {item.field_home_services_subheading} */}
+              </div>
+              {item.field_text_services && (
+                <div
+                  className='font-bold xl:text-2xl lg:text-1xl text-xl pt-4'
+                  dangerouslySetInnerHTML={{
+                    __html: item.field_text_services,
+                  }}
+                >
+                  {/* {item.field_text_services} */}
+                </div>
+              )}
             </div>
           ))}
         </div>

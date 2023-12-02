@@ -18,7 +18,7 @@ import {
 
 const Services = () => {
   const [data, setData] = useState([])
-  console.log(data,'Services')
+  console.log(data, 'Services')
   const backend_url = 'https://dev-growwives.pantheonsite.io'
   useEffect(() => {
     const fetchData = async () => {
@@ -56,7 +56,22 @@ const Services = () => {
                   </h2>
                   <div className='flex items-stretch flex-wrap'>
                     {item.map((el, i) => (
-                      <div key={i} className='lg:basis-1/2 w-full'>
+                      <div
+                        key={i}
+                        className={`lg:basis-1/2 w-full bg:${
+                          i === 0 || i === 3 || i === 4 || i === 7 || i === 8
+                            ? `${
+                                isEven(i)
+                                  ? 'bg-sky-600 md:bg-sky-600'
+                                  : 'bg-white md:bg-sky-600'
+                              }`
+                            : `${
+                                isEven(i)
+                                  ? 'bg-sky-600 md:bg-white'
+                                  : 'bg-white md:bg-white'
+                              }`
+                        } `}
+                      >
                         <ServicesSections
                           title={el.field_heading}
                           desc={el.field_subheading}

@@ -2,35 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
- .spacing {
-    @apply lg:py-60 py-30;
-  }
-  .image-bg  {
-    @apply before:content-[''] w-full h-full absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:opacity-['0.75'] 
-  }
-  .about {
-     @apply before:content-[''] w-full h-full absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:opacity-['0.75']  
-  }
-  .back {
-    background-color: rgba(0,0,0,0.5);
-  }
-  .about-opacity {
-    background-color: rgba(106, 90, 205, 0.53)
-  }
-  .logo {
-    @apply relative before:content-[''] before:absolute xl:before:top-28 xl:before:left-56 before:right-0 lg:before:bottom-0 before:bg-[url('/drupal.png')]  before:bg-no-repeat before:bg-contain before:w-40 before:h-40 lg:before:top-12 lg:before:left-48 before:left-44 before:bottom-32
-  }
-  .power {
-    @apply relative before:content-[''] before:absolute md:before:top-2 xl:before:right-0 md:before:right-14 before:right-0  before:top-[0.1rem] before:bottom-0 before:bg-[url('/icon-east.png')]  before:bg-no-repeat before:bg-contain before:w-8 before:h-8
-  }
-  .PhoneInputCountry {
-    @apply border-gray-500 p-1.5 border;
-  }
-  .active.menu-link {
-    border-radius: 0;
-    transition: all ease 0.5s;
-  }
-  @media screen and (max-width: 1023px) {
+.spacing {
+  @apply lg:py-60 py-30;
+}
+main.__className_e66fe9 {
+  margin-top: 73px;
+}
+.image-bg {
+  @apply before:content-[''] w-full h-full absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:opacity-['0.75'];
+}
+.about {
+  @apply before:content-[''] w-full h-full absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:opacity-['0.75'];
+}
+.back {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.about-opacity {
+  background-color: rgba(106, 90, 205, 0.53);
+}
+.logo {
+  @apply relative before:content-[''] before:absolute xl:before:top-12 before:top-4 xl:before:left-56 before:right-0 lg:before:bottom-0 before:bg-[url('/drupal.png')]  before:bg-no-repeat before:bg-contain xl:before:w-40 xl:before:h-40 before:w-28 before:h-28 lg:before:left-48 before:left-44 before:bottom-32;
+}
+.power {
+  @apply relative before:content-[''] before:absolute md:before:top-2 xl:before:right-0 md:before:right-14 before:right-0  before:top-[0.1rem] before:bottom-0 before:bg-[url('/icon-east.png')]  before:bg-no-repeat before:bg-contain before:w-8 before:h-8;
+}
+.PhoneInputCountry {
+  @apply border-gray-500 p-1.5 border;
+}
+.active.menu-link {
+  border-radius: 0;
+  transition: all ease 0.5s;
+}
+@media screen and (max-width: 1023px) {
   #menu {
     position: fixed;
     top: 0;
@@ -55,5 +58,55 @@
     -ms-transform: translateX(0);
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
+  }
+}
+/* Services Css Classes */
+
+.items-container > div:nth-child(1),
+.items-container div:nth-child(6) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: calc(10px + (160 - 10) * ((100vw - 375px) / (1920 - 375)));
+  padding-right: calc(10px + (160 - 10) * ((100vw - 375px) / (1920 - 375)));
+}
+.items-container div:nth-child(1) > div,
+.items-container div:nth-child(6) > div {
+  display: flex;
+  flex-direction: column;
+}
+.items-container > div:nth-child(2),
+.items-container > div:nth-child(5) {
+  width: 54%;
+  justify-content: space-around;
+  gap: 100px;
+}
+.items-container > div:nth-child(3),
+.items-container > div:nth-child(4) {
+  width: 45%;
+  justify-content: space-around;
+}
+.services-items > div:last-child {
+  position: absolute;
+}
+.text-suuuuu {
+  position: absolute;
+}
+@media screen and (max-width: 767px) {
+  .items-container > div:nth-child(1),
+  .items-container > div:nth-child(2),
+  .items-container > div:nth-child(3),
+  .items-container > div:nth-child(4),
+  .items-container > div:nth-child(5),
+  .items-container div:nth-child(6) {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .items-container div:nth-child(n) > div {
+    align-items: center;
+  }
+  .text-suuuuu {
+    position: unset;
   }
 }

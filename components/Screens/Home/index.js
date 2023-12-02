@@ -26,6 +26,7 @@ const Home = () => {
       {data?.length ? (
         data.map((item, index) => {
           // Assuming each sub-array has only one object
+          console.log(item, 'items')
           const dataToShow = item[0]?.type
           switch (dataToShow) {
             case 'Home Page Banner':
@@ -40,7 +41,7 @@ const Home = () => {
                   <DrupalProjects data={item} />
                 </div>
               )
-            case 'Drupal Power House Customizations':
+            case 'Drupal  Power  House  Customizations':
               return (
                 <div key={index}>
                   <PowerHouse data={item} />
@@ -67,7 +68,7 @@ const Home = () => {
             case 'Home Cta Services':
               return (
                 <div key={index}>
-                  <DigitalGrowDiscover data={item} imgDom={backend_url} />
+                  <DigitalGrowDiscover data={item} imgDom={backend_url} towCol="two-col" />
                 </div>
               )
             case 'Cta Heading Link Image':
