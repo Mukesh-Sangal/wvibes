@@ -18,7 +18,7 @@ import {
 
 const Services = () => {
   const [data, setData] = useState([])
-  console.log(data, 'Services')
+  // console.log(data, 'Services')
   const backend_url = 'https://dev-growwives.pantheonsite.io'
   useEffect(() => {
     const fetchData = async () => {

@@ -7,7 +7,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolling, setIsScrolling] = useState(false)
   const pathname = usePathname()
-  console.log(pathname,'pathname')
+  // console.log(pathname,'pathname')
   const menu = [
     {
       title: 'Home',
@@ -81,7 +81,7 @@ function Header() {
             </Link>
             <button
               type='button'
-              className={`inline-flex z-50 lg:hidden items-center justify-center rounded-md p-2 focus:outline-none`}
+              className={`inline-flex z-50  lg:hidden items-center justify-center rounded-md p-2 focus:outline-none`}
               aria-controls='Main menu'
               aria-expanded='false'
               aria-label='Main Menu'
@@ -93,15 +93,16 @@ function Header() {
               <svg
                 className='block h-6 w-6'
                 xmlns='http://www.w3.org/2000/svg'
-                fill='none'
                 viewBox='0 0 24 24'
-                strokeWidth='1.5'
+                fill='none'
                 stroke='currentColor'
+                strokeWidth='1.5'
+                strokeLinecap='round'
+                strokeLinejoin='round'
                 aria-hidden='true'
               >
                 <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
+                  stroke={isOpen ? '#fff' : '#000'}
                   d={
                     isOpen
                       ? 'M6 18L18 6M6 6l12 12'
@@ -113,7 +114,7 @@ function Header() {
           </div>
           <div
             id='menu'
-            className={`ml-auto mt-5 lg:mt-0 hidden lg:block lg:bg-transparent bg-white ${
+            className={`ml-auto mt-5 lg:mt-0 hidden lg:block lg:bg-transparent lg:bg-white bg-[#2dbef3] ${
               isOpen ? 'open' : ''
             }`}
           >
@@ -124,19 +125,19 @@ function Header() {
               height={100}
               width={100}
             />
-            <ul className='lg:flex camelcase lg:px-0 px-3'>
+            <ul className='flex  camelcase lg:px-0 px-3 mobile '>
               {menu.map((item, index) => (
                 <li
-                  className={`hover:bg-white" mx-1 xl:px-2 px-[0.3rem] relative group`}
+                  className={`hover:bg-white mobiles-icon mx-1 xl:px-2 px-[0.3rem] relative group`}
                   key={index}
                 >
                   {item.url ? (
                     <Link
                       href={item && item?.url}
-                      className={`px-1 relative lg:inline-block block lg:rounded-md text-lg font-bold menu-link pt-3 pb-1 lg:border-0 border-b-[1px] border-solid border-b-red text-[#262626] transition-all duration-300 ease-in-out hover:text-[#e91b72]
+                      className={`px-1 relative lg:inline-block block lg:rounded-md lg:text-lg text-1-xl font-bold menu-link pt-3 pb-1 lg:border-0 border-solid lg:border-b-red lg:text-[#262626] text-white transition-all duration-300 ease-in-out hover:text-[#e91b72]
                                             ${
                                               activeRoute(item?.url)
-                                                ? 'active lg:border-b-2 border-solid lg:border-b-red lg:before:border-0 before:border-l-2 before:border-l-solid before:border-l-red before:relative before:left-[-4px]'
+                                                ? 'active lg:border-b-2 lg:border-solid lg:border-b-red lg:before:border-0  before:border-l-solid before:relative before:left-[-4px]'
                                                 : ''
                                             }
                                           `}

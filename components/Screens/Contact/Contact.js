@@ -18,7 +18,7 @@ const Contact = () => {
     let data = new FormData(e.target)
     data.append('webform_id', 'contact_us')
     data = JSON.stringify(Object.fromEntries(data))
-    console.log(data, 'Values')
+    // console.log(data, 'Values')
     setFormStatus({ status: 'fetching' })
     try {
       const response = await axios.post(

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function BannerLayout({ data }) {
-  console.log(data, 'Services Page');
+  // console.log(data, 'Services Page');
   return (
     <div
       className='lg:h-[90vh] flex h-screen bg-no-repeat bg-cover relative

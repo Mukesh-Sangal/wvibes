@@ -110,3 +110,21 @@ main.__className_e66fe9 {
     position: unset;
   }
 }
+@media screen and (max-width: 768px) {
+  .mobile {
+    justify-content: center;
+    align-items: baseline;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #2dbef3;
+  }
+  .mobiles-icon::after {
+    content: ">";
+    position: absolute;
+    top: 12px;
+    right: -32px;
+    color: #fff;
+    font-size: 33px;
+  }
+}
