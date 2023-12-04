@@ -120,11 +120,57 @@ main.__className_e66fe9 {
     background-color: #2dbef3;
   }
   .mobiles-icon::after {
-    content: ">";
+    content: '>';
     position: absolute;
     top: 12px;
     right: -32px;
     color: #fff;
     font-size: 33px;
   }
+}
+.bef-img:before {
+  content: '';
+  position: absolute;
+  background-image: url(/bg-img-logo.png);
+  width: 168px;
+  height: 100px;
+  background-repeat: no-repeat;
+  right: 0;
+  top: -45px;
+  transition: transform 0.3s ease;
+}
+.bef-img:hover:before {
+  transform: rotate(360deg); /* Rotate the pseudo-element on hover */
+}
+.mountains-white:after {
+  content: '';
+  position: absolute;
+  background-image: url(/mountain-green.png);
+  width: 500px;
+  height: 295px;
+  background-repeat: no-repeat;
+  right: 0;
+  bottom: 0;
+  transition: transform 0.3s ease;
+}
+.mountains-white:hover:after {
+  /* transform: translateX(-50%); Slide the :after pseudo-element to the left */
+  transform: scale(0.8);
+  width: 490px;
+  height: 290px;
+  bottom: 0;
+}
+.grow-dis:before {
+  content: '';
+  position: absolute;
+  background-image: url(/digital-grow.png);
+  width: 135px;
+  height: 127px;
+  background-repeat: no-repeat;
+  right: 0;
+  top: -125px;
+  transition: transform 0.3s ease;
+}
+.grow-dis:hover:before {
+  transform: rotate(360deg); /* Rotate the pseudo-element on hover */
 }

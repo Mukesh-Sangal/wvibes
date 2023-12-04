@@ -12,7 +12,7 @@ const LetsBuild = ({ data, imgDom }) => {
         height='1080'
       />
       <div className='image-bg back'>
-        <div className='container flex flex-wrap spacing gap-60 h-full'>
+        <div className='container flex flex-wrap spacing gap-60 h-full bef-img relative'>
           <div className='flex items-center justify-between'>
             <div className='heading lg:w-[55%] w-full xl:w-1/3 2xl:w-[41%]'>
               <header className='font-bold xl:text-4xl lg:w-auto w-[80%] md:text-2xl text-1xl text-white'>

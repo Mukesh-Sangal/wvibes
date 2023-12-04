@@ -119,7 +119,7 @@ function Header() {
             }`}
           >
             <Image
-              src='/logo.png'
+              src='/logo1.png'
               className='lg:hidden mx-1 my-5 pl-3'
               alt='logo'
               height={100}

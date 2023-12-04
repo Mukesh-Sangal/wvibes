@@ -10,7 +10,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
     >
       <div className='spacing'>
         <h1
-          className='xl:text-5xl lg:text-3xl text-1-xl lg:pl-32 pl-16 font-bold text-white text-left lg:mb-12 mb-8'
+          className='container grow-dis relative xl:text-5xl lg:text-3xl text-1-xl font-bold text-white text-left lg:mb-12 mb-8'
           dangerouslySetInnerHTML={{
             __html: data[0].field_home_service_title,
           }}
