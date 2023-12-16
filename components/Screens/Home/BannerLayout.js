@@ -8,7 +8,7 @@ export default function BannerLayout({ data }) {
     <div
       className='lg:h-[90vh] flex h-screen bg-no-repeat bg-cover relative
 '
-      style={{ backgroundImage: `url('/banne.png')` }}
+      style={{ backgroundImage: `url('/Imagebanner.png')` }}
     >
       <div className='container flex items-center'>
         <div className=' p-6 md:p-0 w-full md:w-1/2  xl:w-2/5'>

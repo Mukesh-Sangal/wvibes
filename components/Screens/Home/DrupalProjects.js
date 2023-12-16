@@ -4,7 +4,7 @@ import React, {useEffect} from 'react'
 const DrupalProjects = ({data}) => {
   
   return (
-    <div className='bg-[#5856d6] main p-6 transition duration-500 ease-in-out hover:bg-red delay-2000'>
+    <div className='bg-[#5856d6] main p-6 '>
       <div className='container spacing flex 2xl:gap-56 lg:gap-3 gap-4 md:flex-nowrap flex-wrap '>
         {data.map((item, index) => (
           <div className='item' key={index}>

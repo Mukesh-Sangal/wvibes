@@ -4,7 +4,7 @@ import Link from 'next/link'
 const LinkWithTitle = ({ data }) => {
   return (
     <div className=' bg-[#dc248b] '>
-      <div className='flex container spacing mountains-white relative'>
+      <div className='flex container spacing mountains-white bg-cover relative'>
         <div className='w-[52%]'>
           <h1 className='font-bold 2xl:text-4xl xl:text-3xl text-1-xl  text-white items-baseline'>
             {data[0].field_help_agencies_title}

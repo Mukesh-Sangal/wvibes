@@ -5,6 +5,7 @@ import BannerLayout from './BannerLayout'
 import DrupalProjects from './DrupalProjects'
 import PowerHouse from './PowerHouse'
 import LetsBuild from './LetsBuild'
+import CounterUp from './CounterUp'
 import LinkWithTitle from './LinkWithTitle'
 import HireaDrupalDeveloper from './HireaDrupalDeveloper'
 import DigitalGrowDiscover from './DigitalGrowDiscover'
@@ -53,6 +54,12 @@ const Home = () => {
                   <LetsBuild data={item} imgDom={backend_url} />
                 </div>
               )
+            case 'Improve':
+              return (
+                <div key={index}>
+                  <CounterUp data={item} imgDom={backend_url} />
+                </div>
+              )
             case 'Home Page We Help Agencies':
               return (
                 <div key={index}>
@@ -68,7 +75,11 @@ const Home = () => {
             case 'Home Cta Services':
               return (
                 <div key={index}>
-                  <DigitalGrowDiscover data={item} imgDom={backend_url} towCol="two-col" />
+                  <DigitalGrowDiscover
+                    data={item}
+                    imgDom={backend_url}
+                    towCol='two-col'
+                  />
                 </div>
               )
             case 'Cta Heading Link Image':

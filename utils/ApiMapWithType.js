@@ -5,6 +5,7 @@ async function getPageData(apiPageUrl) {
     Banner: `https://dev-growwives.pantheonsite.io/innerbanner/`,
     'Box Container': `https://dev-growwives.pantheonsite.io/what-we-do/`,
     'Title With Desc Main': `https://dev-growwives.pantheonsite.io/title-with-desc/`,
+    Improve: `https://dev-growwives.pantheonsite.io/improving/`,
     'Lets Build head subhead img': `https://dev-growwives.pantheonsite.io/lets-build/`,
     'Home Portfolio': `https://dev-growwives.pantheonsite.io/home-page-section-1/`,
     'Home Page Banner': `https://dev-growwives.pantheonsite.io/home-banner/`,
@@ -21,7 +22,7 @@ async function getPageData(apiPageUrl) {
     'About lando today': `https://dev-growwives.pantheonsite.io/about-start-with-lando/`,
     'Technologies We Serve': `https://dev-growwives.pantheonsite.io/tech-we-serve/`,
   }
-  // console.log(result.data,'result')
+  //  console.log(result.data,'result')
   let { data } = result
   const results = []
   for (let i = 0; i < data.length; i++) {
