@@ -37,7 +37,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
                   }`}
                 >
                   <h1
-                    className={` lg:text-1-xl text-lg pt-6 font-bold`}
+                    className={` lg:text-1-xl text-1xl pt-6 font-bold`}
                     dangerouslySetInnerHTML={{
                       __html: item.field_home_service_heading,
                     }}

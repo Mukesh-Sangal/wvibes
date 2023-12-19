@@ -4,7 +4,7 @@ import urlExtractor from 'utils/urlExtractor'
 const PowerHouse = ({ data }) => {
   // console.log(data, 'data')
   return (
-    <div className='bg-white p-16'>
+    <div className='bg-white md:p-16 p-0'>
       <div className='container spacing flex justify-between md:flex-nowrap flex-wrap md:gap-0 gap-4'>
         <div className=''>
           <h1 className='logo font-bold xl:text-4xl lg:text-3xl text-2xl text-black xl:w-2/6 w-[20%]'>

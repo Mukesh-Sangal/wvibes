@@ -237,17 +237,75 @@ main.__className_e66fe9 {
   }
 }
 @media screen and (max-width: 1535px) {
-.mountains-white:after {
+  .mountains-white:after {
     width: 200px;
     height: 117px;
     right: 138px;
   }
 }
 @media screen and (max-width: 1277px) {
-.mountains-white:after {
+  .mountains-white:after {
     width: 160px;
     height: 100px;
     right: 138px;
     bottom: -7px;
   }
 }
+.conic-gradient {
+  position: relative;
+  animation: rotateShadow 2s linear infinite;
+}
+
+@keyframes rotateShadow {
+  0% {
+    box-shadow: 1px 5px 2px #e65c00;
+  }
+  50% {
+    box-shadow: 1px 5px 2px #18b201;
+     transform: rotate(180deg);
+  }
+  100% {
+    box-shadow: 1px 5px 2px #e456c8;
+     transform: rotate(360deg);
+  }
+}
+
+.conic-gradient:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* .conic-gradient:after {
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* .conic-gradient {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+} */
+
+/* @keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+} */

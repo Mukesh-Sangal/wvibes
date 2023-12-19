@@ -25,13 +25,13 @@ const CounterUp = ({ data, imgDom }) => {
             {data.map((detail, index) => (
               <li
                 key={index}
-                className='mb-12 lg:mb-0 flex flex-col justify-center items-center gap-5 p-7'
+                className='mb-12 lg:mb-0 flex flex-col justify-center items-center gap-5 p-7 '
               >
-                <Image
+                {/* <Image
                   src={`${imgDom}/${detail.field_improve_icon}`}
                   width={100}
                   height={100}
-                />
+                /> */}
                 <CountUp
                   start={viewPortEntered ? null : 0}
                   end={+`${detail.field_counter}`}
@@ -50,13 +50,13 @@ const CounterUp = ({ data, imgDom }) => {
                       delayedCall
                     >
                       <span
-                        className='text-3xl font-normal border-[5px] border-white rounded-full w-44 h-44 inline-flex items-center justify-center'
+                        className='text-3xl font-normal border-white rounded-full w-44 h-44 inline-flex items-center justify-center z-50 conic-gradient relative' 
                         ref={countUpRef}
                       />
                     </VisibilitySensor>
                   )}
                 </CountUp>
-                <h3 className='capitalize text-xl text-white font-bold'>
+                <h3 className='capitalize text-1xl text-white font-bold z-50'>
                   {detail.field_short_desc}
                 </h3>
 
