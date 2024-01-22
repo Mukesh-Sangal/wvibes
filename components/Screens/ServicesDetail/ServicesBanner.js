@@ -6,7 +6,7 @@ const ServicesBanner = ({ data, imgDom }) => {
 
   return (
     <div
-      className='service-bef relative'
+      className='service-bef lg:p-12 lg:pl-8 relative'
       // style={{ backgroundImage: `url('/services.png')` }}
     >
       <div className='container flex flex-wrap justify-between relative'>
@@ -19,13 +19,14 @@ const ServicesBanner = ({ data, imgDom }) => {
             className='mb-4 mt-8 '
           ></Image>
           <div className='desc'>
-            <h1 className='lg:text-3xl text-1-xl text-white font-bold mb-8 '>
+            <h1 className='lg:text-[50px] text-[36px] text-white font-bold mb-8 '>
               {data[0].field_banner_title}
             </h1>
-            <h3 className='lg:text-1-xl text-1xl text-white font-bold'>
+            <hr />
+            <h3 className='lg:text-[24px] text-[22px] lg:leading-[31.32px] text-white font-bold'>
               {data[0].field_heading}
             </h3>
-            <p className='lg:text-1xl  text-xl text-white mb-12'>
+            <p className='lg:text-[24px] text-[20px] text-white mb-12'>
               {data[0].field_home_page_subheading}
             </p>
           </div>

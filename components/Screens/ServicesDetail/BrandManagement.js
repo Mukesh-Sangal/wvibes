@@ -6,7 +6,7 @@ import urlExtractor from 'utils/urlExtractor'
 const BrandManagement = ({ data, imgDom }) => {
   // console.log(data, 'Brand management')
   return (
-    <div className='container'>
+    <div className='container lg:py-24'>
       <div className='lg:flex lg:flex-wrap justify-between lg:py-8 py-4'>
         <div className={`${data[0].field_image_position !== '' ? 'order-2 ' : ''} basis-[48%]`}>
           <div className='w-11/12'>
@@ -20,13 +20,13 @@ const BrandManagement = ({ data, imgDom }) => {
         </div>
         <div className='basis-[44%] lg:mt-0 mt-10'>
           <div>
-            <h1 className='lg:text-xl text-base text-[#52697a] font-bold'>
+            <h1 className='lg:text-[20px] text-base text-[#52697a] font-bold'>
               {data[0].field_banner_title_1}
             </h1>
-            <h2 className='lg:text-3xl text-1xl text-blue font-bold'>
+            <h2 className='lg:text-[38px] text-[24px] text-blue font-bold'>
               {data[0].field_home_page_subheading}
             </h2>
-            <p className='lg:text-1xl text-xl text-[#52697a] mt-4 lg:mb-20 mb-8'>
+            <p className='lg:text-[24px]  text-[18px] text-[#52697a] mt-4 lg:mb-20 mb-8'>
               {data[0].field_desc_2}
             </p>
             <div className='lg:mb-16 mb-8'>

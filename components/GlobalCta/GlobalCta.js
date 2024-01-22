@@ -8,9 +8,9 @@ const GlobalCta = ({data}) => {
     <div className='cta-bg'>
       <div class='left-gradient'></div>
       <div class='right-gradient'></div>
-      <div class='container z-1 relative py-16'>
+      <div class='container z-1 relative py-16 pb-24'>
         <div className='lg:w-2/4 w-full'>
-          <h1 className='lg:text-3xl text-1-xl text-white font-bold'>
+          <h1 className='lg:text-[38px] text-1-xl text-white font-bold'>
             {data[0].field_global_cta_title}
           </h1>
           <p className='lg:text-1xl text-lg text-white'>
@@ -19,7 +19,7 @@ const GlobalCta = ({data}) => {
           <div className='mt-8'>
             <Link
               href={urlExtractor(data[0].field_global_cta_link)[1]}
-              className='bg-white lg:text-lg text-base p-4 text-blue rounded font-bold'
+              className='bg-white lg:text-lg text-base py-4 px-7 text-blue rounded font-bold'
             >
               {urlExtractor(data[0].field_global_cta_link)[0]}
             </Link>

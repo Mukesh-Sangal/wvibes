@@ -343,3 +343,12 @@ main.__className_e66fe9 {
   transform: matrix(0.93, 0, -0.44, 1, 0, 0);
   z-index: 0;
 }
+hr {
+  border: 0;
+  border-top: 1px solid #c2ced6;
+  height: 0;
+  line-height: 1;
+  margin: 1.6em 0;
+  width: 100%;
+  z-index: 50;
+}
