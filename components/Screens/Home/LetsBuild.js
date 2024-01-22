@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import urlExtractor from 'utils/urlExtractor'
+import ScrollIcon from '../../ScrollIcon/ScrollIcon'
 const LetsBuild = ({ data, imgDom }) => {
   // console.log(data,'Lets')
   return (
@@ -19,7 +20,8 @@ const LetsBuild = ({ data, imgDom }) => {
           width='1920'
           height='1080'
         /> */}
-        <div className='image-bg back'>
+        <div className='image-bg back parachute'>
+          {/* <ScrollIcon/> */}
           <div className='container flex flex-wrap spacing gap-60 h-full bef-img relative'>
             <div className='flex items-center justify-between'>
               <div className='heading lg:w-[55%] w-full xl:w-1/3 2xl:w-[41%]'>

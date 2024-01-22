@@ -21,6 +21,12 @@ async function getPageData(apiPageUrl) {
     'Our Team': `https://dev-growwives.pantheonsite.io/our-team/`,
     'About lando today': `https://dev-growwives.pantheonsite.io/about-start-with-lando/`,
     'Technologies We Serve': `https://dev-growwives.pantheonsite.io/tech-we-serve/`,
+    'Services Banner': `https://dev-growwives.pantheonsite.io/services-banner/`,
+    'Services Counter Main': `https://dev-growwives.pantheonsite.io/services-counter/`,
+    'Services Digital Asset Management': `https://dev-growwives.pantheonsite.io/content-management/`,
+    'Management Paragraph': `https://dev-growwives.pantheonsite.io/brand-text-block/`,
+    'Brand Management at Scale': `https://dev-growwives.pantheonsite.io/brand-management/`,
+    'Global Cta': `https://dev-growwives.pantheonsite.io/global-cta/`,
   }
   //  console.log(result.data,'result')
   let { data } = result
@@ -37,8 +43,9 @@ async function getPageData(apiPageUrl) {
       // Handle the error as needed
     }
   }
+  // console.log(results);
   return results
   // Now 'results' array contains the data for each object
   // console.log('Fetched data:', results)
 }
-export default getPageData;
+export default getPageData

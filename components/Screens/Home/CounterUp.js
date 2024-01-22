@@ -6,7 +6,7 @@ import VisibilitySensor from 'react-visibility-sensor'
 // import 'aos/dist/aos.css'
 const CounterUp = ({ data, imgDom }) => {
   // console.log(data);
-  console.log(data, 'Improving')
+  // console.log(data, 'Improving')
   const [viewPortEntered, setViewPortEntered] = useState(false)
   // useEffect(() => {
   //   Aos.init({ duration: 600, disable: 'mobile', once: true })

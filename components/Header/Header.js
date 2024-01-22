@@ -29,6 +29,10 @@ function Header() {
       title: 'Contact Us',
       url: '/contact',
     },
+    {
+      title: 'Services Detail',
+      url: '/servicesdetail',
+    },
   ]
   const closeMenu = () => {
     setIsOpen(false)

@@ -20,7 +20,7 @@ module.exports = {
         bannerhead: '#F5F5F5',
         red: '#C52633',
         red1: '#DE5151',
-        blue: '#00598E',
+        blue: '#232c61',
         dark: '#000000',
         dark1: '#2f353b',
         light: '#0000008D',
@@ -82,7 +82,5 @@ module.exports = {
       '2xl': '1536px',
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
+  plugins: [require('@tailwindcss/forms')],
 }
