@@ -8,7 +8,7 @@ const AboutUs = ({data}) => {
           <h1 className='md:text-3xl text-2xl font-bold text-black  pb-6'>
             {data[0].field_title}
           </h1>
-          <h2 className='text-1xl font-medium px-12'>{data[0].field_desc}</h2>
+          <h2 className='text-1xl font-medium lg:px-12 '>{data[0].field_desc}</h2>
         </div>
         <div className='w-full'>
           <Image

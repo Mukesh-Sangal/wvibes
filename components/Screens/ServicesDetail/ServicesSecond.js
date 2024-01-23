@@ -48,7 +48,7 @@ const ServicesSecond = ({ data, imgDom }) => {
         ))}
       </div>
       {data[0].field_grid_columns !== '' && (
-        <hr className='container lg:w-[75%] w-[95%] m-auto pb-24' />
+        <hr className='container lg:w-[80%] w-[95%] m-auto pb-16' />
       )}
     </>
   )

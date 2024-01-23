@@ -3,7 +3,7 @@ import React from 'react'
 const Paragraph = ({data}) => {
 //  console.log(data, 'Paragraph')
   return (
-    <div className='container lg:my-24 my-8'>
+    <div className='container lg:my-24 my-16'>
       <hr />
       <div className='lg:my-12 my-3'>
         <h1 className='text-blue lg:text-[38px] md:text-[27px] text-1xl mb-2 font-bold'>

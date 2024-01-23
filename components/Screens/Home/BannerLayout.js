@@ -7,7 +7,7 @@ export default function BannerLayout({ data }) {
   // console.log(data, 'Services Page');
   return (
     <div
-      className='lg:h-[90vh] flex h-screen bg-no-repeat bg-cover relative
+      className='lg:h-[90vh] flex h-screen bg-no-repeat bg-center bg-cover relative
 '
       style={{ backgroundImage: bgImg }}
     >

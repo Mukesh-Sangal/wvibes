@@ -1,20 +1,35 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React,  { useEffect } from 'react'
 import urlExtractor from 'utils/urlExtractor'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const BrandManagement = ({ data, imgDom }) => {
   // console.log(data, 'Brand management')
+  useEffect(() => {
+    Aos.init({ duration: 600, disable: 'mobile', once: true })
+  })
   return (
-    <div className='container lg:py-24'>
+    <div className='container lg:py-24 py-16'>
       <div className='lg:flex lg:flex-wrap justify-between lg:py-8 py-4'>
-        <div className={`${data[0].field_image_position !== '' ? 'order-2 ' : ''} basis-[48%]`}>
+        <div
+          className={`${
+            data[0].field_image_position !== '' ? 'order-2 ' : ''
+          } basis-[48%]`}
+        >
           <div className='w-11/12'>
             <Image
               src={`${imgDom}${data[0].field_banner_image}`}
               width={1920}
               height={500}
-              alt="brand"
+              alt='brand'
+              data-aos-offset='120'
+              data-aos={`${
+                data[0].field_image_position !== '' ? 'fade-left' : 'fade-right'
+              }`}
+              data-aos-duration='1000'
+              data-aos-easing='ease-in-out'
             />
           </div>
         </div>
