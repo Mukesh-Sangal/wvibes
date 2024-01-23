@@ -5,7 +5,7 @@ const TechBanner = ({ data, imgDom }) => {
   return (
     <div className='container spacing '>
       <div className='grid grid-cols-2 h-full place-items-center'>
-        <div>
+        <div className='lg:pr-24 pr-12 '>
           <h1 className='xl:text-5xl md:text-3xl text-xl font-bold text-black mb-4'>
             {data[0].field_home_banner_title}
           </h1>

@@ -4,7 +4,7 @@ const AboutUs = ({data}) => {
   return (
     <div className='container spacing bg-white'>
       <div className='grid lg:grid-cols-2 grid-cols-1 lg:gap-28 gap-14'>
-        <div className=' text-center'>
+        <div className='text-center'>
           <h1 className='md:text-3xl text-2xl font-bold text-black  pb-6'>
             {data[0].field_title}
           </h1>
