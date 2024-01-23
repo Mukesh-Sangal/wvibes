@@ -4,7 +4,7 @@ import React from 'react'
 const HireaDrupalDeveloper = ({data}) => {
   return (
     <div className='container spacing flex lg:flex-nowrap flex-wrap xl:gap-0 gap-6'>
-      <div className='flex justify-between lg:flex-col lg:w-auto	w-full'>
+      <div className='flex justify-between items-baseline	 lg:flex-col lg:w-auto	w-full'>
         <div className='md:w-auto w-[60%]'>
           <h1 className='font-bold xl:text-4xl md:text-2xl text-1-xl'>
             {data[0].field_cta_section_heading}
