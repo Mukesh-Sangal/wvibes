@@ -8,7 +8,7 @@ const TopFooter = (props) => {
     <div className='container'>
       <div className='banner flex flex-wrap justify-between align-center pt-20'>
         <div className='basis-[100%] font-bold flex flex-wrap justify-between'>
-          <h1 className='lg:text-4xl md:text-1-xl lg:basis-[60%] basis-[100%] '>
+          <h1 className='lg:text-4xl text-1-xl lg:basis-[60%] basis-[100%] '>
             {props.title}
           </h1>
           <Link href='/contact'>
@@ -25,7 +25,7 @@ const TopFooter = (props) => {
             height={250}
             priority
             loading='eager'
-            className='max-w-[100%] w-[100%]  h-[250px] ml-auto object-cover'
+            className='max-w-[100%] w-[100%] h-[250px] ml-auto object-contain'
           />
         </div>
       </div>

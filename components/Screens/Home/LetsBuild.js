@@ -23,13 +23,13 @@ const LetsBuild = ({ data, imgDom }) => {
         <div className='image-bg back parachute'>
           {/* <ScrollIcon/> */}
           <div className='container flex justify-center items-center spacing h-full bef-img relative'>
-            <div className='flex flex-wrap  justify-center lg:gap-x-16 lg:gap-y-0 gap-y-11 items-center'>
-              <div className='heading 2xl:w-[41%] lg:w-[50%] w-[80%]'>
+            <div className='flex flex-wrap justify-center lg:gap-x-16 lg:gap-y-0 gap-y-11 items-center'>
+              <div className='heading 2xl:w-[41%] lg:w-[50%] w-[100%]'>
                 <header className='font-bold lg:text-4xl text-1-xl text-white'>
                   {data[0].field_lets_build_head}
                 </header>
               </div>
-              <div className='titles grid grid-cols-2 content-between md:gap-y-8 md:gap-x-12 gap-y-8 gap-x-3 lg:w-[40%] w-[80%]'>
+              <div className='titles grid grid-cols-2 content-between md:gap-y-8 md:gap-x-12 gap-y-8 gap-x-3 lg:w-[40%] w-[100%]'>
                 {data.map((item, index) => (
                   <Link
                     className='font-medium lg:text-1-xl text-1xl items-start  text-white'
