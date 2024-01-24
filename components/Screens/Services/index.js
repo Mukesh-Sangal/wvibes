@@ -51,7 +51,7 @@ const Services = () => {
             case 'Box layout':
               return (
                 <div key={index} className='container spacing'>
-                  <h2 className='text-center lg:mb-20 mb-5 font-bold lg:text-4xl md:text-3xl text-1-xl'>
+                  <h2 className='text-center lg:mb-20 mb-5 font-bold lg:text-4xl text-1-xl'>
                     {item[0].field_section_1_services}
                   </h2>
                   <div className='flex items-stretch flex-wrap'>

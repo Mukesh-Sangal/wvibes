@@ -22,17 +22,17 @@ const LetsBuild = ({ data, imgDom }) => {
         /> */}
         <div className='image-bg back parachute'>
           {/* <ScrollIcon/> */}
-          <div className='container flex flex-wrap spacing gap-60 h-full bef-img relative'>
-            <div className='flex flex-wrap items-center'>
-              <div className='heading lg:w-[55%] w-full xl:w-1/3 2xl:w-[41%]'>
-                <header className='font-bold xl:text-4xl text-2xl text-white'>
+          <div className='container flex justify-center items-center spacing h-full bef-img relative'>
+            <div className='flex flex-wrap  justify-center lg:gap-x-16 lg:gap-y-0 gap-y-11 items-center'>
+              <div className='heading 2xl:w-[41%] lg:w-[50%] w-[80%]'>
+                <header className='font-bold lg:text-4xl text-1-xl text-white'>
                   {data[0].field_lets_build_head}
                 </header>
               </div>
-              <div className='titles grid grid-cols-2 content-between md:gap-y-8 md:gap-x-12 gap-y-8 gap-x-3 lg:w-auto w-[100%]'>
+              <div className='titles grid grid-cols-2 content-between md:gap-y-8 md:gap-x-12 gap-y-8 gap-x-3 lg:w-[40%] w-[80%]'>
                 {data.map((item, index) => (
                   <Link
-                    className='font-medium lg:text-2xl md:text-1-xl text-1xl items-start  text-white'
+                    className='font-medium lg:text-1-xl text-1xl items-start  text-white'
                     href={urlExtractor(item.field_lets_build_link)[1]}
                     key={index}
                   >
