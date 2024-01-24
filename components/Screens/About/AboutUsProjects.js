@@ -8,9 +8,9 @@ const AboutUsProjects = ({data}) => {
       style={{ backgroundImage: 'url(/aboutProject.png)' }}
     >
       <div className='about about-opacity'>
-        <div className='container spacing grid lg:grid-cols-4 grid-cols-2 h-full xl:gap-40 gap-16 content-center '>
+        <div className='container spacing grid lg:grid-cols-4 grid-cols-2 h-full xl:gap-30 gap-16 content-center '>
           {data.map((item, index) => (
-            <div className='font-bold text-white md:text-3xl text-2xl' key={index}>
+            <div className='font-bold text-white lg:text-4xl text-1-xl' key={index}>
               {item.field_portfolio_items}
             </div>
           ))}
