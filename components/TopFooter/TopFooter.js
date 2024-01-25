@@ -6,14 +6,14 @@ const TopFooter = (props) => {
   return (
     <div className='container'>
       <div className='banner flex flex-wrap justify-between align-center pt-20'>
-        <div className='relative'>
-          <div className='basis-[100%] font-bold flex flex-wrap justify-between'>
-            <h1 className='lg:text-4xl text-1-xl lg:basis-[60%] basis-[100%] '>
+        <div className='relative lg:mb-0 mb-12'>
+          <div className='font-bold flex flex-wrap justify-between'>
+            <h1 className='footer-title lg:text-4xl text-1-xl lg:basis-[60%] md:mb-0 mb-8 '>
               {props.title}
             </h1>
           </div>
           <Link
-            className='py-3 px-3 lg:absolute lg:top-8 lg:right-0 font-medium lg:text-1-xl text-1xl  border-2 rounded border-[#000] inline-block mt-2'
+            className='footer-link py-3 px-3 md:absolute lg:top-8 top:4 right-0 font-medium lg:text-1-xl text-1xl  border-2 rounded border-[#000] inline-block mt-2'
             href='/contact'
           >
             {props.link}

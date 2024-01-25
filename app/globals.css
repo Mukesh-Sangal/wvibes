@@ -312,3 +312,17 @@ hr {
   width: 100%;
   z-index: 50;
 }
+@media screen and (max-width: 991px) {
+  .footer-title{
+    width: 75%;
+  }
+  .footer-link {
+    top:0;
+    right:0
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer-title{
+    width: 100%;
+  }
+}

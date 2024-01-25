@@ -5,16 +5,16 @@ import Image from 'next/image'
 const TechWeServe = ({data, imgDom}) => {
   return (
     <div className='container spacing'>
-      <h1 className='lg:text-4xl text-2xl font-bold mb-10'>
+      <h1 className='lg:text-4xl text-2xl font-bold mb-10 heading-tech'>
         {data[0].field_title}
       </h1>
-      <div className='grid lg:grid-rows-4 grid-cols-1 lg:w-auto w-full lg:grid-flow-col lg:gap-24 gap-6 mb-8'>
+      <div className='grid lg:grid-rows-4 grid-cols-1 lg:w-auto w-full lg:grid-flow-col  lg:gap-y-0 gap-y-12 mb-8'>
         {data.map((item, index) => (
-          <div key={index} className='flex lg:gap-24 gap-8 items-center'>
-            <h2 className='lg:text-3xl text-1xl md:w-56 w-40'>
+          <div key={index} className='flex gap-8 justify-between lg:mb-12'>
+            <h2 className='lg:text-2xl text-1-xl font-bold md:w-56 w-40'>
               {item.field_tech_heading}
             </h2>
-            <div className='flex items-center content-center lg:gap-32 gap-12'>
+            <div className='flex items-center content-center lg:gap-32 md:gap-24 gap-8'>
               {item.field_tech_image_unlimited
                 .split(',')
                 .map((image, index) => (
