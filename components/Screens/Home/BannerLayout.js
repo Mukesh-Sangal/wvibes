@@ -32,7 +32,7 @@ export default function BannerLayout({ data }) {
           </div>
         </div>
       </div>
-      <div className='digital-transformation absolute bottom-0 left-0 w-full bg-[#009CDE] bg-opacity-25 lg:p-8 p-4'>
+      <div className='digital-transformation absolute bottom-0 left-0 w-full bg-[#009CDE] bg-opacity-50 lg:p-8 p-4'>
         <h1 className='text-white xl:text-3xl lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity'>
           {data[0].field_home_page_subheading}
         </h1>

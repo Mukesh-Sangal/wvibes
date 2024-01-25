@@ -6,7 +6,7 @@ const LetsStartTopNotch = ({data, imgDom}) => {
       <div className='grid md:grid-cols-2 grid-cols-1'>
         <div>
           <h1
-            className='font-bold text-black md:text-3xl text-2xl xl:w-[54%] md:w-[70%]'
+            className='font-bold text-black lg:text-4xl text-2xl xl:w-[54%] md:w-[70%]'
             dangerouslySetInnerHTML={{
               __html: data[0].field_title,
             }}

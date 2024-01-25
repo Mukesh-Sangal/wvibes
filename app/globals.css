@@ -24,7 +24,7 @@ main.__className_e66fe9 {
   background-color: rgba(106, 90, 205, 0.53);
 }
 .logo {
-  @apply relative before:content-[''] before:absolute xl:before:top-12 before:top-4 xl:before:left-56 before:right-0 lg:before:bottom-0 before:bg-[url('/drupal.png')]  before:bg-no-repeat before:bg-contain xl:before:w-40 xl:before:h-40 before:w-28 before:h-28 lg:before:left-48 before:left-44 before:bottom-32;
+  @apply relative before:content-[''] before:absolute xl:before:top-4 before:top-0 xl:before:left-56 before:right-0 lg:before:bottom-0 before:bg-[url('/drupal.png')]  before:bg-no-repeat before:bg-contain xl:before:w-40 xl:before:h-40 before:w-28 before:h-28 lg:before:left-48 before:left-44 before:bottom-32;
 }
 .power {
   @apply relative before:content-[''] before:absolute md:before:top-2 xl:before:right-0 md:before:right-14 before:right-0  before:top-[0.1rem] before:bottom-0 before:bg-[url('/icon-east.png')]  before:bg-no-repeat before:bg-contain before:w-8 before:h-8;
@@ -152,7 +152,7 @@ main.__className_e66fe9 {
 .mountains-white:after {
   content: '';
   position: absolute;
-  background-image: url(/mountain-green.png);
+  background-image: url(/white.svg);
   width: 500px;
   height: 295px;
   background-repeat: no-repeat;
@@ -164,7 +164,7 @@ main.__className_e66fe9 {
 .mountains-white:hover:after {
   content: '';
   position: absolute;
-  background-image: url(/mountain-green.png);
+  background-image: url(/white.svg);
   width: 500px;
   height: 295px;
   background-repeat: no-repeat;
@@ -277,46 +277,6 @@ main.__className_e66fe9 {
   100% {
     box-shadow: 1px 5px 2px #0077c0;
     transform: rotate(360deg);
-  }
-}
-.parachute::before {
-  content: '';
-  position: relative;
-  animation-name: para1;
-  animation-duration: infinite;
-  /* animation-iteration-count:4 ; */
-  /* animation-fill-mode: forwards; */
-  background-color: red;
-  /* background-size: cover; */
-  width: 300px;
-  height: 300px;
-  /* background-color: #2dbef3; */
-  z-index: 9999;
-}
-@keyframes para1 {
-  0% {
-    top: 0px;
-    right: 0px;
-  }
-  20% {
-    top: 20px;
-    right: 30px;
-  }
-  40% {
-    top: 40px;
-    right: 45px;
-  }
-  50% {
-    top: 60px;
-    right: 55px;
-  }
-  90% {
-    top: 80px;
-    right: 80px;
-  }
-  100% {
-    top: 100px;
-    right: 100px;
   }
 }
 .cta-bg {

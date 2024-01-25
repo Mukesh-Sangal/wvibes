@@ -5,7 +5,7 @@ import Image from 'next/image'
 const TechWeServe = ({data, imgDom}) => {
   return (
     <div className='container spacing'>
-      <h1 className='xl:text-6xl lg:text-4xl md:text-3xl text-2xl font-bold mb-10'>
+      <h1 className='lg:text-4xl text-2xl font-bold mb-10'>
         {data[0].field_title}
       </h1>
       <div className='grid lg:grid-rows-4 grid-cols-1 lg:w-auto w-full lg:grid-flow-col lg:gap-24 gap-6 mb-8'>
@@ -35,7 +35,7 @@ const TechWeServe = ({data, imgDom}) => {
       <div className='text-center mt-16'>
         <Link
           href='/contact'
-          className='text-[#dc248b] lg:text-2xl text-lg border-3 border-[#dc248b] p-4 font-bold'
+          className='text-[#dc248b] lg:text-2xl text-lg border-3 font-medium border-[#dc248b] p-4 rounded'
         >
           {data[0].field_section_link}
         </Link>

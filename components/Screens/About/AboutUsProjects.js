@@ -4,7 +4,7 @@ import React from 'react'
 const AboutUsProjects = ({data}) => {
   return (
     <div
-      className='bg-cover lg:h-[300px] h-[500px] relative'
+      className='bg-cover lg:h-[500px] h-[500px] relative'
       style={{ backgroundImage: 'url(/aboutProject.png)' }}
     >
       <div className='about about-opacity'>

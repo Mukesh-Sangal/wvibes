@@ -51,9 +51,6 @@ const Services = () => {
             case 'Box layout':
               return (
                 <div key={index} className='container spacing'>
-                  <h2 className='text-center lg:mb-20 mb-5 font-bold lg:text-4xl text-1-xl'>
-                    {item[0].field_section_1_services}
-                  </h2>
                   <div className='flex items-stretch flex-wrap'>
                     {item.map((el, i) => (
                       <div
@@ -118,11 +115,12 @@ const Services = () => {
                       </div>
                     ))}
                   </div>
-                  <div className='flex justify-center items-center lg:py-20 py-6'>
-                    <Link href='/contact'>
-                      <Button variant='outline' className='text-xl'>
-                        {item[0].field_section_link}
-                      </Button>
+                  <div className='flex justify-center items-center lg:py-8 py-4'>
+                    <Link
+                      className='py-3 px-3 font-medium lg:text-1-xl text-1xl border-2 rounded border-[#000] inline-block mt-2'
+                      href='/contact'
+                    >
+                      {item[0].field_section_link}
                     </Link>
                   </div>
                 </div>
@@ -139,14 +137,14 @@ const Services = () => {
               )
             case 'faq':
               return (
-                <div className='container text-center spacing' key={index}>
-                  <h2 className='text-center xl:mb-20 mb-12 font-bold lg:text-4xl md:text-3xl text-1-xl'>
+                <div className='container text-left spacing' key={index}>
+                  <h2 className='lg:text-center xl:mb-20 mb-12 font-bold lg:text-4xl text-1-xl'>
                     {item[0].field_faq_title}
                   </h2>
                   <Accordion
                     type='single'
                     collapsible
-                    className='w-full max-w-sm mx-auto'
+                    className='w-full max-w-xl mx-auto'
                   >
                     {item.map((el, i) => (
                       <AccordionItem value={`item-${i}`} key={`item-${i}`}>

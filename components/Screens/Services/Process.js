@@ -4,8 +4,9 @@ const Process = (props) => {
   return (
     <div>
       {props.desc !== '' ? (
+        <div className='lg:pb-20 pb-8'>
         <div className='container'>
-          <h2 className='mb-8 font-semibold lg:text-4xl text-1xl'>
+          <h2 className='mb-8 font-semibold lg:text-4xl text-1-xl'>
             {props.title}
           </h2>
           <p className='lg:text-1-xl text-1xl mb-10'>{props.desc}</p>
@@ -21,6 +22,7 @@ const Process = (props) => {
             ))}
           </div>
         </div>
+        </div>
       ) : (
         <div className='bg-black lg:py-20 py-8'>
           <div className='container'>
@@ -33,7 +35,7 @@ const Process = (props) => {
               <div className='lg:basis-[70%] basis-[100%] flex flex-wrap justify-between items-center'>
                 {props?.list.map((el, index) => (
                   <div
-                    className='lg:text-1-xl text-1xl font-[500] my-10 basis-[45%] text-white'
+                    className='lg:text-1-xl text-1xl font-[500] my-4 basis-[45%] text-white'
                     key={index}
                     dangerouslySetInnerHTML={{
                       __html: el,

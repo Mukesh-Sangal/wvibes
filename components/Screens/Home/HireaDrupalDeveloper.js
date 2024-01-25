@@ -3,8 +3,8 @@ import React from 'react'
 
 const HireaDrupalDeveloper = ({data}) => {
   return (
-    <div className='container spacing flex lg:flex-nowrap flex-wrap xl:gap-0 gap-6'>
-      <div className='flex justify-between flex-wrap items-baseline lg:flex-col lg:w-auto	w-full'>
+    <div className='container lg:py-28 py-12 justify-between flex lg:flex-nowrap flex-wrap xl:gap-0 gap-6'>
+      <div className='flex lg:w-[48%] justify-between flex-wrap items-baseline lg:flex-col'>
         <div className='md:w-auto lg:w-[60%] w-full'>
           <h1 className='font-bold xl:text-4xl md:text-2xl text-1-xl'>
             {data[0].field_cta_section_heading}
@@ -19,7 +19,7 @@ const HireaDrupalDeveloper = ({data}) => {
           </Link>
         </div>
       </div>
-      <div className='grid grid-cols-2 content-between 2xl:gap-y-14 lg:gap-y-8 2xl:gap-x-14 md:gap-y-8 gap-y-4 gap-x-8 lg:pt-0 pt-8'>
+      <div className='grid grid-cols-2 lg:w-[48%] w-full content-between lg:gap-y-8 2xl:gap-x-14 md:gap-y-8 gap-y-4 gap-x-8 lg:pt-0 pt-8'>
         {data.map((item, index) => (
           <div
             className='font-medium lg:text-1-xl text-1xl items-start'

@@ -8,16 +8,16 @@ const Footer = () => {
      url: '/',
    },
    {
-     title: 'Pricing',
-     url: '/pricing',
+     title: 'Our Services',
+     url: '/services',
    },
    {
      title: 'About us',
      url: '/about',
    },
    {
-     title: 'Contact',
-     url: '/contact',
+     title: 'Technologies',
+     url: '/technologies',
    },
    {
      title: 'Facebook',
@@ -43,6 +43,10 @@ const Footer = () => {
      title: 'Terms Of service',
      url: '/terms-and-conditions',
    },
+   {
+     title: 'Contact Us',
+     url: '/contact',
+   },
  ]
   return (
     <div className='container spacing flex flex-wrap md:gap-12 gap-8 bg-white'>
@@ -65,7 +69,7 @@ const Footer = () => {
             </ul>
           </div>
           <p className='md:text-1xl text-lg'>
-            2023© growibes All rights reserved.
+            2024© growibes All rights reserved.
           </p>
         </div>
     </div>

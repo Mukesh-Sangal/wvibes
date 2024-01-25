@@ -3,13 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 const TechBanner = ({ data, imgDom }) => {
   return (
-    <div className='container spacing '>
+    <div className='container lg:py-24 py-16'>
       <div className='grid grid-cols-2 h-full place-items-center'>
-        <div className='lg:pr-24 pr-12 '>
+        <div className='lg:pr-24 pr-4 '>
           <h1 className='xl:text-5xl md:text-3xl text-xl font-bold text-black mb-4'>
             {data[0].field_home_banner_title}
           </h1>
-          <p className='lg:text-1xl text-base font-bold text-[#dc248b] mb-3'>
+          <p className='lg:text-1xl text-base font-bold text-[#dc248b] mb-8'>
             {data[0].field_home_page_subheading}
           </p>
           <div className='flex w-full items-start text-center flex-wrap lg:gap-8 gap-2'>

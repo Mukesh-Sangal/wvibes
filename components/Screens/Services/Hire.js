@@ -4,7 +4,7 @@ import { Button } from '../../../components/ui/button'
 
 const Hire = (props) => {
   return (
-    <div className='bg-sky-600 py-8'>
+    <div className='bg-sky-600 lg:py-24 py-12 '>
       <div className='container'>
         <div className='flex flex-wrap justify-between items-start'>
           <div className='xl:basis-[25%] basis-[100%]'>

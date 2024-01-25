@@ -6,15 +6,15 @@ const StartWithLando = ({data, imgdom}) => {
     <div className='container spacing'>
       <div className='grid lg:grid-cols-2 grid-cols-1 gap-8 h-full place-items-center '>
         <div className='pl-26'>
-          <h1 className='md:text-3xl text-2xl font-bold mb-4 xl:w-[70%]'>
+          <h1 className='md:text-4xl text-2xl font-bold mb-4 xl:w-[70%]'>
             {data[0].field_title}
           </h1>
-          <p className='lg:text-1xl text-lg mb-12'>
+          <p className='lg:text-2xl text-1-xl mb-12'>
             {data[0].field_home_page_subheading}
           </p>
           <Link
             href='/contact'
-            className='bg-[#3164f4] text-white text-lg font-bold rounded px-6 py-4'
+            className='bg-white border-2 border-black font-medium lg:text-1-xl text-1xl text-black rounded px-6 py-4'
           >
             {data[0].field_cta_link}
           </Link>

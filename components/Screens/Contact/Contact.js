@@ -62,7 +62,7 @@ const Contact = () => {
   }, [phoneValue])
 
   return (
-    <section className='container spacing'>
+    <section className='container lg:py-24 py-16'>
       <div className='grid md:grid-cols-2 grid-cols-1'>
         <article className='w-full h-full'>
           <Image src='/digital.png' width={1920} height={100} className='h-full object-cover' 

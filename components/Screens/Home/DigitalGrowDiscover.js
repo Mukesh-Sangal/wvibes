@@ -47,7 +47,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
                 </div>
               </div>
               <div
-                className='font-bold xl:text-2xl lg:text-1xl text-xl pt-4'
+                className='font-bold xl:text-2xl text-[#5856d6] lg:text-1xl text-xl pt-4'
                 dangerouslySetInnerHTML={{
                   __html: item.field_home_services_subheading,
                 }}
@@ -56,7 +56,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
               </div>
               {item.field_text_services && (
                 <div
-                  className='font-bold xl:text-2xl lg:text-1xl text-xl pt-4'
+                  className='font-bold xl:text-2xl lg:text-1xl text-[#5856d6] text-xl pt-4'
                   dangerouslySetInnerHTML={{
                     __html: item.field_text_services,
                   }}
@@ -67,7 +67,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
             </div>
           ))}
         </div>
-        <div className='text-center w-full pt-12 font-bold text-white relative'>
+        <div className='text-center w-full pt-12 font-medium text-white relative'>
           <Link
             href='/contact'
             className='px-6 py-3 border-2 rounded inline-block xl:text-2xl lg:text-1-xl text-xl'
