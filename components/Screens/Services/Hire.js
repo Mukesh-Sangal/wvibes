@@ -22,7 +22,7 @@ const Hire = (props) => {
               </Link>
             </p>
           </div>
-          <div className='xl:basis-[70%] basis-[100%]  flex flex-wrap justify-between items-center'>
+          <div className='xl:basis-[70%] basis-[100%]  flex flex-wrap justify-between'>
             {props?.list.map((el, index) => (
               <div
                 className='lg:text-1-xl text-1xl font-[500] my-5 basis-[45%] w-[250px] text-white'

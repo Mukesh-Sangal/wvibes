@@ -32,7 +32,7 @@ const Process = (props) => {
                   {props.title}
                 </h2>
               </div>
-              <div className='lg:basis-[70%] basis-[100%] flex flex-wrap justify-between items-center'>
+              <div className='lg:basis-[70%] basis-[100%] flex flex-wrap justify-between '>
                 {props?.list.map((el, index) => (
                   <div
                     className='lg:text-1-xl text-1xl font-[500] my-4 basis-[45%] text-white'
