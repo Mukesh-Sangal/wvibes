@@ -9,9 +9,9 @@ const TechBanner = ({ data, imgDom }) => {
           <h1 className='xl:text-5xl md:text-3xl text-xl font-bold text-black mb-4'>
             {data[0].field_home_banner_title}
           </h1>
-          <p className='lg:text-1xl text-base font-bold text-[#dc248b] mb-8'>
+          {/* <p className='lg:text-1xl text-base font-bold text-[#dc248b] mb-8'>
             {data[0].field_home_page_subheading}
-          </p>
+          </p> */}
           <div className='flex w-full items-start text-center flex-wrap lg:gap-8 gap-2'>
             <Link
               className='md:p-4 p-2 lg:text-lg inline-block lg:w-52 w-40 text-base font-bold text-white bg-[#5856d6] rounded border-2 border-[#5856d6]'

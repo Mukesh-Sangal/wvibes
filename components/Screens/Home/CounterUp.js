@@ -50,7 +50,7 @@ const CounterUp = ({ data, imgDom }) => {
                       delayedCall
                     >
                       <span
-                        className='lg:text-4xl text-1-xl font-bold border-white rounded-full w-48 h-48 inline-flex items-center justify-center z-50 conic-gradient relative'
+                        className='circle lg:text-4xl text-1-xl font-bold border-white rounded-full w-48 h-48 inline-flex items-center justify-center z-50 conic-gradient relative'
                         ref={countUpRef}
                       />
                     </VisibilitySensor>

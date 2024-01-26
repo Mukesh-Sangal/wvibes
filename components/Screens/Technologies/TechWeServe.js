@@ -35,7 +35,7 @@ const TechWeServe = ({data, imgDom}) => {
       <div className='text-center mt-16'>
         <Link
           href='/contact'
-          className='text-[#dc248b] lg:text-2xl text-lg border-3 font-medium border-[#dc248b] p-4 rounded'
+          className='text-[#dc248b] lg:text-1-xl text-1xl border-3 font-medium border-[#dc248b] p-4 rounded'
         >
           {data[0].field_section_link}
         </Link>

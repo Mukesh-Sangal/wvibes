@@ -32,7 +32,7 @@ const ServicesBanner = ({ data, imgDom }) => {
           </div>
         </div>
         <div className='lg:basis-[49%] w-full  overflow-hidden lg:order-2 order-1'>
-          <div className='h-full'>
+          {/* <div className='h-full'>
             <Image
               src={`${imgDom}${data[0].field_banner_image}`}
               width={1000}
@@ -40,7 +40,7 @@ const ServicesBanner = ({ data, imgDom }) => {
               alt='Banner Image'
               className='w-full h-full object-contain'
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

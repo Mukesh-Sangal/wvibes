@@ -8,7 +8,7 @@ const LetsBuild = ({ data, imgDom }) => {
   return (
     <>
       <div
-        className='relative w-full flex items-center justify-center bg-fixed lg:min-h-[60vh] min-h-[80vh] bg-no-repeat bg-cover'
+        className='relative w-full flex items-center justify-center bg-fixed lg:min-h-[60vh] md:min-h-[40vh] min-h-[75vh] bg-no-repeat bg-cover'
         style={{
           backgroundImage: `url(${imgDom}${data[0].field_lets_build_image})`,
         }}

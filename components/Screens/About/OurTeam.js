@@ -7,7 +7,7 @@ const OurTeam = ({data,imgdom}) => {
         <h1 className='text-black font-bold text-center md:text-3xl text-2xl pb-6'>
           {data[0].field_title}
         </h1>
-        <p className='text-black text-center lg:text-2xl text-1-xl pb-12'>
+        <p className='text-black text-center text-1xl font-medium pb-12'>
           {data[0].field_home_page_subheading}
         </p>
         <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-12 gap-x-8 content-between'>

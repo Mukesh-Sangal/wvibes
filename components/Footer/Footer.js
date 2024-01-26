@@ -53,9 +53,9 @@ const Footer = () => {
         <div className='lg:basis-[25%] basis-[100%]'>
           <Image width={300} height={300} src='/logo.png' alt='footer-logo'/>
         </div>
-        <div className='footer-links lg:basis-[70%] basis-[100%] text-left lg:mt-8 mt-4'>
+        <div className='footer-links lg:basis-[70%] basis-[100%] text-left lg:mt-0 mt-4'>
           <div>
-            <ul className='grid lg:grid-rows-4 grid-rows-6 grid-flow-col gap-4 lg:mb-20 mb-10'>
+            <ul className='grid lg:grid-rows-4 grid-rows-6 grid-flow-col lg:gap-4 gap-1 lg:mt-4 lg:mb-16 mb-8'>
               {data.map((item, index) => (
                 <li
                   key={index}

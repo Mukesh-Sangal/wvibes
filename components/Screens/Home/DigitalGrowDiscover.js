@@ -18,7 +18,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
         <div className='items-container relative flex justify-between flex-wrap '>
           {data.map((item, index) => (
             <div
-              className='item services-item rounded py-7 px-3 bg-white flex items-center h-full lg:min-h-[395px] min-h-[300px] mb-4'
+              className='item services-item rounded py-7 px-3 bg-white flex items-start mt-4 h-full lg:min-h-[395px] min-h-[300px] mb-4'
               key={index}
             >
               <div>
@@ -37,7 +37,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
                   }`}
                 >
                   <h1
-                    className={` lg:text-1-xl text-1xl pt-6 font-bold`}
+                    className={` lg:text-1-xl text-1xl pt-6 font-bold w-64`}
                     dangerouslySetInnerHTML={{
                       __html: item.field_home_service_heading,
                     }}
@@ -47,7 +47,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
                 </div>
               </div>
               <div
-                className='font-bold xl:text-2xl text-[#5856d6] lg:text-1xl text-xl pt-4'
+                className='font-bold xl:text-2xl text-[#25AAE1] lg:self-center lg:text-1xl text-xl pt-4'
                 dangerouslySetInnerHTML={{
                   __html: item.field_home_services_subheading,
                 }}
@@ -56,7 +56,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
               </div>
               {item.field_text_services && (
                 <div
-                  className='font-bold xl:text-2xl lg:text-1xl text-[#5856d6] text-xl pt-4'
+                  className='font-bold xl:text-2xl lg:text-1xl text-[#25AAE1] lg:self-center text-xl'
                   dangerouslySetInnerHTML={{
                     __html: item.field_text_services,
                   }}

@@ -144,7 +144,7 @@ const Services = () => {
                   <Accordion
                     type='single'
                     collapsible
-                    className='w-full max-w-xl mx-auto'
+                    className='w-full lg:w-4/6 mx-auto'
                   >
                     {item.map((el, i) => (
                       <AccordionItem value={`item-${i}`} key={`item-${i}`}>

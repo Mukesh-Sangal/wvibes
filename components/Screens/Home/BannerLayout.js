@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import {bgImg} from './BannerImage'
 import Link from 'next/link'
+import urlExtractor from 'utils/urlExtractor'
 
 export default function BannerLayout({ data }) {
   // console.log(data, 'Services Page');
@@ -32,10 +33,22 @@ export default function BannerLayout({ data }) {
           </div>
         </div>
       </div>
-      <div className='digital-transformation absolute bottom-0 left-0 w-full bg-[#009CDE] bg-opacity-50 lg:p-8 p-4'>
-        <h1 className='text-white xl:text-3xl lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity'>
+      <div className='digital-transformation absolute bottom-0 justify-center flex gap-8 left-0 w-full bg-[#009CDE] bg-opacity-50 lg:p-8 p-4'>
+        {/* <h1 className='text-white xl:text-3xl lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity'>
           {data[0].field_home_page_subheading}
-        </h1>
+        </h1> */}
+        <Link
+          href={urlExtractor(data[0].field_banner_drupal_development)[1]}
+          className='text-white xl:text-3xl lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity drupal-development relative'
+        >
+          {urlExtractor(data[0].field_banner_drupal_development)[0]}
+        </Link>
+        <Link
+          href={urlExtractor(data[0].field_banner_digital_transformat)[1]}
+          className='text-white xl:text-3xl lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity'
+        >
+          {urlExtractor(data[0].field_banner_digital_transformat)[0]}
+        </Link>
       </div>
     </div>
   )
