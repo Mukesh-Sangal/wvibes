@@ -53,7 +53,7 @@ const BrandManagement = ({ data, imgDom }) => {
                       <Link
                         key={linkIndex}
                         href={url}
-                        className='bg-blue lg:text-lg text-base p-4 text-white rounded font-bold'
+                        className='brand-expertise'
                       >
                         {text}
                       </Link>

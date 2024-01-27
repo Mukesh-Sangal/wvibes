@@ -352,3 +352,12 @@ hr {
   .active.accordion-header {
     color: #fff !important;
   }
+  .button-primary {
+    @apply text-center bg-[#dc248b] font-bold border-[#dc248b] text-white lg:text-lg text-base p-4 transition-all duration-500 ease-in-out hover:border-[#dc248b] border hover:bg-white hover:text-[#dc248b];
+  }
+  .brand-expertise {
+    @apply text-center bg-blue border-blue text-white transition-all ease-out duration-500 hover:border-blue border hover:bg-white hover:text-blue lg:text-lg text-base p-4 rounded font-bold;
+  }
+  .brand-expertise-reverse {
+    @apply text-center bg-white border-white text-blue transition-all ease-out duration-500 hover:border-white border hover:bg-blue hover:text-white lg:text-lg text-base p-4 rounded font-bold;
+  }

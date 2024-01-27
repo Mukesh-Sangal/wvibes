@@ -19,7 +19,7 @@ const GlobalCta = ({data}) => {
           <div className='mt-8'>
             <Link
               href={urlExtractor(data[0].field_global_cta_link)[1]}
-              className='bg-white lg:text-lg text-base py-4 px-7 text-blue rounded font-bold'
+              className='brand-expertise-reverse'
             >
               {urlExtractor(data[0].field_global_cta_link)[0]}
             </Link>

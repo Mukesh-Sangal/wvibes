@@ -19,7 +19,7 @@ const ImageTitleLink = ({ data, imgDom }) => {
             {data.map((item, index) => (
               <Link
                 href={urlExtractor(item.field_cta_link)[1]}
-                className='bg-white lg:text-lg text-base p-4 text-blue rounded font-bold'
+                className="  button-primary "
                 key={index}
               >
                 {/* {data[0].field_cta_link} */}
