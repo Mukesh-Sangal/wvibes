@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-const OurTeam = ({data,imgdom}) => {
+const OurTeam = ({ data, imgdom }) => {
   return (
     <div className='container lg:pb-60 pb-30 lg:pt-30 pt-12 bg-white'>
       <div className=''>

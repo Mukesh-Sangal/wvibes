@@ -65,7 +65,7 @@ const Contact = () => {
 
   return (
     <>
-    <ContactBanner title="Contact Us"/>
+      <ContactBanner title='Contact Us' />
       <section className='container lg:py-24 py-16'>
         <div className='grid md:grid-cols-2 grid-cols-1'>
           <article className='w-full h-full'>
@@ -168,8 +168,8 @@ const Contact = () => {
                   disabled={submit || formStatus?.status === 'fetching'}
                   value={
                     formStatus?.status === 'fetching'
-                      ? 'SUBMITTING...'
-                      : 'Send Message'
+                      ? 'Submitting...'
+                      : 'Send Mmessage'
                   }
                 ></input>
               </div>
@@ -180,11 +180,11 @@ const Contact = () => {
         <p className='lg:mt-20 mt-2 text-[#030303] lg:text-1-xl text-1xl text-center'>
           Lets Connect to take a leap forward towards your digital growth
         </p>
-        <h2 className='lg:mt-16 mt-12 mb-12 text-center  lg:text-4xl text-1xl font-bold '>
-          Office Addresses
-        </h2>
-        <Accordion />
       </section>
+      <h2 className='lg:mt-12 mt-8 mb-12 text-center  lg:text-4xl text-1xl font-bold '>
+        Office Addresses
+      </h2>
+      <Accordion />
     </>
   )
 }
