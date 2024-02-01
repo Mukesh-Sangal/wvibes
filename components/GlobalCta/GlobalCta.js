@@ -3,7 +3,6 @@ import React from 'react'
 import urlExtractor from 'utils/urlExtractor'
 
 const GlobalCta = ({data}) => {
- console.log(data, 'Cta Items');
   return (
     <div className='cta-bg'>
       <div class='left-gradient'></div>

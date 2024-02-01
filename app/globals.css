@@ -73,6 +73,7 @@ main.__className_e66fe9 {
   width: 100%;
   display: flex;
   justify-content: space-between;
+    gap: 0 40px !important;
   padding-left: calc(10px + (160 - 10) * ((100vw - 375px) / (1920 - 375)));
   padding-right: calc(10px + (160 - 10) * ((100vw - 375px) / (1920 - 375)));
 }

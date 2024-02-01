@@ -6,7 +6,7 @@ const TechGrow = ({ data, imgDom }) => {
   return (
     <div className='relative w-full flex items-center justify-center'>
       <Image
-        className='2xl:h-[60vh] lg:h-[65vh] md:h-[65vh] h-[90vh] w-full object-cover flex items-center justify-center'
+        className='2xl:h-[65vh] lg:h-[80vh] md:h-[65vh] h-[90vh] w-full object-cover flex items-center justify-center'
         src={`${imgDom}/${data[0].field_lets_build_image}`}
         width={1920}
         height={500}
@@ -27,7 +27,7 @@ const TechGrow = ({ data, imgDom }) => {
               </div>
             ))}
           </div>
-          <div className='text-right mt-8'>
+          <div className='text-right mt-8 mb-8'>
             <Link
               className='text-white rounded border-2 font-medium lg:text-1-xl text-1xl p-4'
               href='/contact'

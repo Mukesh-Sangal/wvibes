@@ -18,7 +18,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
         <div className='items-container relative flex justify-between flex-wrap '>
           {data.map((item, index) => (
             <div
-              className='item services-item rounded py-7 px-3 bg-white flex items-start mt-4 h-full lg:min-h-[395px] min-h-[300px] mb-4'
+              className='item services-item rounded py-7 bg-white flex items-start mt-4 h-full xl:min-h-[395px] lg:min-h-[300px] mb-4'
               key={index}
             >
               <div>
@@ -37,7 +37,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
                   }`}
                 >
                   <h1
-                    className={` lg:text-1-xl text-1xl pt-6 font-bold w-64`}
+                    className={` xl:text-1-xl text-1xl pt-6 font-bold xl:w-64 md:w-48`}
                     dangerouslySetInnerHTML={{
                       __html: item.field_home_service_heading,
                     }}
