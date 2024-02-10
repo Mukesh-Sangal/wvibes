@@ -8,6 +8,7 @@ import 'react-phone-number-input/style.css'
 import Accordion from '../../Accordion'
 import { isValidPhoneNumber } from 'react-phone-number-input'
 import axios from 'axios'
+import ContactLocation from './ContactLocation'
 const Contact = () => {
   const [phoneValue, setPhoneValue] = useState()
   const [isValidNumber, setIsValidNumber] = useState(false)
@@ -169,7 +170,7 @@ const Contact = () => {
                   value={
                     formStatus?.status === 'fetching'
                       ? 'Submitting...'
-                      : 'Send Mmessage'
+                      : 'Send message'
                   }
                 ></input>
               </div>
@@ -181,6 +182,7 @@ const Contact = () => {
           Lets Connect to take a leap forward towards your digital growth
         </p>
       </section>
+      <ContactLocation />
       <h2 className='lg:mt-12 mt-8 mb-12 text-center  lg:text-4xl text-1xl font-bold '>
         Office Addresses
       </h2>

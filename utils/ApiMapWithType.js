@@ -27,6 +27,7 @@ async function getPageData(apiPageUrl) {
     'Management Paragraph': `https://dev-growwives.pantheonsite.io/brand-text-block/`,
     'Brand Management at Scale': `https://dev-growwives.pantheonsite.io/brand-management/`,
     'Global Cta': `https://dev-growwives.pantheonsite.io/global-cta/`,
+    'Office Location': `https://dev-growwives.pantheonsite.io/office-locations/`,
   }
   //  console.log(result.data,'result')
   let { data } = result
