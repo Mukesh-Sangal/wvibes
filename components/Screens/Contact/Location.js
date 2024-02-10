@@ -4,7 +4,7 @@ import React from 'react'
 const Location = ({data, imgDom}) => {
  console.log(data,'LOC')
   return (
-    <div className='bg-blue p-16'>
+    <div className='bg-[#0020f6] p-16'>
       <h1 className='lg:text-4xl text-white pb-8 font-bold text-2xl text-left container'>
         {data[0].field_location_title}
       </h1>
