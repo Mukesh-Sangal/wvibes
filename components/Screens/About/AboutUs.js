@@ -5,10 +5,10 @@ const AboutUs = ({data}) => {
     <div className='container lg:py-24 py-14  bg-white'>
       <div className='grid lg:grid-cols-2 grid-cols-1 lg:gap-28 gap-14 items-center'>
         <div className='text-left'>
-          <h1 className='md:text-3xl text-2xl font-bold text-black  pb-6'>
+          <h1 className='md:text-[38px] text-2xl font-bold text-black  pb-6'>
             {data[0].field_title}
           </h1>
-          <h2 className='text-1xl font-medium '>{data[0].field_desc}</h2>
+          <h2 className='text-[24px]'>{data[0].field_desc}</h2>
         </div>
         <div className='w-full'>
           <Image

@@ -117,7 +117,7 @@ const Services = () => {
                   </div>
                   <div className='flex justify-center items-center lg:py-8 py-4'>
                     <Link
-                      className='py-3 px-3 font-medium lg:text-1-xl text-xl border-2 rounded border-[#000] inline-block mt-2'
+                      className='py-3 px-3 font-medium lg:text-[20px] text-xl border-2 rounded border-[#000] inline-block mt-2'
                       href='/contact'
                     >
                       {item[0].field_section_link}

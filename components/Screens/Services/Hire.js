@@ -15,7 +15,7 @@ const Hire = (props) => {
               <Link href='/contact'>
                 <Button
                   variant='outline'
-                  className='bg-[transparent] text-white my-10'
+                  className='bg-[transparent] text-white text-[20px] my-10'
                 >
                   {props.link}
                 </Button>
@@ -25,7 +25,7 @@ const Hire = (props) => {
           <div className='xl:basis-[70%] basis-[100%]  flex flex-wrap justify-between'>
             {props?.list.map((el, index) => (
               <div
-                className='lg:text-1-xl text-1xl font-[500] my-5 basis-[45%] w-[250px] text-white'
+                className='lg:text-[38px] text-1xl font-[500] my-5 basis-[45%] w-[250px] text-white'
                 key={index}
               >
                 {el[props.value]}

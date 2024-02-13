@@ -1,8 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import urlExtractor from 'utils/urlExtractor'
 const DigitalGrowDiscover = ({ data, imgDom}) => {
-  // console.log(data, 'Digital')
+  console.log(data, 'Digital')
   return (
     <div
       className='bg-cover relative w-full bg-fixed digital-grow'
@@ -47,21 +48,51 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
                 </div>
               </div>
               <div
-                className='font-bold xl:text-2xl text-[#25AAE1] lg:self-center lg:text-1xl text-xl pt-4'
-                dangerouslySetInnerHTML={{
-                  __html: item.field_home_services_subheading,
-                }}
+                className=' xl:text-2xl lg:self-center lg:text-1xl text-xl pt-4 text-left'
+                // dangerouslySetInnerHTML={{
+                //   __html: item.field_home_services_subheading,
+                // }}
               >
-                {/* {item.field_home_services_subheading} */}
+                {item.field_home_cta_subheading_link_i && (
+                  <div className='flex flex-wrap flex-col'>
+                    {item.field_home_cta_subheading_link_i
+                      .split(',')
+                      .map((link, linkIndex) => {
+                        const [text, url] = urlExtractor(link.trim())
+                        return (
+                          <Link
+                            key={linkIndex}
+                            href={url}
+                            className='xl:text-2xl hover:text-[#25AAE1] text-left lg:text-1xl text-xl '
+                          >
+                            {text}
+                          </Link>
+                        )
+                      })}
+                  </div>
+                )}
               </div>
-              {item.field_text_services && (
+              {item.field_text_subhead_link_item && (
                 <div
-                  className='font-bold xl:text-2xl lg:text-1xl text-[#25AAE1] lg:self-center text-xl'
-                  dangerouslySetInnerHTML={{
-                    __html: item.field_text_services,
-                  }}
+                  className=' xl:text-2xl lg:text-1xl lg:self-center text-xl'
+                  // dangerouslySetInnerHTML={{
+                  //   __html: item.field_text_services,
+                  // }}
                 >
-                  {/* {item.field_text_services} */}
+                  {item.field_text_subhead_link_item
+                    .split(',')
+                    .map((link, linkIndex) => {
+                      const [text, url] = urlExtractor(link.trim())
+                      return (
+                        <Link
+                          key={linkIndex}
+                          href={url}
+                          className='xl:text-2xl hover:text-[#25AAE1] text-left lg:text-1xl text-xl '
+                        >
+                          {text}
+                        </Link>
+                      )
+                    })}
                 </div>
               )}
             </div>

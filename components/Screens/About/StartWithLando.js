@@ -9,12 +9,12 @@ const StartWithLando = ({data, imgdom}) => {
           <h1 className='md:text-4xl text-2xl font-bold mb-4 xl:w-[70%]'>
             {data[0].field_title}
           </h1>
-          <p className='text-1xl font-medium mb-12'>
+          <p className='lg:text-[38px] text-1xl font-medium mb-12'>
             {data[0].field_home_page_subheading}
           </p>
           <Link
             href='/contact'
-            className='bg-white border-2 border-black font-medium lg:text-1-xl text-1xl text-black rounded px-6 py-4'
+            className='bg-white border-2 border-black font-medium lg:text-[20px] text-1xl text-black rounded px-6 py-4'
           >
             {data[0].field_cta_link}
           </Link>

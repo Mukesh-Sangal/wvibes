@@ -7,7 +7,7 @@ const InnerBanner = ({data}) => {
       style={{ backgroundImage: `url('/aboutBanner.png')` }}
     >
       <div className='container spacing flex items-center h-full'>
-        <h1 className='font-bold text-white 2xl:text-4xl lg:text-3xl md:text-2xl text-1-xl'>
+        <h1 className='font-bold text-white lg:text-4xl md:text-2xl text-1-xl'>
           {data[0].field_banner_title}
         </h1>
       </div>

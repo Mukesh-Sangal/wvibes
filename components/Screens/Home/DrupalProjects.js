@@ -63,7 +63,7 @@ const DrupalProjects = ({ data }) => {
               </CountUp>
             )}
 
-            <h1 className='font-bold lg:text-2xl text-1xl text-white'>
+            <h1 className=' lg:text-2xl text-1xl text-white'>
               {item.field_portfolio_items}
             </h1>
           </div>

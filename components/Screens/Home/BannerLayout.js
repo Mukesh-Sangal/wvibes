@@ -14,7 +14,7 @@ export default function BannerLayout({ data }) {
     >
       <div className='container flex items-center'>
         <div className=' p-6 md:p-0 w-full md:w-1/2'>
-          <h1 className='font-bold text-white lg:w-[80%] w-full md:w-full 2xl:text-4xl lg:text-3xl md:text-2xl text-1-xl leading-snug'>
+          <h1 className='font-bold text-white lg:w-[80%] w-full md:w-full lg:text-4xl md:text-2xl text-1-xl leading-snug'>
             {data[0].field_home_banner_title}
           </h1>
           <div className='banner_link flex justify-start lg:pt-8 pt-4 gap-9 '>

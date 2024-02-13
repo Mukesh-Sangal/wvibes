@@ -18,7 +18,7 @@ const TechDesign = ({ data }) => {
         <div className='grid lg:grid-cols-3 grid-cols-2 xl:gap-x-20 lg:gap-x-8 lg:gap-y-10 gap-6'>
           {data.map((item, index) => (
             <div
-              className={`lg:text-1-xl text-1xl font-bold ${
+              className={`lg:text-[38px] text-1xl font-bold ${
                 data[0].field_section_5 !== '' ? 'text-white' : 'text-black'
               }`}
               dangerouslySetInnerHTML={{
@@ -34,7 +34,7 @@ const TechDesign = ({ data }) => {
               data[0].field_section_5 !== ''
                 ? 'text-white border-white p-4'
                 : 'text-black border-black p-4'
-            } lg:text-1-xl text-1xl border-2 font-medium rounded`}
+            } lg:text-[20px] text-1xl border-2 font-medium rounded`}
             href='/contact'
           >
             Lets connect

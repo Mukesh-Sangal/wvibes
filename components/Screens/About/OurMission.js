@@ -7,7 +7,7 @@ const OurMission = ({data}) => {
         <h1 className='font-bold text-black lg:text-4xl text-2xl pb-8'>
           {data[0].field_title}
         </h1>
-        <p className=' text-black text-1xl font-medium pb-8'>
+        <p className='text-black text-[38px] font-medium pb-8'>
           {data[0].field_desc}
         </p>
         <hr />

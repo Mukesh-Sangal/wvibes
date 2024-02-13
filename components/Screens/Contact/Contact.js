@@ -80,13 +80,13 @@ const Contact = () => {
           </article>
           <article className='block lg:px-16 px-4 rounded w-full pb-10'>
             <form onSubmit={handleSubmit}>
-              <header className='heading-bar-bottom font-bold lg:text-3xl text-2xl'>
+              <header className='heading-bar-bottom font-bold lg:text-4xl text-2xl'>
                 Contact Us
               </header>
-              <p className='text-[#030303] lg:text-1xl text-xl'>
+              <p className='text-[#030303] lg:text-[38px] text-1xl'>
                 Explore the future with us.
               </p>
-              <p className='text-[#030303] lg:text-1xl text-xl mb-4'>
+              <p className='text-[#030303] lg:text-[38px] text-1xl mb-4'>
                 Feel free to get in touch.
               </p>
               {formStatus?.message && (
@@ -155,7 +155,7 @@ const Contact = () => {
                     name='message'
                   ></textarea>
                 </div>
-                <span className='md:mb-6 mb-2 text-[#030303] text-lg'>
+                <span className='md:mb-6 mb-2 text-[#030303] text-[24px]'>
                   How can we get better?
                 </span>
                 {/* <span className='md:mb-6 mb-2 text-formText text-sm'>
@@ -165,7 +165,7 @@ const Contact = () => {
               <div className='text-left'>
                 <input
                   type='submit'
-                  className={`font-medium lg:text-1-xl text-1xl border-2 rounded border-[#000] text-black py-3 px-3 mt-2`}
+                  className={`font-medium lg:text-[20px] text-1xl border-2 rounded border-[#000] text-black py-3 px-3 mt-2`}
                   disabled={submit || formStatus?.status === 'fetching'}
                   value={
                     formStatus?.status === 'fetching'
@@ -178,7 +178,7 @@ const Contact = () => {
             </form>
           </article>
         </div>
-        <p className='lg:mt-20 mt-2 text-[#030303] lg:text-1-xl text-1xl text-center'>
+        <p className='lg:mt-20 mt-2 text-[#030303] lg:text-1xl text-1xl text-center'>
           Lets Connect to take a leap forward towards your digital growth
         </p>
       </section>

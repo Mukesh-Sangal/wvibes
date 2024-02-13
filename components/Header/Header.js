@@ -138,7 +138,7 @@ function Header() {
                   {item.url ? (
                     <Link
                       href={item && item?.url}
-                      className={`px-1 relative lg:inline-block block lg:rounded-md lg:text-lg text-1-xl font-bold menu-link pt-3 pb-1 lg:border-0 border-solid lg:border-b-red lg:text-[#262626] text-white transition-all duration-300 ease-in-out hover:text-[#e91b72]
+                      className={`px-1 relative lg:inline-block block lg:rounded-md lg:text-[20px] text-1-xl font-bold menu-link pt-3 pb-1 lg:border-0 border-solid lg:border-b-red lg:text-[#262626] text-white transition-all duration-300 ease-in-out hover:text-[#e91b72]
                                             ${
                                               activeRoute(item?.url)
                                                 ? 'active lg:border-b-2 lg:border-solid lg:border-b-red lg:before:border-0  before:border-l-solid before:relative before:left-[-4px]'

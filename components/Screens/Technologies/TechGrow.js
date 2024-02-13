@@ -20,7 +20,7 @@ const TechGrow = ({ data, imgDom }) => {
           <div className='grid lg:grid-cols-3 grid-cols-2 xl:gap-x-28 lg:gap-x-14 gap-x-4  lg:gap-y-14 gap-y-10 '>
             {data.map((item, index) => (
               <div
-                className='md:text-1-xl text-1xl font-bold text-white'
+                className='md:text-[38px] text-1xl font-bold text-white'
                 key={index}
               >
                 {item.field_subhead}
@@ -29,7 +29,7 @@ const TechGrow = ({ data, imgDom }) => {
           </div>
           <div className='text-right mt-8 mb-8'>
             <Link
-              className='text-white rounded border-2 font-medium lg:text-1-xl text-1xl p-4'
+              className='text-white rounded border-2 font-medium lg:text-[20px] text-1xl p-4'
               href='/contact'
             >
               Lets connect

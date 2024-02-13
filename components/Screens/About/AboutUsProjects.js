@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const AboutUsProjects = ({data}) => {
-  console.log(data,"About Counter")
+  // console.log(data,"About Counter")
   return (
     <div
       className='bg-cover lg:h-[400px] h-[500px] relative'
@@ -11,12 +11,11 @@ const AboutUsProjects = ({data}) => {
       <div className='about about-opacity'>
         <div className='container spacing grid lg:grid-cols-4 grid-cols-2 h-full xl:gap-30 md:gap-16 gap-8 content-center '>
           {data.map((item, index) => (
-            <div className="flex flex-col font-bold">
-              <h1 className='lg:text-4xl text-2xl text-white'>{item.field_counter_up}</h1>
-              <div
-                className='font-bold text-white lg:text-2xl text-1-xl'
-                key={index}
-              >
+            <div className='flex flex-col ' key={index}>
+              <h1 className='lg:text-4xl font-bold text-2xl text-white'>
+                {item.field_counter_up}
+              </h1>
+              <div className='text-white lg:text-[38px] text-1-xl'>
                 {item.field_portfolio_items}
               </div>
             </div>
