@@ -53,8 +53,6 @@ module.exports = {
         '3xl': '3rem',
         '3xl-1': '3.5rem',
         '4xl': '4rem',
-        '5xl': '4.5rem',
-        '6xl': '6rem',
       },
       borderWidth: {
         3: '3px',

@@ -33,10 +33,7 @@ const TechWeServe = ({data, imgDom}) => {
         ))}
       </div>
       <div className='text-center mt-16'>
-        <Link
-          href='/contact'
-          className='text-[#dc248b] lg:text-[20px] text-1xl border-3 font-medium border-[#dc248b] p-4 rounded'
-        >
+        <Link href='/contact' className='button-primary-reverse'>
           {data[0].field_section_link}
         </Link>
       </div>

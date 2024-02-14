@@ -14,7 +14,7 @@ const TopFooter = (props) => {
               </h1>
             </div>
             <Link
-              className='footer-link py-3 px-3 md:absolute lg:top-8 top:4 right-0 font-medium lg:text-[20px] text-1xl  border-2 rounded border-[#000] inline-block mt-2'
+              className='footer-link transparent-buttons md:absolute lg:top-8 top:4 right-0 inline-block mt-2'
               href='/contact'
             >
               {props.link}

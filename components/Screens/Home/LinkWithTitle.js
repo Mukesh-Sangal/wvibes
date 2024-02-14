@@ -10,7 +10,7 @@ const LinkWithTitle = ({ data }) => {
             {data[0].field_help_agencies_title}
           </h1>
         </div>
-        <div className='w-[40%] text-end lg:mt-16 mt-6'>
+        <div className='md:w-[40%] text-end 2xl:mt-16 mt-6'>
           <Link
             href='/contact'
             className='py-3 px-3 font-medium lg:text-1-xl text-1xl border-2 rounded text-white'

@@ -11,7 +11,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
     >
       <div className='spacing'>
         <h1
-          className='container grow-dis relative xl:text-5xl lg:text-3xl text-1-xl font-bold text-white text-left lg:mb-12 mb-8'
+          className='container grow-dis relative lg:text-4xl text-1-xl font-bold text-white text-left lg:mb-12 mb-8'
           dangerouslySetInnerHTML={{
             __html: data[0].field_home_service_title,
           }}
@@ -99,10 +99,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
           ))}
         </div>
         <div className='text-center w-full pt-12 font-medium text-white relative'>
-          <Link
-            href='/contact'
-            className='px-6 py-3 border-2 rounded inline-block xl:text-2xl lg:text-1-xl text-xl'
-          >
+          <Link href='/contact' className='transparent-buttons-reverse'>
             {data[0].field_home_service_link}
           </Link>
         </div>

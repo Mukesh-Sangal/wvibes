@@ -12,10 +12,7 @@ const StartWithLando = ({data, imgdom}) => {
           <p className='lg:text-[38px] text-1xl font-medium mb-12'>
             {data[0].field_home_page_subheading}
           </p>
-          <Link
-            href='/contact'
-            className='bg-white border-2 border-black font-medium lg:text-[20px] text-1xl text-black rounded px-6 py-4'
-          >
+          <Link href='/contact' className='transparent-buttons'>
             {data[0].field_cta_link}
           </Link>
         </div>

@@ -5,33 +5,28 @@ import { Button } from '../../../components/ui/button'
 const Hire = (props) => {
   return (
     <div className='bg-sky-600 lg:py-24 py-12 '>
-      <div className='container'>
-        <div className='flex flex-wrap justify-between items-start'>
-          <div className='xl:basis-[25%] basis-[100%]'>
-            <h2 className='font-bold lg:text-4xl text-1-xl leading-[1.2] text-white'>
+      <div className='container justify-between flex lg:flex-nowrap flex-wrap xl:gap-0 gap-6'>
+        <div className='flex lg:w-[48%] justify-between flex-wrap items-baseline lg:flex-col'>
+          <div className='md:w-auto 2xl:w-[80%] w-full'>
+            <h1 className='font-bold text-white xl:text-4xl md:text-2xl text-1-xl'>
               {props.title}
-            </h2>
-            <p>
-              <Link href='/contact'>
-                <Button
-                  variant='outline'
-                  className='bg-[transparent] text-white text-[20px] my-10'
-                >
-                  {props.link}
-                </Button>
-              </Link>
-            </p>
+            </h1>
           </div>
-          <div className='xl:basis-[70%] basis-[100%]  flex flex-wrap justify-between'>
-            {props?.list.map((el, index) => (
-              <div
-                className='lg:text-[38px] text-1xl font-[500] my-5 basis-[45%] w-[250px] text-white'
-                key={index}
-              >
-                {el[props.value]}
-              </div>
-            ))}
+          <div className='lg:mt-0 mt-8'>
+            <Link className='hire-a-dedicated-button' href='/contact'>
+              {props.link}
+            </Link>
           </div>
+        </div>
+        <div className='grid grid-cols-2 lg:w-[48%] w-full content-between lg:gap-y-8 2xl:gap-x-14 md:gap-y-8 gap-y-4 gap-x-8 lg:pt-0 pt-8'>
+          {props?.list.map((el, index) => (
+            <div
+              className='lg:text-[38px] text-1xl text-white items-start'
+              key={index}
+            >
+              {el[props.value]}
+            </div>
+          ))}
         </div>
       </div>
     </div>

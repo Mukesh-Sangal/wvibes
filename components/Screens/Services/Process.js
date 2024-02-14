@@ -13,7 +13,7 @@ const Process = (props) => {
           <div className='flex flex-wrap justify-between items-center md:gap-0 gap-4'>
             {props?.list.map((el, index) => (
               <div
-                className='lg:text-[38px] text-1xl  font-bold mb-8 basis-[30%]'
+                className='lg:text-[38px] text-1xl mb-8 basis-[30%]'
                 key={index}
                 dangerouslySetInnerHTML={{
                   __html: el,
@@ -35,7 +35,7 @@ const Process = (props) => {
               <div className='lg:basis-[70%] basis-[100%] flex flex-wrap justify-between lg:pl-16'>
                 {props?.list.map((el, index) => (
                   <div
-                    className='lg:text-[38px] text-1xl font-[500] my-4 basis-[45%] text-white'
+                    className='lg:text-[38px] text-1xl my-4 basis-[45%] text-white'
                     key={index}
                     dangerouslySetInnerHTML={{
                       __html: el,
