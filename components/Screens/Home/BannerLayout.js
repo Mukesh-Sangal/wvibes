@@ -20,13 +20,13 @@ export default function BannerLayout({ data }) {
           <div className='banner_link flex justify-start lg:pt-8 pt-4 gap-9 '>
             <Link
               href='/contact'
-              className='text-white text-center font-bold 2xl:text-1-xl lg:text-1xl text-base 2xl:w-80 md:w-56 w-36  bg-[#DC248B] p-4  rounded'
+              className='text-white text-center font-bold 2xl:text-1-xl lg:text-1xl text-base 2xl:w-80 md:w-56 w-36  bg-[#DC248B] hover:border-[#dc248b] border-[#dc248b] hover:bg-white hover:text-[#dc248b] transition-all duration-500 ease-in-out p-4  rounded'
             >
               {data[0].field_home_banner_link}
             </Link>
             <Link
               href='/contact'
-              className='text-white text-center font-bold 2xl:text-1-xl lg:text-1xl text-base 2xl:w-80 md:w-56 w-36 bg-[#6A5ACD] p-4  rounded'
+              className='text-white text-center font-bold 2xl:text-1-xl lg:text-1xl text-base 2xl:w-80 md:w-56 w-36 bg-[#6A5ACD] hover:bg-white hover:text-[#6A5ACD] border-[#6A5ACD] hover:border-white p-4 transition-all duration-500 ease-in-out  rounded'
             >
               {data[0].field_home_banner_know_more_link}
             </Link>

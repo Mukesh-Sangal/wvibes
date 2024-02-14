@@ -106,7 +106,7 @@ const Contact = () => {
                 <div className='form-group md:mb-6 mb-2 mt-2'>
                   <input
                     type='text'
-                    className='form-control block w-full px-3 py-1.5 text-base font-normal text-formLabel bg-white bg-clip-padding border-inputborder transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:outline-none'
+                    className='input-border form-control block w-full  px-3 py-1.5 text-xl font-normal text-formLabel bg-white bg-clip-padding border-inputborder transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:outline-none'
                     name='full_name'
                     aria-describedby='full_name'
                     placeholder='Your Name*'
@@ -116,13 +116,13 @@ const Contact = () => {
                 <div className='form-group md:mb-6 mb-2'>
                   <input
                     type='email'
-                    className='form-control block w-full px-3 py-1.5 text-base font-normal text-formLabel bg-white bg-clip-padding  border-inputborder transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none'
+                    className='input-border form-control block w-full px-3 py-1.5 text-xl font-normal text-formLabel bg-white bg-clip-padding  border-inputborder transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none'
                     name='email'
                     placeholder='Email address*'
                     required
                   />
                 </div>
-                <div className='form-group md:mb-6 mb-2'>
+                <div className='form-group md:mb-6 text-xl mb-2'>
                   <PhoneInput
                     international
                     defaultCountry='IN'
@@ -132,7 +132,7 @@ const Contact = () => {
                     placeholder='Contact Number'
                     name='phone_number'
                     limitMaxLength='15  '
-                    className='PhoneInput form-control block w-full text-base font-normal text-formLabel bg-white bg-clip-padding border-inputborder transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none'
+                    className='input-border PhoneInput form-control block w-full text-xl font-normal text-formLabel bg-white bg-clip-padding border-inputborder transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none'
                   />
                   {phoneValue && (
                     <>
@@ -148,7 +148,7 @@ const Contact = () => {
                 </div>
                 <div className=' md:mb-6 mb-2'>
                   <textarea
-                    className='form-control block w-full px-3 py-1.5 text-base font-normal text-formLabel bg-white bg-clip-padding border border-solid border-inputborder transition ease-in-out m-0 focus:outline-none'
+                    className='form-control block w-full px-3 py-1.5 text-xl font-normal text-formLabel bg-white bg-clip-padding border border-solid border-inputborder transition ease-in-out m-0 focus:outline-none'
                     rows='5'
                     placeholder='Write your message here...*'
                     required
@@ -165,7 +165,7 @@ const Contact = () => {
               <div className='text-left'>
                 <input
                   type='submit'
-                  className={`font-medium lg:text-[20px] text-1xl border-2 rounded border-[#000] text-black py-3 px-3 mt-2`}
+                  className={`transparent-buttons`}
                   disabled={submit || formStatus?.status === 'fetching'}
                   value={
                     formStatus?.status === 'fetching'
