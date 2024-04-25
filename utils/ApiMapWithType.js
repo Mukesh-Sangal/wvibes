@@ -18,6 +18,7 @@ async function getPageData(apiPageUrl) {
     'About us First Section': `https://dev-growwives.pantheonsite.io/about-first/`,
     'Our Mission': `https://dev-growwives.pantheonsite.io/our-mission/`,
     'About Digital Experiences': `https://dev-growwives.pantheonsite.io/about-digital-experiences/`,
+    'Slider Component': `https://dev-growwives.pantheonsite.io/slider/`,
     'Our Team': `https://dev-growwives.pantheonsite.io/our-team/`,
     'About lando today': `https://dev-growwives.pantheonsite.io/about-start-with-lando/`,
     'Technologies We Serve': `https://dev-growwives.pantheonsite.io/tech-we-serve/`,

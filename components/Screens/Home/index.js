@@ -10,10 +10,12 @@ import LinkWithTitle from './LinkWithTitle'
 import HireaDrupalDeveloper from './HireaDrupalDeveloper'
 import DigitalGrowDiscover from './DigitalGrowDiscover'
 import TopFooter from '../../TopFooter/TopFooter'
+import SlideComponent from './SlideComponent'
 import { Skeleton } from '../../../components/ui/skeleton'
 const Home = () => {
   const [data, setData] = useState([])
   const backend_url = 'https://dev-growwives.pantheonsite.io'
+  console.log(data, 'Home')
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/home%20page`
@@ -52,6 +54,12 @@ const Home = () => {
               return (
                 <div key={index}>
                   <LetsBuild data={item} imgDom={backend_url} />
+                </div>
+              )
+            case 'Slider Component':
+              return (
+                <div key={index}>
+                  <SlideComponent data={item} imgDom={backend_url} />
                 </div>
               )
             case 'Improve':

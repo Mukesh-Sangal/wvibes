@@ -4,7 +4,7 @@ import CountUp from 'react-countup'
 
 const DrupalProjects = ({ data }) => {
   const [viewPortEntered, setViewPortEntered] = useState(false)
-  console.log(data)
+  // console.log(data)
 
   return (
     <div className='bg-[#5856d6] main p-6 '>

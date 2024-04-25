@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import urlExtractor from 'utils/urlExtractor'
 const DigitalGrowDiscover = ({ data, imgDom}) => {
-  console.log(data, 'Digital')
+  // console.log(data, 'Digital')
   return (
     <div
       className='bg-cover relative w-full bg-fixed digital-grow'
