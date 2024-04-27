@@ -20,7 +20,7 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #c52633;
+  background: #e91b72;
   border-radius: 5px;
   transition: all ease 0.5s;
 }
@@ -184,25 +184,27 @@ main.__className_e66fe9 {
   content: '';
   position: absolute;
   background-image: url(/white.svg);
-  width: 500px;
-  height: 295px;
+  width: 295px;
+  height: 175px;
   background-repeat: no-repeat;
   background-size: cover;
   right: 0;
   bottom: 0;
   transition: transform 0.3s ease;
 }
-.mountains-white:hover:after {
-  content: '';
-  position: absolute;
-  background-image: url(/white.svg);
-  width: 500px;
-  height: 295px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  right: 0;
-  bottom: 0;
-  transition: transform 0.3s ease;
+@media screen and (min-width: 1024px) {
+  .mountains-white:hover:after {
+    content: '';
+    position: absolute;
+    background-image: url(/white.svg);
+    width: 500px;
+    height: 295px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 0;
+    bottom: 0;
+    transition: transform 0.3s ease;
+  }
 }
 
 .digital-grow:hover:after {
@@ -395,6 +397,9 @@ hr {
 .transparent-buttons {
   @apply py-3 px-3 font-medium lg:text-[20px] text-xl border-2 rounded border-[#000] inline-block mt-2 hover:bg-black hover:border-black hover:text-white transition-all duration-500 ease-in-out;
 }
+.slider-buttons {
+  @apply py-3 px-3 font-medium lg:text-[20px] text-xl border-2 rounded border-[#000] inline-block md:mt-24 mt-16 hover:bg-black hover:border-black hover:text-white transition-all duration-500 ease-in-out lg:ml-8 ml-4;
+}
 
 .transparent-buttons-reverse {
   @apply py-3 px-3 font-medium lg:text-[20px] text-xl border-2  rounded border-white inline-block mt-2 hover:border-white hover:bg-white hover:text-black transition-all duration-500 ease-in-out;
@@ -413,21 +418,6 @@ hr {
   border-right: 0;
   border-left: 0;
 }
-@media screen and (min-width: 1024px) {
- .swiper-slide {
-   width: 33.33% !important;
- } 
-}
-@media screen and (min-width: 500px) and (max-width:1023px) {
- .swiper-slide {
-   width: 50% !important;
- } 
-}
-@media screen and (max-width: 499px) {
- .swiper-slide {
-   width: 100% !important;
- } 
-}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -438,7 +428,6 @@ hr {
   justify-content: center;
   align-items: center;
   margin-right: 0 !important;
-  
 }
 
 .swiper-slide img {
@@ -463,11 +452,30 @@ hr {
 }
 @media screen and (min-width: 768px) {
   .mySwiper {
-    padding-bottom: 9rem !important;
+    padding-bottom: 10rem !important;
   }
 }
 @media screen and (max-width: 767px) {
   .mySwiper {
     padding-bottom: 3rem !important;
   }
+}
+.swiper-wrapper {
+  position: relative;
+}
+.slider-arrow {
+  position: absolute;
+  z-index: 99;
+  cursor: pointer;
+}
+.swiper-button-prev {
+  left: 0;
+  top: 25%;
+}
+.swiper-button-next {
+  right: 0;
+  top: 25%;
+}
+.arrow-s {
+  fill: yellow;
 }

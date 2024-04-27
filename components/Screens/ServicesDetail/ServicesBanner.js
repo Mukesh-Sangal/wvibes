@@ -16,7 +16,7 @@ const ServicesBanner = ({ data, imgDom }) => {
             alt={data[0].title}
             width={100}
             height={100}
-            className='mb-4 mt-8 '
+            className='mb-4 lg:mt-8 mt-24'
           ></Image>
           <div className='desc'>
             <h1 className='lg:text-[50px] text-[36px] text-white font-bold mb-8 '>

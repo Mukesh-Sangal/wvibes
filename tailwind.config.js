@@ -41,6 +41,7 @@ module.exports = {
         menuColor: '#69727C',
         footer: '#f5f5f5',
         formText: '#555555',
+        yellows: '#FBEF3C',
       },
       fontSize: {
         sm: '0.75rem',

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef }  from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import urlExtractor from 'utils/urlExtractor'
@@ -11,13 +11,16 @@ import { useSwiper } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/free-mode'
 import 'swiper/css/pagination'
-import { FcPrevious, FcNext } from 'react-icons/fc'
+import { GrPrevious, GrNext } from 'react-icons/gr'
+
+
 
 const SlideComponent = ({ data, imgDom }) => {
    const swiper = useSwiper()
+   const swiperRef = useRef()
   return (
     <div className='bg-white  text-dark text-3xl'>
-      <div className='py-12 md:container'>
+      <div className='py-12 container'>
         <h1 className='md:text-4xl text-1-xl text-yellow-300 font-bold'>
           {data[0].field_slider_title}
         </h1>
@@ -28,14 +31,27 @@ const SlideComponent = ({ data, imgDom }) => {
       <Swiper
         slidesPerView={3}
         freeMode={true}
-        // pagination={{
-        //   clickable: true,
-        // }}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
         }}
-        navigation={true}
+        // pagination={{ el: '.swiper-pagination', clickable: true }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          clickable: true,
+        }}
         modules={[FreeMode, Autoplay, Navigation]}
         className='mySwiper lg:py-36'
       >
@@ -62,18 +78,17 @@ const SlideComponent = ({ data, imgDom }) => {
             </SwiperSlide>
           )
         })}
-        {/* <div className='slider-controler'>
-          <div className='swiper-button-prev slider-arrow'>
-            <FcPrevious />
-          </div>
-          <div className='swiper-button-next slider-arrow'>
-            <FcNext />
-          </div>
-          <div className='swiper-pagination'></div>
-        </div> */}
+
+        <div className='swiper-button-prev slider-arrow'>
+          <GrPrevious size={70} color={'yellow'} />
+        </div>
+        <div className='swiper-button-next slider-arrow'>
+          <GrNext size={70} color={'yellow'} />
+        </div>
+        <div className='swiper-pagination'></div>
         <Link
           href={urlExtractor(data[0].field_contact)[1]}
-          className='transparent-buttons lg:ml-8 lg:mt-16 ml-4 mt-8'
+          className='slider-buttons'
         >
           {urlExtractor(data[0].field_contact)[0]}
         </Link>
