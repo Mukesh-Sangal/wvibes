@@ -4,7 +4,7 @@ import Link from 'next/link'
 const TechBanner = ({ data, imgDom }) => {
   return (
     <div className='container lg:py-24 py-16'>
-      <div className='grid grid-cols-2 h-full place-items-center'>
+      <div className='grid grid-cols-2 h-full place-items-center lg:mt-0 mt-8'>
         <div className='lg:pr-24 pr-4 '>
           <h1 className='lg:text-4xl md:text-3xl text-xl font-bold text-black mb-4'>
             {data[0].field_home_banner_title}

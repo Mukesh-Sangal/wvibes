@@ -15,7 +15,7 @@ const DrupalProjects = ({ data }) => {
               <CountUp
                 start={viewPortEntered ? null : 0}
                 end={+`${item.field_counter_up}`}
-                duration={2.75}
+                duration={5.75}
                 suffix='%'
                 delay={0}
               >
@@ -40,7 +40,7 @@ const DrupalProjects = ({ data }) => {
               <CountUp
                 start={viewPortEntered ? null : 0}
                 end={+`${item.field_counter_up}`}
-                duration={2.75}
+                duration={4.75}
                 suffix='+'
                 delay={0}
               >

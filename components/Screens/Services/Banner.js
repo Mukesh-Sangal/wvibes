@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Banner = (props) => {
   return (
     <div className='container'>
-      <div className='banner flex flex-wrap justify-between align-center  lg:py-28 py-14'>
+      <div className='banner flex flex-wrap justify-between align-center lg:py-28 py-14 lg:mt-0 mt-12 '>
         <div className='basis-[60%] font-bold flex flex-col justify-center'>
           <h1 className='lg:text-4xl md:text-3xl text-1-xl'>{props.title}</h1>
         </div>
