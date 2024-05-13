@@ -116,18 +116,35 @@ main.__className_e66fe9 {
 .items-container > div:nth-child(5) {
   width: 54%;
   justify-content: space-around;
-  gap: 100px;
+  gap: 70px;
+  padding-left: 30px;
 }
 .items-container > div:nth-child(3),
 .items-container > div:nth-child(4) {
   width: 45%;
   justify-content: space-around;
+
 }
 .services-items > div:last-child {
   position: absolute;
 }
-.text-suuuuu {
-  position: absolute;
+@media screen and (min-width: 768px) {
+  .items-container > div:nth-child(1),
+.items-container div:nth-child(6)  {
+    background-color: rgba(127, 17, 224, 0.9);
+}
+.items-container > div:nth-child(3),
+.items-container > div:nth-child(4) {
+    background-color: rgba(97, 190, 237, 0.9);
+}
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .items-container > div:nth-child(3),
+  .items-container > div:nth-child(4),
+  .items-container > div:nth-child(2),
+  .items-container > div:nth-child(5) {
+    height: 210px;
+  }
 }
 @media screen and (max-width: 767px) {
   .items-container > div:nth-child(1),
@@ -142,9 +159,6 @@ main.__className_e66fe9 {
   }
   .items-container div:nth-child(n) > div {
     align-items: center;
-  }
-  .text-suuuuu {
-    position: unset;
   }
 }
 @media screen and (max-width: 768px) {

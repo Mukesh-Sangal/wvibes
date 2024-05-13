@@ -18,6 +18,7 @@ import { GrPrevious, GrNext } from 'react-icons/gr'
 const SlideComponent = ({ data, imgDom }) => {
    const swiper = useSwiper()
    const swiperRef = useRef()
+   console.log(data,'Product')
   return (
     <div className='bg-white  text-dark text-3xl'>
       <div className='py-12 container'>
@@ -61,7 +62,7 @@ const SlideComponent = ({ data, imgDom }) => {
           return (
             <SwiperSlide key={index}>
               <Link
-                href={urlExtractor(item.field_slider_link)[1]}
+                href={`/products/${urlExtractor(item.field_slider_link)[1]}`}
                 key={index}
                 className='Slider-hover text-black hover:text-yellow-300 relative text-left'
               >

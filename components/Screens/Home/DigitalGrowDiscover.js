@@ -19,26 +19,17 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
         <div className='items-container relative flex justify-between flex-wrap '>
           {data.map((item, index) => (
             <div
-              className='item services-item rounded py-7 bg-white flex items-start mt-4 h-full xl:min-h-[395px] lg:min-h-[300px] mb-4'
+              className='item services-item rounded py-7 bg-white flex items-center mt-4 h-full xl:min-h-[395px] lg:min-h-[300px] mb-4'
               key={index}
             >
               <div>
-                <div>
-                  <Image
-                    src={`${imgDom}${item.field_service_logo}`}
-                    width={100}
-                    height={100}
-                    alt='Image Discover'
-                    className='md:w-full'
-                  />
-                </div>
                 <div
                   className={`${
                     item.field_text_services.trim() == '' ? 'text-suuuuu' : ''
                   }`}
                 >
                   <h1
-                    className={` xl:text-1-xl text-1xl pt-6 font-bold xl:w-64 md:w-48`}
+                    className={` xl:text-2xl lg:text-1-xl text-1xl pt-6 font-bold xl:w-64 md:w-48`}
                     dangerouslySetInnerHTML={{
                       __html: item.field_home_service_heading,
                     }}
@@ -48,7 +39,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
                 </div>
               </div>
               <div
-                className=' xl:text-2xl lg:self-center lg:text-1xl text-xl pt-4 text-left'
+                className=' xl:text-1-xl lg:self-center lg:text-lg text-xl pt-4 text-left'
                 // dangerouslySetInnerHTML={{
                 //   __html: item.field_home_services_subheading,
                 // }}
@@ -63,7 +54,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
                           <Link
                             key={linkIndex}
                             href={url}
-                            className='xl:text-2xl hover:text-[#25AAE1] text-left lg:text-1xl text-xl '
+                            className='xl:text-2xl hover:text-[#25AAE1] text-left lg:text-1xl text-xl font-bold'
                           >
                             {text}
                           </Link>
@@ -87,7 +78,7 @@ const DigitalGrowDiscover = ({ data, imgDom}) => {
                         <Link
                           key={linkIndex}
                           href={url}
-                          className='xl:text-2xl hover:text-[#25AAE1] text-left lg:text-1xl text-xl '
+                          className='xl:text-2xl hover:text-[#25AAE1] text-left lg:text-1xl text-xl font-bold'
                         >
                           {text}
                         </Link>
