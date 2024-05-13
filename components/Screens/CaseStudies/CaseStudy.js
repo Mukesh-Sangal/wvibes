@@ -9,12 +9,17 @@ const CaseStudy = ({ data, imgDom }) => {
       const username = 'root' // Replace with your actual username
       const password = 'root' // Replace with your actual password
       const basicAuth = 'Basic ' + btoa(username + ':' + password)
+
+      // Fetch CSRF token dynamically
+      const csrfResponse = await fetch(`${imgDom}/session/token`)
+      const csrfToken = await csrfResponse.text()
       const headers = {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        'X-CSRF-Token': 'szJC88DuD0ncIhjySAH_QrqFLCcZTvyquq_-OMJAltk',
+        'X-CSRF-Token': csrfToken, // Use the fetched CSRF token
         Authorization: basicAuth, // Add the Authorization header
       }
+
       const promises = data.field_paragraph_reference.map(async (reference) => {
         const response = await axios.get(
           `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
@@ -22,8 +27,9 @@ const CaseStudy = ({ data, imgDom }) => {
         )
         return response.data
       })
+
       const fetchedData = await Promise.all(promises)
-      setParagraphData(fetchedData);
+      setParagraphData(fetchedData)
     } catch (error) {
       console.error('Error fetching data:', error)
     }

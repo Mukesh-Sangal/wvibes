@@ -22,7 +22,7 @@ export default function Products({ params }) {
 
   return (
     <div className='mt-[64px]'>
-      <CaseStudies data={data}/>
+      <CaseStudies data={data} imgDom={backend_url} />
     </div>
   )
 }
