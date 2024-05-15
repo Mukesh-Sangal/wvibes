@@ -62,7 +62,7 @@ const SlideComponent = ({ data, imgDom }) => {
           return (
             <SwiperSlide key={index}>
               <Link
-                href={`/casestudy/${urlExtractor(item.field_slider_link)[1]}`}
+                href={`/casestudy${urlExtractor(item.field_slider_link)[1]}`}
                 key={index}
                 className='Slider-hover text-black hover:text-yellow-300 relative text-left'
               >

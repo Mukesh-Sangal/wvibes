@@ -7,8 +7,11 @@ const ServicesSections = (props) => {
     >
       <h3
         className={`lg:text-[38px] text-1-xl ${props.color} lg:mb-10 mb-4 font-semibold`}
+        dangerouslySetInnerHTML={{
+          __html: props.title,
+        }}
       >
-        {props.title}
+        {/* {props.title} */}
       </h3>
       <p className={`md:text-1xl text-xl ${props.desColor} lg:mb-10 mb-4 `}>
         {props.desc}

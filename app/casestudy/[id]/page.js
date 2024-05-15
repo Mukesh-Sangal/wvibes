@@ -12,19 +12,20 @@ export default function Products({ params }) {
   // Fetch data based on the content ID
   const fetchData = async () => {
     try {
-       const apipageUrl = `${backend_url}/node/${params.id}?_format=json`
-       console.log(apipageUrl,'Api')
-       const res = await fetch(`${apipageUrl}`)
-       const apidata = await res.json()
-       setData(apidata)
-
+      // Fetch data based on the path alias instead of params.id
+      const apipageUrl = `${backend_url}/${params.id}?_format=json`
+      console.log(apipageUrl,'Api Url')
+      const res = await fetch(apipageUrl)
+      const apidata = await res.json()
+      setData(apidata)
     } catch (error) {
       console.error('Error fetching data:', error)
     }
   }
+
   useEffect(() => {
     fetchData()
-  }, [])
+  }, [params.id]) 
 
   return (
     <div className='mt-[64px]'>

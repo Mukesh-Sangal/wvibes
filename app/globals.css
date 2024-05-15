@@ -124,17 +124,24 @@ main.__className_e66fe9 {
   width: 45%;
   justify-content: space-around;
 }
+.items-container > div:nth-child(1),
+.items-container > div:nth-child(3),
+.items-container > div:nth-child(4),
+.items-container > div:nth-child(6)
+ {
+color:#fff;
+}
 .services-items > div:last-child {
   position: absolute;
 }
 
 .items-container > div:nth-child(1),
 .items-container div:nth-child(6) {
-  background-color: rgba(127, 17, 224, 0.9);
+  background-color: rgba(127, 17, 224, 0.6);
 }
 .items-container > div:nth-child(3),
 .items-container > div:nth-child(4) {
-  background-color: rgba(97, 190, 237, 0.9);
+  background-color: rgba(97, 190, 237, 0.6);
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .items-container > div:nth-child(3),
@@ -411,7 +418,7 @@ hr {
   @apply py-3 px-3 font-medium lg:text-[20px] text-xl border-2 rounded border-[#000] inline-block mt-2 hover:bg-black hover:border-black hover:text-white transition-all duration-500 ease-in-out;
 }
 .slider-buttons {
-  @apply py-3 px-3 font-medium lg:text-[20px] text-xl border-2 rounded border-[#000] inline-block md:mt-24 mt-16 hover:bg-black hover:border-black hover:text-white transition-all duration-500 ease-in-out lg:ml-8 ml-4;
+  @apply py-3 px-3 font-medium lg:text-[20px] text-xl border-2 rounded border-[#000] inline-block md:mt-24 mt-8 hover:bg-black hover:border-black hover:text-white transition-all duration-500 ease-in-out lg:ml-8 ml-4;
 }
 
 .transparent-buttons-reverse {
