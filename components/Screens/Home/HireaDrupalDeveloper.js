@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const HireaDrupalDeveloper = ({data}) => {
+const HireaDrupalDeveloper = ({ data }) => {
   return (
     <div className='container lg:py-28 py-12 justify-between flex lg:flex-nowrap flex-wrap xl:gap-0 gap-6'>
       <div className='flex lg:w-[48%] justify-between flex-wrap items-baseline lg:flex-col'>

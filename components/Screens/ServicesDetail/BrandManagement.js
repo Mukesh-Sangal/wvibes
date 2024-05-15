@@ -6,7 +6,6 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 
 const BrandManagement = ({ data, imgDom }) => {
-  // console.log(data, 'Brand management')
   useEffect(() => {
     Aos.init({ duration: 600, disable: 'mobile', once: true })
   })

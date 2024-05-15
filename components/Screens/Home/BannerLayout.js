@@ -5,7 +5,6 @@ import Link from 'next/link'
 import urlExtractor from 'utils/urlExtractor'
 
 export default function BannerLayout({ data }) {
-  // console.log(data, 'Services Page');
   return (
     <div
       className='lg:h-[90vh] flex h-[80vh] bg-no-repeat bg-center bg-cover relative

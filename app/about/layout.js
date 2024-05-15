@@ -15,7 +15,6 @@ export async function generateMetadata() {
       throw new Error(`Failed to fetch data. Status: ${response.status}`)
     }
     const product = await response.json()
-    console.log(product, 'Product')
     // Check if the product data is available and has the expected structure
     if (
       Array.isArray(product) &&

@@ -2,15 +2,8 @@ import React, { useState, useEffect } from 'react'
 import CountUp from 'react-countup'
 import Image from 'next/image'
 import VisibilitySensor from 'react-visibility-sensor'
-// import Aos from 'aos'
-// import 'aos/dist/aos.css'
 const CounterUp = ({ data, imgDom }) => {
-  // console.log(data);
-  // console.log(data, 'Improving')
   const [viewPortEntered, setViewPortEntered] = useState(false)
-  // useEffect(() => {
-  //   Aos.init({ duration: 600, disable: 'mobile', once: true })
-  // }, [])
   return (
     <>
       <section
@@ -27,11 +20,6 @@ const CounterUp = ({ data, imgDom }) => {
                 key={index}
                 className='mb-12 last:mb-0 lg:mb-0 flex flex-col justify-center items-center gap-5 p-7 '
               >
-                {/* <Image
-                  src={`${imgDom}/${detail.field_improve_icon}`}
-                  width={100}
-                  height={100}
-                /> */}
                 <CountUp
                   start={viewPortEntered ? null : 0}
                   end={+`${detail.field_counter}`}
@@ -59,8 +47,6 @@ const CounterUp = ({ data, imgDom }) => {
                 <h3 className='capitalize lg:text-2xl text-1xl text-white font-bold z-50'>
                   {detail.field_short_desc}
                 </h3>
-
-                {/* <p className='mt-6 text-base'>{detail.field_short_desc}</p> */}
               </li>
             ))}
           </ul>

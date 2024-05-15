@@ -2,12 +2,10 @@ import React from 'react'
 import Image from 'next/image';
 
 const ServicesBanner = ({ data, imgDom }) => {
-//  console.log(data, 'Services Banner Data');
 
   return (
     <div
       className='service-bef lg:p-12 lg:pl-8 relative'
-      // style={{ backgroundImage: `url('/services.png')` }}
     >
       <div className='container flex flex-wrap justify-between relative'>
         <div className='xl:basis-[33%] lg:basis-[45%] w-full lg:order-1 order-2'>
@@ -32,15 +30,6 @@ const ServicesBanner = ({ data, imgDom }) => {
           </div>
         </div>
         <div className='lg:basis-[49%] w-full  overflow-hidden lg:order-2 order-1'>
-          {/* <div className='h-full'>
-            <Image
-              src={`${imgDom}${data[0].field_banner_image}`}
-              width={1000}
-              height={1000}
-              alt='Banner Image'
-              className='w-full h-full object-contain'
-            />
-          </div> */}
         </div>
       </div>
     </div>

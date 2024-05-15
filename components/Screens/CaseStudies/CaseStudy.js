@@ -6,8 +6,8 @@ const CaseStudy = ({ data, imgDom }) => {
   // console.log(paragraphData, 'data of Paragraph')
   const fetchData = async () => {
     try {
-      const username = 'root' // Replace with your actual username
-      const password = 'root' // Replace with your actual password
+      const username = 'root'
+      const password = 'root'
       const basicAuth = 'Basic ' + btoa(username + ':' + password)
 
       // Fetch CSRF token dynamically

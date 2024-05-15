@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 
 const ServicesSecond = ({ data, imgDom }) => {
-  // console.log(data, 'Second Item')
   return (
     <>
       <div

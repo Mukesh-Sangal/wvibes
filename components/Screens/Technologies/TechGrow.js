@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 const TechGrow = ({ data, imgDom }) => {
-  console.log(data, 'Grow Tech')
   return (
     <div className='relative w-full flex items-center justify-center'>
       <Image

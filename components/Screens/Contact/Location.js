@@ -2,7 +2,6 @@ import Image from 'next/image'
 import React from 'react'
 
 const Location = ({data, imgDom}) => {
- console.log(data,'LOC')
   return (
     <div className='bg-[#25AAE1] p-16'>
       <h1 className='lg:text-4xl text-white pb-8 font-bold text-2xl text-left container'>

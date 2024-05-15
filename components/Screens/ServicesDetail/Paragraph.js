@@ -1,7 +1,6 @@
 import React from 'react'
 
-const Paragraph = ({data}) => {
-//  console.log(data, 'Paragraph')
+const Paragraph = ({ data }) => {
   return (
     <div className='container lg:my-24 my-16'>
       <hr />

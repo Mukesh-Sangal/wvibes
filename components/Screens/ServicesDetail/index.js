@@ -24,7 +24,6 @@ const ServicesDetail = () => {
       {data?.length ? (
         data.map((item, index) => {
           // Assuming each sub-array has only one object
-          // console.log(item, 'items')
           const dataToShow = item[0]?.type
           switch (dataToShow) {
             case 'Services Banner':

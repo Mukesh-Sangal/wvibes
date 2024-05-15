@@ -2,7 +2,6 @@ import Image from 'next/image'
 import React from 'react'
 
 const AboutUsProjects = ({data}) => {
-  // console.log(data,"About Counter")
   return (
     <div
       className='bg-cover lg:h-[400px] h-[500px] relative'

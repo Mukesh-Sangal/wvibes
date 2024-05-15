@@ -4,7 +4,6 @@ import urlExtractor from 'utils/urlExtractor'
 import Image from 'next/image'
 
 const ImageTitleLink = ({ data, imgDom }) => {
-  // console.log(data)
   return (
     <div className='bg-blue py-10'>
       <div className='container lg:flex lg:flex-wrap justify-center items-center py-12'>
@@ -22,7 +21,6 @@ const ImageTitleLink = ({ data, imgDom }) => {
                 className="  button-primary "
                 key={index}
               >
-                {/* {data[0].field_cta_link} */}
                 {urlExtractor(item.field_cta_link)[0]}
               </Link>
             ))}
