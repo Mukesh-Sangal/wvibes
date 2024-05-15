@@ -20,7 +20,7 @@ const CaseStudy = ({ data, imgDom }) => {
         Authorization: basicAuth, // Add the Authorization header
       }
 
-      const promises = data.field_paragraph_reference.map(async (reference) => {
+      const promises = data?.field_paragraph_reference?.map(async (reference) => {
         const response = await axios.get(
           `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
           { headers }

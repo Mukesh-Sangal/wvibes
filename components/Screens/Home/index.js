@@ -15,7 +15,7 @@ import { Skeleton } from '../../../components/ui/skeleton'
 const Home = () => {
   const [data, setData] = useState([])
   const backend_url = 'https://dev-growwives.pantheonsite.io'
-  console.log(data, 'Home')
+  // console.log(data, 'Home')
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/home%20page`

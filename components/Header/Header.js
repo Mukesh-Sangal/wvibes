@@ -73,7 +73,7 @@ function Header() {
       <nav className='relative'>
         <div className='lg:flex items-center container mx-auto px-5 py-2'>
           <div className='flex justify-between'>
-            <Link href='/' aria-label='Homepage'>
+            <Link href='/' aria-label='Homepage' onClick={closeMenu}>
               <Image
                 src='/logo.png'
                 className='h-14 image'
@@ -95,7 +95,7 @@ function Header() {
               <span className='sr-only'>Open main menu</span>
               {/* <!-- Icon when menu is closed. Heroicon name: outline/bars-3 Menu open: "hidden", Menu closed: "block"--> */}
               <svg
-                className='block h-6 w-6'
+                className='block h-12 w-12'
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
                 fill='none'
@@ -122,13 +122,15 @@ function Header() {
               isOpen ? 'open' : ''
             }`}
           >
-            <Image
-              src='/logo1.png'
-              className='lg:hidden mx-1 my-5 pl-3'
-              alt='logo'
-              height={100}
-              width={100}
-            />
+            <Link href='/' onClick={closeMenu}>
+              <Image
+                src='/logo1.png'
+                className='lg:hidden mx-1 my-5 pl-3'
+                alt='logo'
+                height={200}
+                width={200}
+              />
+            </Link>
             <ul className='flex  camelcase lg:px-0 px-3 mobile '>
               {menu.map((item, index) => (
                 <li
@@ -138,7 +140,7 @@ function Header() {
                   {item.url ? (
                     <Link
                       href={item && item?.url}
-                      className={`px-1 relative lg:inline-block block lg:rounded-md xl:text-[20px] text-xl font-bold menu-link pt-3 pb-1 lg:border-0 border-solid lg:border-b-[#FBEF3C] lg:text-[#262626] text-white transition-all duration-300 ease-in-out hover:text-[#e91b72]
+                      className={`px-1 relative lg:inline-block block lg:rounded-md xl:text-[20px] text-[20px] font-bold menu-link pt-3 pb-1 lg:border-0 border-solid lg:border-b-[#FBEF3C] lg:text-[#262626] text-white transition-all duration-300 ease-in-out hover:text-[#e91b72]
                                             ${
                                               activeRoute(item?.url)
                                                 ? 'active lg:border-b-2 lg:border-solid lg:border-b-[#FBEF3C]lg:before:border-0  before:border-l-solid before:relative before:left-[-4px]'
