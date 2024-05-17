@@ -1,14 +1,13 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-// import { useRouter } from 'next/router'
 import CaseStudies from '../../../components/Screens/CaseStudies'
 export default function Products({ params }) {
-  // const router = useRouter();
+
   const backend_url = 'https://dev-growwives.pantheonsite.io'
    const [data, setData] = useState([])
     console.log(data,'Cse Study Data')
-    //  const { id } = router.query
-     console.log(params.id, 'id of the data')
+  // Paramid recieved from the parameters
+    //  console.log(params.id, 'id of the data')
   // Fetch data based on the content ID
   const fetchData = async () => {
     try {

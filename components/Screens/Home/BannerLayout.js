@@ -13,13 +13,13 @@ export default function BannerLayout({ data }) {
     >
       <div className='container flex items-center'>
         <div className=' p-6 md:p-0 w-full md:w-1/2'>
-          <h1 className='font-bold text-white lg:w-[80%] w-full md:w-full lg:text-4xl md:text-2xl text-1-xl leading-snug'>
+          <h1 className='font-bold text-white lg:w-[80%] w-full md:w-full xl:text-4xl lg:text-3xl text-1-xl leading-snug'>
             {data[0].field_home_banner_title}
           </h1>
           <div className='banner_link flex justify-start lg:pt-8 pt-4 gap-9 '>
             <Link
               href='/contact'
-              className='text-white text-center font-bold 2xl:text-1-xl  border hover:border-1 lg:text-1xl text-base 2xl:w-80 md:w-56 w-36  bg-[#DC248B] hover:border-[#DC248B] border-[#dc248b] hover:bg-white hover:text-[#DC248B] transition-all duration-500 ease-in-out p-4  rounded'
+              className='text-white text-center font-bold 2xl:text-1-xl border hover:border-1 lg:text-1xl text-base 2xl:w-80 md:w-56 w-36  bg-[#DC248B] hover:border-[#DC248B] border-[#dc248b] hover:bg-white hover:text-[#DC248B] transition-all duration-500 ease-in-out p-4  rounded'
             >
               {data[0].field_home_banner_link}
             </Link>
@@ -32,19 +32,19 @@ export default function BannerLayout({ data }) {
           </div>
         </div>
       </div>
-      <div className='digital-transformation absolute bottom-0 justify-center flex gap-8 left-0 w-full bg-[#009CDE] bg-opacity-50 lg:p-8 p-4'>
+      <div className='digital-transformation absolute bottom-0 justify-center flex gap-8 left-0 w-full bg-[#009CDE] bg-opacity-50 p-4'>
         {/* <h1 className='text-white xl:text-3xl lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity'>
           {data[0].field_home_page_subheading}
         </h1> */}
         <Link
           href={urlExtractor(data[0].field_banner_drupal_development)[1]}
-          className='text-white xl:text-3xl lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity drupal-development relative'
+          className='text-white xl:text-[38px] lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity drupal-development relative'
         >
           {urlExtractor(data[0].field_banner_drupal_development)[0]}
         </Link>
         <Link
           href={urlExtractor(data[0].field_banner_digital_transformat)[1]}
-          className='text-white xl:text-3xl lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity'
+          className='text-white xl:text-[38px] lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity'
         >
           {urlExtractor(data[0].field_banner_digital_transformat)[0]}
         </Link>

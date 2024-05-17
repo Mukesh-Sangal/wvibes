@@ -46,7 +46,7 @@ const CaseStudy = ({ data, imgDom }) => {
       <h2 className='lg:text-4xl text-2xl font-bold text-dark mb-4'>
         {data?.field_para_subtitle[0]?.value}
       </h2>
-      <div className='grid md:grid-cols-2 grid-cols-1 pt-7 gap-32'>
+      <div className='grid md:grid-cols-2 grid-cols-1 pt-7 lg:gap-32 gap-12' >
         {paragraphData.map((item, index) => (
           <div className='' key={index}>
             <h2 className='text-dark text-1-xl font-bold pb-12'>

@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
+const withPWA = require("next-pwa")({
+    dest: "public",
+    register: true,
+});
 const nextConfig = {
-  // experimental: { appDir: true },
+  reactStrictMode: true,
   images: {
-    domains: ['dev-growwives.pantheonsite.io'],
+    domains: [process.env.NEXT_IMAGE_DOMAIN],
     minimumCacheTTL: 60,
   },
   trailingSlash: true,
