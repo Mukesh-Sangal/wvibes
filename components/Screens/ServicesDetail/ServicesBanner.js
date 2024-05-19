@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image';
 
 const ServicesBanner = ({ data, imgDom }) => {
-
   return (
     <div
       className='service-bef lg:p-12 lg:pl-8 relative'

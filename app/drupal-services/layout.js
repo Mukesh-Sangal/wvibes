@@ -6,7 +6,7 @@ export async function generateMetadata() {
   // Generate a random cache-busting query parameter
   const cacheBuster = Math.random()
   // Build the URL with the cache-busting parameter
-  const apiUrl = `https://dev-growwives.pantheonsite.io/node_title/digital%20services?cache=${cacheBuster}`
+  const apiUrl = `https://dev-growwives.pantheonsite.io/node_title/services?cache=${cacheBuster}`
   try {
     // Fetch data with the cache-busting parameter
     const response = await fetch(apiUrl)
@@ -35,7 +35,7 @@ export async function generateMetadata() {
     return null
   }
 }
-export default function ServicesdetailLayout({ children }) {
+export default function ServicesLayout({ children }) {
   return (
     <>
       <main className={inter.className}>{children}</main>

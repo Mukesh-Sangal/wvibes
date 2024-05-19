@@ -42,7 +42,7 @@ main.__className_e66fe9 {
   @apply before:content-[''] w-full h-full absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:opacity-['0.75'];
 }
 .service-bef {
-  @apply before:content-[''] w-full h-full before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('/services.png')] before:bg-no-repeat before:bg-cover before:mix-blend-overlay;
+  @apply before:content-[''] w-full h-full before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('/Servicebg.png')] before:bg-no-repeat before:bg-cover before:mix-blend-overlay;
 }
 .about {
   @apply before:content-[''] w-full h-full absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:opacity-['0.75'];

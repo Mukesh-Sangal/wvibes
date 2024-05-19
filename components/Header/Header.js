@@ -14,8 +14,12 @@ function Header() {
       url: '/',
     },
     {
-      title: 'Our Services',
+      title: 'Services',
       url: '/services',
+    },
+    {
+      title: 'Drupal Services',
+      url: '/drupal-services',
     },
     {
       title: 'About us',
@@ -28,10 +32,6 @@ function Header() {
     {
       title: 'Contact Us',
       url: '/contact',
-    },
-    {
-      title: 'Services Detail',
-      url: '/servicesdetail',
     },
   ]
   const closeMenu = () => {

@@ -7,7 +7,7 @@ const Location = ({data, imgDom}) => {
       <h1 className='lg:text-4xl text-white pb-8 font-bold text-2xl text-left container'>
         {data[0].field_location_title}
       </h1>
-      <div className='container grid lg:grid-cols-4 md:grid-cols-2  lg:gap-x-20 gap-y-24 '>
+      <div className='container grid lg:grid-cols-4 md:grid-cols-2  xl:gap-x-20 gap-8 gap-y-24 '>
         {data.map((item, index) => (
           <div key={index}>
             <div className='relative'>

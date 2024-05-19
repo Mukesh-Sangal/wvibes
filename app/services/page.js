@@ -1,9 +1,9 @@
 import React from 'react'
-import Services from '../../components/Screens/Services'
-export default function ServicesPage() {
+import ServicesDetail from '../../components/Screens/ServicesDetail'
+export default function Servicesdetail() {
   return (
     <div>
-      <Services />
+      <ServicesDetail />
     </div>
   )
 }
