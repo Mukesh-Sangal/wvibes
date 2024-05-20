@@ -18,9 +18,8 @@ const TechWeServe = ({data, imgDom}) => {
               {item.field_tech_image_unlimited
                 .split(',')
                 .map((image, index) => (
-                  <div>
+                  <div key={index}>
                     <Image
-                      key={index}
                       src={`${imgDom}/${image.trim()}`} // Remove leading/trailing spaces
                       width={100}
                       height={100}

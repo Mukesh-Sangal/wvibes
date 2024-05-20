@@ -22,12 +22,12 @@ function Header() {
       url: '/drupal-services',
     },
     {
-      title: 'About us',
-      url: '/about',
-    },
-    {
       title: 'Technologies',
       url: '/technologies',
+    },
+    {
+      title: 'About us',
+      url: '/about',
     },
     {
       title: 'Contact Us',
