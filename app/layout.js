@@ -9,7 +9,7 @@ export async function generateMetadata() {
   const cacheBuster = Math.random()
 
   // Build the URL with the cache-busting parameter
-  const apiUrl = `https://dev-growwives.pantheonsite.io/node_title/home%20page?cache=${cacheBuster}`
+  const apiUrl = `${process.env.NEXT_PUBLIC_DRUPAL_BASE_URL}/node_title/home%20page?cache=${cacheBuster}`
 
   try {
     // Fetch data with the cache-busting parameter

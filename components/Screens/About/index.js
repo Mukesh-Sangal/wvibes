@@ -11,7 +11,7 @@ import StartWithLando from './StartWithLando'
 import { Skeleton } from '../../../components/ui/skeleton'
 const About = () => {
   const [data, setData] = useState([])
-  const backend_url = 'https://dev-growwives.pantheonsite.io'
+  const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/about`
@@ -36,7 +36,7 @@ const About = () => {
             case 'About us First Section':
               return (
                 <div key={index}>
-                  <AboutUs data={item} />
+                  <AboutUs data={item} imgDom={backend_url} />
                 </div>
               )
             case 'Home Portfolio':

@@ -7,7 +7,6 @@ import { Skeleton } from '../../../components/ui/skeleton'
 
 const CaseStudies = ({ data, imgDom }) => {
   const [paragraphData, setParagraphData] = useState([])
-  const backendUrl = 'https://dev-growwives.pantheonsite.io'
   const fetchData = async () => {
     try {
       const username = 'root' // Replace with your actual username
@@ -23,7 +22,7 @@ const CaseStudies = ({ data, imgDom }) => {
       }
       const promises = data.field_case_study_ref.map(async (reference) => {
         const response = await axios.get(
-          `${backendUrl}/entity/paragraph/${reference.target_id}?_format=json`,
+          `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
           { headers }
         )
         return response.data
@@ -46,18 +45,12 @@ const CaseStudies = ({ data, imgDom }) => {
         paragraphData.map((paragraph, index) => {
           switch (paragraph.type[0].target_id) {
             case 'case_study_banner':
-              return <Banner key={index} data={paragraph} imgDom={backendUrl} />
+              return <Banner key={index} data={paragraph} imgDom={imgDom} />
             case 'case_study':
-              return (
-                <CaseStudy key={index} data={paragraph} imgDom={backendUrl} />
-              )
+              return <CaseStudy key={index} data={paragraph} imgDom={imgDom} />
             case 'case_study_text_and_disc':
               return (
-                <CaseStudyText
-                  key={index}
-                  data={paragraph}
-                  imgDom={backendUrl}
-                />
+                <CaseStudyText key={index} data={paragraph} imgDom={imgDom} />
               )
             default:
               return null

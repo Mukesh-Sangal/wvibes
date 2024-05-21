@@ -9,7 +9,7 @@ import TopFooter from '../../TopFooter/TopFooter'
 import { Skeleton } from '../../../components/ui/skeleton'
 const Technologies = () => {
   const [data, setData] = useState([])
-  const backend_url = 'https://dev-growwives.pantheonsite.io'
+  const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/technologies`

@@ -11,6 +11,7 @@ import axios from 'axios'
 import ContactLocation from './ContactLocation'
 const Contact = () => {
   const [phoneValue, setPhoneValue] = useState()
+  const backendUrl = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL;
   const [isValidNumber, setIsValidNumber] = useState(false)
   const [formStatus, setFormStatus] = useState({
     status: 'success | error | fetching',
@@ -25,7 +26,7 @@ const Contact = () => {
     setFormStatus({ status: 'fetching' })
     try {
       const response = await axios.post(
-        'https://dev-growwives.pantheonsite.io/webform_rest/submit',
+        `${backendUrl}/webform_rest/submit`,
         data,
         {
           headers: {

@@ -10,7 +10,7 @@ import Paragraph from './Paragraph'
 import { Skeleton } from '../../../components/ui/skeleton'
 const ServicesDetail = () => {
   const [data, setData] = useState([])
-  const backend_url = 'https://dev-growwives.pantheonsite.io'
+  const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/digital%20services`

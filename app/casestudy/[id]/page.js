@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import CaseStudies from '../../../components/Screens/CaseStudies'
 export default function Products({ params }) {
 
-  const backend_url = 'https://dev-growwives.pantheonsite.io'
+  const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
    const [data, setData] = useState([])
     console.log(data,'Cse Study Data')
   // Paramid recieved from the parameters

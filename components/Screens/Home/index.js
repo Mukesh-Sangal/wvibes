@@ -14,7 +14,7 @@ import SlideComponent from './SlideComponent'
 import { Skeleton } from '../../../components/ui/skeleton'
 const Home = () => {
   const [data, setData] = useState([])
-  const backend_url = 'https://dev-growwives.pantheonsite.io'
+  const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
   // console.log(data, 'Home')
   useEffect(() => {
     const fetchData = async () => {
