@@ -1,8 +1,7 @@
+// Load environment variables from a .env file into process.env
+require('dotenv').config()
+
 /** @type {import('next').NextConfig} */
-const withPWA = require("next-pwa")({
-    dest: "public",
-    register: true,
-});
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -10,6 +9,10 @@ const nextConfig = {
     minimumCacheTTL: 60,
   },
   trailingSlash: true,
+  experimental: {
+    workerThreads: false,
+    cpus: 1,
+  },
 }
 
 module.exports = nextConfig

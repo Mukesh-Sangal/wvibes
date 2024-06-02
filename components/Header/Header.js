@@ -14,16 +14,16 @@ function Header() {
       url: '/',
     },
     {
-      title: 'Services',
-      url: '/services',
+      title: 'Dxp',
+      url: '/dxp',
     },
     {
       title: 'Drupal Services',
       url: '/drupal-services',
     },
     {
-      title: 'Technologies',
-      url: '/technologies',
+      title: 'What We Do',
+      url: '/what-we-do',
     },
     {
       title: 'About us',

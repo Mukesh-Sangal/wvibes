@@ -4,12 +4,19 @@ const OurMission = ({data}) => {
   return (
     <div className='container spacing text-left'>
       <div className='w-full m-auto'>
-        <h1 className='font-bold text-black lg:text-4xl text-2xl pb-8'>
-          {data[0].field_title}
+        <h1
+          className='font-bold text-black lg:text-4xl text-2xl pb-8'
+          dangerouslySetInnerHTML={{
+            __html: data[0].field_title,
+          }}
+        >
         </h1>
-        <p className='text-black text-[38px] font-medium pb-8'>
-          {data[0].field_desc}
-        </p>
+        <p
+          className='text-black text-[38px] font-medium pb-8'
+          dangerouslySetInnerHTML={{
+            __html: data[0].field_desc,
+          }}
+        ></p>
         <hr />
       </div>
     </div>

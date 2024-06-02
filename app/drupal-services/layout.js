@@ -6,7 +6,7 @@ export async function generateMetadata() {
   // Generate a random cache-busting query parameter
   const cacheBuster = Math.random()
   // Build the URL with the cache-busting parameter
-  const apiUrl = `${process.env.NEXT_PUBLIC_DRUPAL_BASE_URL}/node_title/services?cache=${cacheBuster}`
+  const apiUrl = `${process.env.NEXT_PUBLIC_DRUPAL_BASE_URL}/node_title/drupal%20services?cache=${cacheBuster}`
   try {
     // Fetch data with the cache-busting parameter
     const response = await fetch(apiUrl)

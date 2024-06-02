@@ -8,7 +8,13 @@ const AboutUs = ({data, imgDom}) => {
           <h1 className='md:text-[38px] text-2xl font-bold text-black  pb-6'>
             {data[0].field_title}
           </h1>
-          <h2 className='text-[24px]'>{data[0].field_desc}</h2>
+          <h2
+            className='text-[24px]'
+            dangerouslySetInnerHTML={{
+              __html: data[0].field_desc,
+            }}
+          >
+          </h2>
         </div>
         <div className='w-full'>
           <Image

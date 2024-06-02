@@ -13,7 +13,7 @@ const ServicesDetail = () => {
   const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
   useEffect(() => {
     const fetchData = async () => {
-      const apiPageUrl = `${backend_url}/node_title/digital%20services`
+      const apiPageUrl = `${backend_url}/node_title/services`
       const apis = await getPageData(apiPageUrl)
       setData(apis)
     }

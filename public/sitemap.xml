@@ -6,27 +6,27 @@
       xmlns:xhtml="http://www.w3.org/1999/xhtml">
       
 	<url>
-		<loc>https://wvibes-tx65.vercel.app/about</loc>
-		<lastmod>2024-05-20</lastmod>
+		<loc>http://localhost:3000/about</loc>
+		<lastmod>2024-06-02</lastmod>
 	</url>
 
 	<url>
-		<loc>https://wvibes-tx65.vercel.app/contact</loc>
-		<lastmod>2024-05-20</lastmod>
+		<loc>http://localhost:3000/contact</loc>
+		<lastmod>2024-06-02</lastmod>
 	</url>
 
 	<url>
-		<loc>https://wvibes-tx65.vercel.app/drupal-services</loc>
-		<lastmod>2024-05-20</lastmod>
+		<loc>http://localhost:3000/drupal-services</loc>
+		<lastmod>2024-06-02</lastmod>
 	</url>
 
 	<url>
-		<loc>https://wvibes-tx65.vercel.app/services</loc>
-		<lastmod>2024-05-20</lastmod>
+		<loc>http://localhost:3000/dxp</loc>
+		<lastmod>2024-06-02</lastmod>
 	</url>
 
 	<url>
-		<loc>https://wvibes-tx65.vercel.app/technologies</loc>
-		<lastmod>2024-05-20</lastmod>
+		<loc>http://localhost:3000/what-we-do</loc>
+		<lastmod>2024-06-02</lastmod>
 	</url>
 </urlset>
