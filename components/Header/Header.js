@@ -129,6 +129,7 @@ function Header() {
                 alt='logo'
                 height={200}
                 width={200}
+                unoptimized={true}
               />
             </Link>
             <ul className='flex  camelcase lg:px-0 px-3 mobile '>

@@ -2,7 +2,7 @@
 import React from 'react'
 
 const Banner = ({ data }) => {
-  console.log(data,'Banner');
+  console.log(data,'Blog Banner');
   return (
     <div
       className='innerBanner bg-cover h-[400px]'

@@ -20,13 +20,15 @@ const CaseStudy = ({ data, imgDom }) => {
         Authorization: basicAuth, // Add the Authorization header
       }
 
-      const promises = data?.field_paragraph_reference?.map(async (reference) => {
-        const response = await axios.get(
-          `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
-          { headers }
-        )
-        return response.data
-      })
+      const promises = data?.field_paragraph_reference?.map(
+        async (reference) => {
+          const response = await axios.get(
+            `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
+            { headers }
+          )
+          return response.data
+        }
+      )
 
       const fetchedData = await Promise.all(promises)
       setParagraphData(fetchedData)
@@ -39,7 +41,7 @@ const CaseStudy = ({ data, imgDom }) => {
     fetchData()
   }, [data])
   return (
-    <div className='container lg:my-24 my-12'>
+    <div className='container my-24'>
       <h1 className='lg:text-2xl text-xl font-bold text-[#f8cc46] mb-4'>
         {data?.field_case_study_title[0]?.value}
       </h1>
@@ -47,12 +49,12 @@ const CaseStudy = ({ data, imgDom }) => {
         {data?.field_para_subtitle[0]?.value}
       </h2>
       <div className='grid md:grid-cols-2 grid-cols-1 pt-7 lg:gap-32 gap-12' >
-        {paragraphData.map((item, index) => (
+        {paragraphData?.map((item, index) => (
           <div className='' key={index}>
             <h2 className='text-dark text-1-xl font-bold pb-12'>
               {item?.field_item_title[0].value}
             </h2>
-            {item.field_case_study_desc.map((item, index) => (
+            {item?.field_case_study_desc?.map((item, index) => (
               <div
                 key={index}
                 className='text-dark text-1xl pb-5 ml-16 font-medium relative'

@@ -1,9 +1,8 @@
 import React from 'react'
 
 const CaseStudyText = ({ data }) => {
-  console.log(data,'Desc Data')
   return (
-    <div className='mb-24'>
+    <div className='my-24'>
       <div className='container'>
         <div>
           <h2 className='text-2xl text-dark font-bold mb-9'>
@@ -23,7 +22,5 @@ const CaseStudyText = ({ data }) => {
     </div>
   )
 }
-
-
 
 export default CaseStudyText

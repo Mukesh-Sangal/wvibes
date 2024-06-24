@@ -119,6 +119,12 @@ main.__className_e66fe9 {
   gap: 70px;
   padding-left: 30px;
 }
+@media screen and (max-width: 767px) {
+  .items-container > div:nth-child(2),
+  .items-container > div:nth-child(5) {
+    padding-right: 30px;
+  }
+}
 .items-container > div:nth-child(3),
 .items-container > div:nth-child(4) {
   width: 45%;
@@ -127,9 +133,8 @@ main.__className_e66fe9 {
 .items-container > div:nth-child(1),
 .items-container > div:nth-child(3),
 .items-container > div:nth-child(4),
-.items-container > div:nth-child(6)
- {
-color:#fff;
+.items-container > div:nth-child(6) {
+  color: #fff;
 }
 .services-items > div:last-child {
   position: absolute;

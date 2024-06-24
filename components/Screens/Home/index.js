@@ -11,9 +11,11 @@ import HireaDrupalDeveloper from './HireaDrupalDeveloper'
 import DigitalGrowDiscover from './DigitalGrowDiscover'
 import TopFooter from '../../TopFooter/TopFooter'
 import SlideComponent from './SlideComponent'
+import BlogSlider from './BlogSlider'
 import { Skeleton } from '../../../components/ui/skeleton'
 const Home = () => {
   const [data, setData] = useState([])
+console.log(data,'Home page');
   const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
   // console.log(data, 'Home')
   useEffect(() => {
@@ -60,6 +62,12 @@ const Home = () => {
               return (
                 <div key={index}>
                   <SlideComponent data={item} imgDom={backend_url} />
+                </div>
+              )
+            case 'BlogItems':
+              return (
+                <div key={index}>
+                  <BlogSlider data={item} imgDom={backend_url} />
                 </div>
               )
             case 'Improve':

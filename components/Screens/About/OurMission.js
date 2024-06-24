@@ -12,7 +12,7 @@ const OurMission = ({data}) => {
         >
         </h1>
         <p
-          className='text-black text-[38px] font-medium pb-8'
+          className='text-black text-[24px] font-medium pb-8'
           dangerouslySetInnerHTML={{
             __html: data[0].field_desc,
           }}
