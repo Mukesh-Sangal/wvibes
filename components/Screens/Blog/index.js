@@ -5,9 +5,9 @@ import CaseStudyText from './CaseStudyText'
 import axios from 'axios'
 import { Skeleton } from '../../../components/ui/skeleton'
 
-const BlogData = ({ data, imgDom }) => {
+const CaseStudies = ({ data, imgDom }) => {
   const [paragraphData, setParagraphData] = useState([])
-  console.log(paragraphData,'Paragraph')
+  console.log(paragraphData,'Para');
   const fetchData = async () => {
     try {
       const username = 'root' // Replace with your actual username
@@ -21,7 +21,7 @@ const BlogData = ({ data, imgDom }) => {
         'X-CSRF-Token': csrfToken,
         Authorization: basicAuth, // Add the Authorization header
       }
-      const promises = data.field_blog.map(async (reference) => {
+      const promises = data?.field_blog?.map(async (reference) => {
         const response = await axios.get(
           `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
           { headers }
@@ -70,4 +70,4 @@ const BlogData = ({ data, imgDom }) => {
   )
 }
 
-export default BlogData
+export default CaseStudies

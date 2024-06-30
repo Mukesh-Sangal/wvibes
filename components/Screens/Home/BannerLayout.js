@@ -1,15 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
-import {bgImg} from './BannerImage'
+import { bgImg } from './BannerImage'
 import Link from 'next/link'
 import urlExtractor from 'utils/urlExtractor'
 
-export default function BannerLayout({ data }) {
+export default function BannerLayout({ data, imgDom }) {
   return (
     <div
       className='lg:h-[90vh] flex h-[80vh] bg-no-repeat bg-center bg-cover relative
 '
-      style={{ backgroundImage: bgImg }}
+      style={{
+        backgroundImage: `url(${imgDom}/${data[0].field_home_banner_image})`,
+      }}
     >
       <div className='container flex items-center'>
         <div className=' p-6 md:p-0 w-full md:w-1/2'>

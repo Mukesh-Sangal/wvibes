@@ -30,7 +30,7 @@ const About = () => {
             case 'Banner':
               return (
                 <div key={index}>
-                  <InnerBanner data={item} />
+                  <InnerBanner data={item} imgDom={backend_url} />
                 </div>
               )
             case 'About us First Section':

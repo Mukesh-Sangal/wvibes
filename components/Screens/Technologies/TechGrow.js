@@ -5,7 +5,7 @@ const TechGrow = ({ data, imgDom }) => {
   return (
     <div className='relative w-full flex items-center justify-center'>
       <Image
-        className='2xl:h-[65vh] lg:h-[80vh] md:h-[65vh] h-[90vh] w-full object-cover flex items-center justify-center'
+        className='2xl:h-[65vh] lg:h-[80vh] md:h-[65vh] h-[90vh] w-full object-cover object-left-top flex items-center justify-center'
         src={`${imgDom}/${data[0].field_lets_build_image}`}
         width={1920}
         height={500}
@@ -18,10 +18,7 @@ const TechGrow = ({ data, imgDom }) => {
           </h1>
           <div className='grid lg:grid-cols-3 grid-cols-2 xl:gap-x-28 lg:gap-x-14 gap-x-4  lg:gap-y-14 gap-y-10 '>
             {data.map((item, index) => (
-              <div
-                className='md:text-[38px] text-1xl text-white'
-                key={index}
-              >
+              <div className='md:text-[38px] text-1xl text-white' key={index}>
                 {item.field_subhead}
               </div>
             ))}

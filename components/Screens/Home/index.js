@@ -37,7 +37,7 @@ console.log(data,'Home page');
             case 'Home Page Banner':
               return (
                 <div key={index}>
-                  <BannerLayout data={item} />
+                  <BannerLayout data={item} imgDom={backend_url} />
                 </div>
               )
             case 'Home Portfolio':
@@ -64,12 +64,12 @@ console.log(data,'Home page');
                   <SlideComponent data={item} imgDom={backend_url} />
                 </div>
               )
-            case 'BlogItems':
-              return (
-                <div key={index}>
-                  <BlogSlider data={item} imgDom={backend_url} />
-                </div>
-              )
+            // case 'BlogItems':
+            //   return (
+            //     <div key={index}>
+            //       <BlogSlider data={item} imgDom={backend_url} />
+            //     </div>
+            //   )
             case 'Improve':
               return (
                 <div key={index}>

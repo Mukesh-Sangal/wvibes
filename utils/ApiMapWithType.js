@@ -30,7 +30,7 @@ async function getPageData(apiPageUrl) {
     'Brand Management at Scale': `${backendUrl}/brand-management/`,
     'Global Cta': `${backendUrl}/global-cta/`,
     'Office Location': `${backendUrl}/office-locations/`,
-    BlogItems: `${backendUrl}/blog-slider/`,
+    BlogItems: `${backendUrl}/blogs/`,
   }
   //  console.log(result.data,'result')
   let { data } = result

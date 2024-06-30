@@ -1,9 +1,8 @@
 import React, {useState, useEffect } from 'react'
 import axios from 'axios'
 const CaseStudy = ({ data, imgDom }) => {
-  // console.log(data, 'SSS')
+  console.log(data, 'SSS')
   const [paragraphData, setParagraphData] = useState([])
-  // console.log(paragraphData, 'data of Paragraph')
   const fetchData = async () => {
     try {
       const username = 'root'
@@ -41,20 +40,22 @@ const CaseStudy = ({ data, imgDom }) => {
     fetchData()
   }, [data])
   return (
-    <div className='container my-24'>
+    <div className='container lg:my-24 my-12'>
       <h1 className='lg:text-2xl text-xl font-bold text-[#f8cc46] mb-4'>
         {data?.field_case_study_title[0]?.value}
       </h1>
-      <h2 className='lg:text-4xl text-2xl font-bold text-dark mb-4'>
+      <h2
+        className='lg:text-2xl text-1xl font-bold text-dark mb-4'
+      >
         {data?.field_para_subtitle[0]?.value}
       </h2>
-      <div className='grid md:grid-cols-2 grid-cols-1 pt-7 lg:gap-32 gap-12' >
+      <div className='grid md:grid-cols-2 grid-cols-1 pt-7 lg:gap-32 gap-12'>
         {paragraphData?.map((item, index) => (
           <div className='' key={index}>
             <h2 className='text-dark text-1-xl font-bold pb-12'>
               {item?.field_item_title[0].value}
             </h2>
-            {item?.field_case_study_desc?.map((item, index) => (
+            {item?.field_blog_desc.map((item, index) => (
               <div
                 key={index}
                 className='text-dark text-1xl pb-5 ml-16 font-medium relative'
@@ -79,7 +80,12 @@ const CaseStudy = ({ data, imgDom }) => {
                     ></path>
                   </g>
                 </svg>
-                <span>{item.value}</span>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: item.value,
+                  }}
+                >
+                </span>
               </div>
             ))}
           </div>
