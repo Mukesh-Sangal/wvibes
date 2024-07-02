@@ -31,6 +31,7 @@ async function getPageData(apiPageUrl) {
     'Global Cta': `${backendUrl}/global-cta/`,
     'Office Location': `${backendUrl}/office-locations/`,
     BlogItems: `${backendUrl}/blogs/`,
+    'Our Clients': `${backendUrl}/our-clients/`,
   }
   //  console.log(result.data,'result')
   let { data } = result

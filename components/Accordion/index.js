@@ -10,18 +10,18 @@ const Accordion = () => {
       title: 'DHARAMSHALA OFFICE',
       iframe:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3376.24493493255!2d76.32325197643145!3d32.197630073911206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3905db27f502831b%3A0xc3c166f4c4b7e252!2sHimachal%20Pradesh%20Cricket%20Association%20Stadium%2C%20Dharamshala!5e0!3m2!1sen!2sin!4v1706247003941!5m2!1sen!2sin',
-      address: 'Near HPCA Stadium Dharmshala here',
-      phone: '+91 12345678',
-      email: 'info@growvibes.co.in',
+      address: 'Near Cricket Stadium lane Dharamshala',
+      phone: '+91 9816091609',
+      email: 'nitish@growibes.com',
     },
 
     {
       title: 'AUSTRALIA OFFICE',
       iframe:
-        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7306.690978258501!2d133.87498009607492!3d-23.699353364820592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b321944be8f1331%3A0x50217a82a254fd0!2sAlice%20Springs%20NT%200870%2C%20Australia!5e0!3m2!1sen!2sin!4v1706247070335!5m2!1sen!2sin',
-      address: 'Australia office adress here',
-      phone: '+91 12345678',
-      email: 'info@growvibes.com',
+        'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.814892524082!2d143.88424207661848!3d-37.63004177202223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad15aeb7222baa1%3A0xa77b2a2a2f076ce3!2s119%20Gear%20Ave%2C%20Mount%20Helen%20VIC%203350%2C%20Australia!5e0!3m2!1sen!2sin!4v1719849520922!5m2!1sen!2sin',
+      address: '119 Gear Avenue Mount Helen Ballarat,3350, Victoria',
+      phone: '+61 470368355',
+      email: 'nitish@growibes.com',
     },
   ]
     useEffect(() => {
@@ -39,7 +39,7 @@ const Accordion = () => {
           style={{ border: 0 }}
         ></iframe>
       <div className='container'>
-        <div className='lg:absolute xl:right-0 lg:-right-9 lg:bottom-0 lg:top-[4%] xl:max-w-lg lg:max-w-md  w-full xl:translate-x-[-20%] lg:translate-x-[-10%] lg:block flex m-auto justify-center flex-wrap mb-5 '>
+        <div className='lg:absolute xl:right-0 lg:-right-9 lg:bottom-0 lg:top-[4%] xl:max-w-lg lg:max-w-md  w-full xl:translate-x-[-20%] lg:translate-x-[-10%] lg:block flex m-auto justify-center flex-wrap mb-5'>
           {address.map((item, index) => {
             return (
               <article

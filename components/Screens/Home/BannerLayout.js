@@ -34,23 +34,27 @@ export default function BannerLayout({ data, imgDom }) {
           </div>
         </div>
       </div>
-      <div className='digital-transformation absolute bottom-0 justify-center flex gap-8 left-0 w-full bg-[#009CDE] bg-opacity-50 p-4'>
-        {/* <h1 className='text-white xl:text-3xl lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity'>
+      {/* <div className='digital-transformation absolute bottom-0 justify-center flex gap-8 left-0 w-full bg-[#009CDE] bg-opacity-50 p-4'>
+        <h1 className='text-white xl:text-3xl lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity'>
           {data[0].field_home_page_subheading}
-        </h1> */}
+        </h1>
+        {data[0]?.field_banner_drupal_development && (
+          <Link
+            href={urlExtractor(data[0]?.field_banner_drupal_development)[1]}
+            className='text-white xl:text-[38px] lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity drupal-development relative'
+          >
+            {urlExtractor(data[0]?.field_banner_drupal_development)[0]}
+          </Link>
+        )}
+        {data[0]?.field_banner_digital_transformat && (
         <Link
-          href={urlExtractor(data[0].field_banner_drupal_development)[1]}
-          className='text-white xl:text-[38px] lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity drupal-development relative'
-        >
-          {urlExtractor(data[0].field_banner_drupal_development)[0]}
-        </Link>
-        <Link
-          href={urlExtractor(data[0].field_banner_digital_transformat)[1]}
+          href={urlExtractor(data[0]?.field_banner_digital_transformat)[1]}
           className='text-white xl:text-[38px] lg:text-2xl md:text-1-xl text-lg font-bold text-center opacity'
         >
-          {urlExtractor(data[0].field_banner_digital_transformat)[0]}
+          {urlExtractor(data[0]?.field_banner_digital_transformat)[0]}
         </Link>
-      </div>
+        )}
+      </div> */}
     </div>
   )
 }
