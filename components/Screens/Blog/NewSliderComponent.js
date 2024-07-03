@@ -80,9 +80,8 @@ const BlogListing = ({ data, imgDom }) => {
               height={500}
               className='w-full h-[500px] object-cover'
             />
-
             <Link
-              href={`/blog/${urlExtractor(blog.field_slider_link)[1]}`}
+              href={`/blogs/${urlExtractor(blog.field_slider_link)[1]}`}
               key={index}
               className='brand-expertise mt-10 inline-block'
             >

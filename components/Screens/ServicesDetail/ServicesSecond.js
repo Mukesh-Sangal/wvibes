@@ -14,13 +14,15 @@ const ServicesSecond = ({ data, imgDom }) => {
         {data.map((item, index) => (
           <div className='px-0 lg:pb-4 pb-16 flex flex-col' key={index}>
             <div
-              className={`${item.field_grid_columns !== '' ? 'order-2' : ''}`}
+              className={`${
+                item.field_grid_columns !== '' ? 'order-2' : 'order-2'
+              }`}
             >
               <h1
                 className={`${
                   item.field_grid_columns !== ''
                     ? 'text-lg lg:text-[20px] mt-4'
-                    : ' lg:text-3x text-2xl pb-5'
+                    : ' lg:text-3x text-2xl pb-5 mt-8'
                 } font-bold text-blue`}
               >
                 {item.field_counter}
@@ -38,8 +40,9 @@ const ServicesSecond = ({ data, imgDom }) => {
             <div>
               <Image
                 src={`${imgDom}${item.field_banner_icon}`}
-                width={100}
-                height={100}
+                width={500}
+                height={500}
+                className='object-contain'
                 alt='Counter Items'
               />
             </div>

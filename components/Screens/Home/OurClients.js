@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React from 'react'
 
 const OurClients = ({data, imgDom}) => {
- console.log(data,'Client');
  const imagePaths = data[0]?.field_clients_logos.split(', ')
   return (
     <div className='bg-[#009CDE] bg-opacity-50 text-center spacing'>
@@ -14,7 +13,7 @@ const OurClients = ({data, imgDom}) => {
           {imagePaths?.map((path, index) => (
             <Image
               key={index}
-              src={`${imgDom}${path}`}
+              src={`${imgDom}/${path}`}
               alt={`Client Image ${index + 1}`}
               width={100} // Adjust width as needed
               height={100} // Adjust height as needed

@@ -25,11 +25,11 @@ const TopFooter = (props) => {
           <Image
             src={props.imgurl}
             alt={props.title}
-            width={1590}
-            height={250}
+            width={1920}
+            height={350}
             priority
             loading='eager'
-            className='max-w-[100%] w-[100%] h-[250px] ml-auto object-cover object-top'
+            className='max-w-[100%] w-[100%] h-[400px] ml-auto object-cover object-top'
           />
         </div>
       </div>

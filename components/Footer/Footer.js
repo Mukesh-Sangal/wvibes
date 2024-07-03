@@ -20,17 +20,13 @@ const Footer = () => {
      url: '/what-we-do',
    },
    {
+     title: 'Blogs',
+     url: '/blogs',
+   },
+   {
      title: 'About us',
      url: '/about',
    },
-   //  {
-   //    title: 'Privacy Policy',
-   //    url: '/privacy-policy',
-   //  },
-   //  {
-   //    title: 'Terms Of service',
-   //    url: '/terms-and-conditions',
-   //  },
    {
      title: 'Contact Us',
      url: '/contact',

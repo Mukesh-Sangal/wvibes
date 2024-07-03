@@ -2,15 +2,18 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const TechWeServe = ({data, imgDom}) => {
+const TechWeServe = ({ data, imgDom }) => {
   return (
     <div className='container spacing'>
-      <h1 className='lg:text-4xl text-2xl font-bold mb-10 heading-tech'>
+      <h1 className='lg:text-4xl text-2xl font-bold mb-16 heading-tech'>
         {data[0].field_title}
       </h1>
       <div className='grid lg:grid-rows-4 grid-cols-1 lg:w-auto w-full lg:grid-flow-col  lg:gap-y-0 gap-y-12 mb-8'>
         {data.map((item, index) => (
-          <div key={index} className='flex gap-8 items-center lg:mb-12'>
+          <div
+            key={index}
+            className='flex xl:gap-64 lg:gap-36 gap-8 items-center lg:mb-24 mb-12'
+          >
             <h2 className='lg:text-[38px] text-1-xl font-bold md:w-56 w-40'>
               {item.field_tech_heading}
             </h2>

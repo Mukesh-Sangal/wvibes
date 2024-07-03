@@ -48,7 +48,7 @@ main.__className_e66fe9 {
   @apply before:content-[''] w-full h-full absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:opacity-['0.75'];
 }
 .back {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .about-opacity {
   background-color: rgba(106, 90, 205, 0.53);

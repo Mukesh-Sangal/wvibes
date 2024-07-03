@@ -26,6 +26,10 @@ function Header() {
       url: '/what-we-do',
     },
     {
+      title: 'Blogs',
+      url: '/blogs',
+    },
+    {
       title: 'About us',
       url: '/about',
     },

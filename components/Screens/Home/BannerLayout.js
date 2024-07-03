@@ -7,7 +7,7 @@ import urlExtractor from 'utils/urlExtractor'
 export default function BannerLayout({ data, imgDom }) {
   return (
     <div
-      className='lg:h-[90vh] flex h-[80vh] bg-no-repeat bg-center bg-cover relative
+      className='lg:h-[100vh] flex h-[80vh] bg-no-repeat bg-center bg-cover relative
 '
       style={{
         backgroundImage: `url(${imgDom}/${data[0].field_home_banner_image})`,

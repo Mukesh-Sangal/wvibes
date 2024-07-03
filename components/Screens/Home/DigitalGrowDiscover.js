@@ -18,7 +18,7 @@ const DigitalGrowDiscover = ({ data }) => {
         <div className='items-container relative flex justify-between flex-wrap '>
           {data.map((item, index) => (
             <div
-              className='item services-item rounded py-7 bg-white flex items-center mt-4 h-full xl:min-h-[395px] lg:min-h-[300px] mb-4'
+              className='item services-item rounded py-7 bg-white flex items-center mt-1 h-full xl:min-h-[395px] lg:min-h-[300px] mb-4'
               key={index}
             >
               <div>
@@ -39,9 +39,9 @@ const DigitalGrowDiscover = ({ data }) => {
               <div
                 className=' xl:text-1-xl lg:self-center lg:text-lg text-xl pt-4 text-left'
               >
-                {item.field_home_cta_subheading_link_i && (
+                {item?.field_home_cta_subheading_link_i && (
                   <div className='flex flex-wrap flex-col'>
-                    {item.field_home_cta_subheading_link_i
+                    {item?.field_home_cta_subheading_link_i
                       .split(',')
                       .map((link, linkIndex) => {
                         const [text, url] = urlExtractor(link.trim())
@@ -49,7 +49,7 @@ const DigitalGrowDiscover = ({ data }) => {
                           <Link
                             key={linkIndex}
                             href={url}
-                            className='xl:text-2xl hover:text-[#25AAE1] text-left lg:text-1xl text-xl font-bold'
+                            className='xl:text-2xl pb-4 hover:text-[#25AAE1] text-left lg:text-1xl text-xl font-bold'
                           >
                             {text}
                           </Link>
@@ -58,11 +58,11 @@ const DigitalGrowDiscover = ({ data }) => {
                   </div>
                 )}
               </div>
-              {item.field_text_subhead_link_item && (
+              {item?.field_text_subhead_link_item && (
                 <div
                   className=' xl:text-2xl lg:text-1xl lg:self-center text-xl'
                 >
-                  {item.field_text_subhead_link_item
+                  {item?.field_text_subhead_link_item
                     .split(',')
                     .map((link, linkIndex) => {
                       const [text, url] = urlExtractor(link.trim())
