@@ -80,6 +80,9 @@ const BlogListing = ({ data, imgDom }) => {
               height={500}
               className='w-full h-[500px] object-cover'
             />
+            <h2 className='text-1xl font-bold text-black mb-8 mt-8 '>
+              {blog.field_blog_description_trimmed}
+            </h2>
             <Link
               href={`/blogs/${urlExtractor(blog.field_slider_link)[1]}`}
               key={index}

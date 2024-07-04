@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const ImageTitleLink = ({ data, imgDom }) => {
   return (
-    <div className='bg-blue py-10'>
+    <div className='bg-blue lg:py-10'>
       <div className='container lg:flex lg:flex-wrap justify-center items-center py-12'>
         <div className='lg:basis-[40%] lg:pb-0 pb-12'>
           <div className='p-4'>
@@ -15,10 +15,11 @@ const ImageTitleLink = ({ data, imgDom }) => {
             <h1 className='text-white xl:text-[38px] lg:text-[38px] lg:leading-[3rem] text-1xl mb-8 font-bold '>
               {data[0].field_title}
             </h1>
+           
             {data.map((item, index) => (
               <Link
                 href={urlExtractor(item.field_cta_link)[1]}
-                className="  button-primary "
+                className='  button-primary '
                 key={index}
               >
                 {urlExtractor(item.field_cta_link)[0]}

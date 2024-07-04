@@ -10,7 +10,7 @@ const BrandManagement = ({ data, imgDom }) => {
     Aos.init({ duration: 600, disable: 'mobile', once: true })
   })
   return (
-    <div className='container lg:py-24 py-16'>
+    <div className='container lg:py-24 lg:py-16'>
       <div className='lg:flex lg:flex-wrap justify-between lg:py-8 py-4'>
         <div
           className={`${

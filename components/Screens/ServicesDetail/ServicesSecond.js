@@ -7,8 +7,8 @@ const ServicesSecond = ({ data, imgDom }) => {
       <div
         className={`grid ${
           data[0].field_grid_columns !== ''
-            ? 'lg:grid-cols-3 grid-cols-1 lg:pb-20 lg:gap-24'
-            : 'lg:grid-cols-4 grid-cols-1 py-16 lg:gap-24'
+            ? 'lg:grid-cols-3 grid-cols-1 lg:pb-20 xl:gap-24 lg:gap-16'
+            : 'lg:grid-cols-4 grid-cols-1 py-16 xl:gap-24 lg:gap-16'
         }  container m-auto `}
       >
         {data.map((item, index) => (
@@ -42,7 +42,7 @@ const ServicesSecond = ({ data, imgDom }) => {
                 src={`${imgDom}${item.field_banner_icon}`}
                 width={500}
                 height={500}
-                className='object-contain'
+                className='object-contain w-full'
                 alt='Counter Items'
               />
             </div>

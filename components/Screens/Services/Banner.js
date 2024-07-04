@@ -2,10 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 const Banner = (props) => {
   return (
-    <div className='container lg:py-24 py-16'>
+    <div className='container md:pt-24 pt-16 '>
       <div className='grid grid-cols-2 h-full place-items-center lg:mt-0 mt-8'>
         <div className='lg:pr-24 pr-4 '>
-          <h1 className='lg:text-4xl md:text-3xl text-xl font-bold text-black mb-4'>
+          <h1 className='xl:text-4xl md:text-3xl text-xl font-bold text-black mb-4'>
             {props.title}
           </h1>
         </div>

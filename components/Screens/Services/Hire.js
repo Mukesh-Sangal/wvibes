@@ -21,7 +21,7 @@ const Hire = (props) => {
         <div className='grid grid-cols-2 lg:w-[48%] w-full content-between lg:gap-y-8 2xl:gap-x-14 md:gap-y-8 gap-y-4 gap-x-8 lg:pt-0 pt-8'>
           {props?.list.map((el, index) => (
             <div
-              className='lg:text-[38px] text-1xl text-white items-start'
+              className='xl:text-[38px] lg:text-1xl text-white items-start'
               key={index}
             >
               {el[props.value]}

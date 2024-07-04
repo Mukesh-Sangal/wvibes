@@ -7,14 +7,14 @@ import urlExtractor from 'utils/urlExtractor'
 export default function BannerLayout({ data, imgDom }) {
   return (
     <div
-      className='lg:h-[100vh] flex h-[80vh] bg-no-repeat bg-center bg-cover relative
+      className='xl:h-[100vh] flex lg:h-[80vh] h-[100vh] bg-no-repeat lg:bg-center bg-right bg-cover relative
 '
       style={{
         backgroundImage: `url(${imgDom}/${data[0].field_home_banner_image})`,
       }}
     >
-      <div className='container flex items-center'>
-        <div className=' p-6 md:p-0 w-full md:w-1/2'>
+      <div className='container flex lg:items-center items-end'>
+        <div className='p-6 md:p-0 w-full md:w-1/2 lg:mb-0 md:mb-16 mb-8'>
           <h1 className='font-bold text-white lg:w-[80%] w-full md:w-full xl:text-4xl lg:text-3xl text-1-xl leading-snug'>
             {data[0].field_home_banner_title}
           </h1>

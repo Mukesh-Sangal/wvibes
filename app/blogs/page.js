@@ -6,12 +6,12 @@ import NewSliderComponent from '../../components/Screens/Blog/NewSliderComponent
 import { Skeleton } from '../../components/ui/skeleton'
 const Home = () => {
   const [data, setData] = useState([])
-  console.log(data, 'Home page')
+  // console.log(data, 'Home page')
   const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
-  // console.log(data, 'Home')
+  console.log(data, 'Home')
   useEffect(() => {
     const fetchData = async () => {
-      const apiPageUrl = `${backend_url}/node_title/blogs%20listing`
+      const apiPageUrl = `${backend_url}/node_title/blogs`
       const apis = await getPageData(apiPageUrl)
       setData(apis)
     }

@@ -3,7 +3,7 @@ import React from 'react'
 const CaseStudyText = ({ data }) => {
   console.log(data,'Desc Data')
   return (
-    <div className='mb-24'>
+    <div className='lg:mb-12 mb-8'>
       <div className='container'>
         <div>
           <h2 className='text-2xl text-dark font-bold mb-9'>

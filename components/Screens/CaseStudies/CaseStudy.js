@@ -39,7 +39,7 @@ const CaseStudy = ({ data, imgDom }) => {
     fetchData()
   }, [data])
   return (
-    <div className='container lg:my-24 my-12'>
+    <div className='container lg:my-12 my-8'>
       <h1 className='lg:text-2xl text-xl font-bold text-[#f8cc46] mb-4'>
         {data?.field_case_study_title[0]?.value}
       </h1>
