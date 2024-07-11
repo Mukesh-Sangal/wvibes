@@ -70,7 +70,7 @@ const BlogListing = ({ data, imgDom }) => {
         <h3>{blog.field_slider_subtitle}</h3> */}
         {filteredBlogs.map((blog, index) => (
           <div key={index} className='lg:ml-24 mb-5 mt-12'>
-            <h2 className='lg:text-2xl text-xl font-bold text-[#f8cc46] mb-8 '>
+            <h2 className='lg:text-2xl text-xl font-bold text-black mb-8 '>
               {blog.field_slider_desc}
             </h2>
             <Image
@@ -78,15 +78,15 @@ const BlogListing = ({ data, imgDom }) => {
               alt={blog.field_slider_title}
               width={600}
               height={500}
-              className='w-full h-[500px] object-cover'
+              className='w-full lg:h-[500px] object-cover'
             />
-            <h2 className='text-1xl font-bold text-black mb-8 mt-8 '>
+            <h2 className='lg:text-1xl text-xl font-medium text-black mb-8 mt-8 '>
               {blog.field_blog_description_trimmed}
             </h2>
             <Link
               href={`/blogs/${urlExtractor(blog.field_slider_link)[1]}`}
               key={index}
-              className='brand-expertise mt-10 inline-block'
+              className='brand-expertise lg:mt-6 mt-4 mb-4 inline-block'
             >
               {urlExtractor(blog.field_slider_link)[0]}
             </Link>

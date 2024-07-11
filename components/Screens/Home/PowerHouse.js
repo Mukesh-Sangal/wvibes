@@ -14,7 +14,7 @@ const PowerHouse = ({ data }) => {
         <div className='flex flex-col lg:justify-evenly md:w-1/2 w-full'>
           {data.map((item, index) => (
             <Link
-              className='font-medium 2xl:text-2xl lg:text-1-xl text-1xl text-[#009cde] power hover:text-[#DC248B]'
+              className='font-medium 2xl:text-2xl lg:text-1-xl text-xl text-[#009cde] power hover:text-[#DC248B]'
               href={urlExtractor(item.field_power_house_items_links)[1]}
               key={index}
             >

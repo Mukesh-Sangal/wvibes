@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-// import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 import ContactBanner from './ContactBanner'
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
@@ -175,7 +175,7 @@ const Contact = () => {
                   }
                 ></input>
               </div>
-              {/* <GoogleReCaptchaProvider reCaptchaKey='6LeNnKgkAAAAAKfvpmxL2iVqwYtFvovRnVIg6BVu' /> */}
+              <GoogleReCaptchaProvider reCaptchaKey='6Ld3xAwqAAAAAIC-371arNeq5RtMvEkp-uj3xJbW' />
             </form>
           </article>
         </div>
