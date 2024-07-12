@@ -1,7 +1,6 @@
 import React from 'react'
 
 const CaseStudyText = ({ data }) => {
-  console.log(data,'Text And Desc Blog');
   return (
     <div className='md:mb-8 mt-12'>
       <div className='container'>

@@ -3,11 +3,10 @@ import axios from 'axios'
 const CaseStudy = ({ data, imgDom }) => {
 
   const [paragraphData, setParagraphData] = useState([])
-    console.log(paragraphData, 'SSS')
   const fetchData = async () => {
     try {
-      const username = 'root'
-      const password = 'root'
+      const username = 'growibes'
+      const password = 'Jaibholenath@1989'
       const basicAuth = 'Basic ' + btoa(username + ':' + password)
 
       // Fetch CSRF token dynamically

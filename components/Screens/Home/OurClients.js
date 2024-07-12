@@ -9,7 +9,7 @@ const OurClients = ({data, imgDom}) => {
         <h1 className='font-bold lg:text-4xl text-1-xl text-white pb-8'>
           {data[0]?.field_clients_text}
         </h1>
-        <div className='grid grid-cols-4 gap-4'>
+        <div className='flex items-center justify-between'>
           {imagePaths?.map((path, index) => (
             <Image
               key={index}

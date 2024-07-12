@@ -2,11 +2,12 @@
 import React from 'react'
 
 const Banner = ({ data }) => {
-  console.log(data,'Banner');
   return (
     <div
-      className='innerBanner bg-cover h-[400px]'
-      style={{ backgroundImage: `url(${data.field_case_study_banner_image[0].url})` }}
+      className='innerBanner bg-cover lg:h-[500px] h-[300px] mt-[72px]  bg-no-repeat bg-center'
+      style={{
+        backgroundImage: `url(${data.field_case_study_banner_image[0].url})`,
+      }}
     >
       <div className='container spacing flex items-center h-full'>
         <h1 className='font-bold text-white lg:text-4xl md:text-2xl text-1-xl'>

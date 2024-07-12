@@ -5,7 +5,6 @@ export default function Products({ params }) {
 
   const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
   const [data, setData] = useState([])
-    console.log(data,'Cse Study Data')
   // Paramid recieved from the parameters
     //  console.log(params.id, 'id of the data')
   // Fetch data based on the content ID

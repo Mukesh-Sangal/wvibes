@@ -10,8 +10,8 @@ const CaseStudies = ({ data, imgDom }) => {
   console.log(paragraphData,'Para');
   const fetchData = async () => {
     try {
-      const username = 'root' // Replace with your actual username
-      const password = 'root' // Replace with your actual password
+      const username = 'growibes' // Replace with your actual username
+      const password = 'Jaibholenath@1989' // Replace with your actual password
       const basicAuth = 'Basic ' + btoa(username + ':' + password)
       const csrfResponse = await fetch(`${imgDom}/session/token`)
       const csrfToken = await csrfResponse.text()
