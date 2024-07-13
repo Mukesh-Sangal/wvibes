@@ -89,12 +89,6 @@ const SlideComponent = ({ data, imgDom }) => {
           <GrNext size={70} color={'yellow'} />
         </div>
         <div className='swiper-pagination'></div>
-        <Link
-          href={urlExtractor(data[0].field_contact)[1]}
-          className='slider-buttons'
-        >
-          {urlExtractor(data[0].field_contact)[0]}
-        </Link>
       </Swiper>
     </div>
   )

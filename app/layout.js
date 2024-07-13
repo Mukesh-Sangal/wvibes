@@ -1,10 +1,13 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Outfit } from '@next/font/google'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import CookieConsent from '../components/CookieConsent'
-const inter = Inter({ subsets: ['latin'] })
-
+const outfit = Outfit({
+  subsets: ['latin'], // Specify the subsets you need
+  weight: ['400', '600', '700', '900'], // Specify the weights you need
+  style: ['normal'],
+})
 export async function generateMetadata() {
   // Generate a random cache-busting query parameter
   const cacheBuster = Math.random()
@@ -43,12 +46,12 @@ export async function generateMetadata() {
 }
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang='en'  className={`{ ${outfit.className}`} >
       <body>
-        <Header />
-        <main className={inter.className}>{children}</main>
+        <Header/>
+        <main>{children}</main>
         <CookieConsent />
-        <Footer />
+        <Footer/>
       </body>
     </html>
   )

@@ -54,7 +54,7 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        <p className='md:text-1xl text-lg'>
+        <p className='md:text-1xl text-lg font-outfit'>
           2024© growibes All rights reserved.
         </p>
       </div>

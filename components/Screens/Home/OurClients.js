@@ -4,11 +4,8 @@ import React from 'react'
 const OurClients = ({data, imgDom}) => {
  const imagePaths = data[0]?.field_clients_logos.split(', ')
   return (
-    <div className='bg-[#009CDE] bg-opacity-50 text-center spacing'>
+    <div className='bg-[#009CDE] bg-opacity-50 text-center lg:py-8 py-4 lg:my-24 my-12'>
       <div className='container'>
-        <h1 className='font-bold lg:text-4xl text-1-xl text-white pb-8'>
-          {data[0]?.field_clients_text}
-        </h1>
         <div className='flex items-center justify-between'>
           {imagePaths?.map((path, index) => (
             <Image

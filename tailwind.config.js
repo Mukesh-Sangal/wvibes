@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['"Poppins"', 'sans-serif'],
+        outfit: ['"Outfit"', 'sans-serif'],
+        'open-sans': ['"Open Sans"', 'sans-serif'],
+      },
       spacing: {
         30: '1.875rem',
         60: '3.75rem',
@@ -15,6 +20,7 @@ module.exports = {
       colors: {
         current: 'currentColor',
         white: '#ffffff',
+        clients: '#009CDE',
         heading: '#3f444a',
         text: '#5c6873',
         bannerhead: '#F5F5F5',

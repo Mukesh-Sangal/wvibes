@@ -1,6 +1,10 @@
 import '../globals.css'
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] })
+import { Outfit } from '@next/font/google'
+const outfit = Outfit({
+  subsets: ['latin'], // Specify the subsets you need
+  weight: ['400', '600', '700', '900'], // Specify the weights you need
+  style: ['normal'],
+})
 
 export async function generateMetadata() {
   // Generate a random cache-busting query parameter
@@ -39,7 +43,7 @@ export async function generateMetadata() {
 export default function ServicesLayout({ children }) {
   return (
     <>
-      <main className={inter.className}>{children}</main>
+      <main className={`{ ${outfit.className}`}>{children}</main>
     </>
   )
 }
