@@ -2,11 +2,14 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import urlExtractor from 'utils/urlExtractor'
-const DigitalGrowDiscover = ({ data }) => {
+const DigitalGrowDiscover = ({ data, imgDom }) => {
+  console.log(data,'Grow')
   return (
     <div
       className='bg-cover relative w-full bg-fixed digital-grow'
-      style={{ backgroundImage: `url('/digital.png')` }}
+      style={{
+        backgroundImage: `url(${imgDom}${data[0].field_home_cta_bg_image})`,
+      }}
     >
       <div className='spacing'>
         <h1
@@ -32,13 +35,10 @@ const DigitalGrowDiscover = ({ data }) => {
                     dangerouslySetInnerHTML={{
                       __html: item.field_home_service_heading,
                     }}
-                  >
-                  </h1>
+                  ></h1>
                 </div>
               </div>
-              <div
-                className=' xl:text-1-xl lg:self-center lg:text-lg text-xl pt-4 text-left'
-              >
+              <div className=' xl:text-1-xl lg:self-center lg:text-lg text-xl pt-4 text-left'>
                 {item?.field_home_cta_subheading_link_i && (
                   <div className='flex flex-wrap flex-col'>
                     {item?.field_home_cta_subheading_link_i
@@ -59,9 +59,7 @@ const DigitalGrowDiscover = ({ data }) => {
                 )}
               </div>
               {item?.field_text_subhead_link_item && (
-                <div
-                  className=' xl:text-2xl lg:text-1xl lg:self-center text-xl'
-                >
+                <div className=' xl:text-2xl lg:text-1xl lg:self-center text-xl'>
                   {item?.field_text_subhead_link_item
                     .split(',')
                     .map((link, linkIndex) => {

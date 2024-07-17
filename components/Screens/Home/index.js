@@ -16,7 +16,7 @@ import { Skeleton } from '../../../components/ui/skeleton'
 const Home = () => {
   const [data, setData] = useState([])
   const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
-  console.log(backend_url, 'Home')
+  console.log(data, 'Home')
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/home%20page`

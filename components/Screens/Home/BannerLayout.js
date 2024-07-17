@@ -9,7 +9,7 @@ export default function BannerLayout({ data, imgDom }) {
     <div
       className='xl:h-[80vh] flex lg:h-[80vh] md:h-[60vh] h-[80vh] bg-no-repeat lg:bg-center bg-right bg-cover relative
 '
-      style={{
+style={{
         backgroundImage: `url(${imgDom}/${data[0].field_home_banner_image})`,
       }}
     >
