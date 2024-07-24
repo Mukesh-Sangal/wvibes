@@ -4,9 +4,9 @@ import React from 'react'
 const OurClients = ({data, imgDom}) => {
  const imagePaths = data[0]?.field_clients_logos.split(', ')
   return (
-    <div className='bg-[#009CDE] bg-opacity-50 text-center lg:py-8 py-4 lg:my-24 my-12'>
+    <div className='bg-[#009CDE] bg-opacity-50 text-center lg:py-8 py-4'>
       <div className='container'>
-        <div className='flex items-center justify-between'>
+        <div className='lg:grid lg:grid-cols-4 gap-8 items-center flex justify-center flex-wrap'>
           {imagePaths?.map((path, index) => (
             <Image
               key={index}
