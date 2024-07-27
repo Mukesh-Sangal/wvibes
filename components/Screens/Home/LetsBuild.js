@@ -26,7 +26,7 @@ const LetsBuild = ({ data, imgDom }) => {
                 {data.map((item, index) => (
                   <Link
                     className='font-medium xl:text-1-xl text-1xl items-start  text-white'
-                    href={urlExtractor(item.field_lets_build_link)[1]}
+                    href={`/technologies/${urlExtractor(item.field_lets_build_link)[1]}`}
                     key={index}
                   >
                     {urlExtractor(item.field_lets_build_link)[0]}

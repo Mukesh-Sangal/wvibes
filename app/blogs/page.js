@@ -8,7 +8,6 @@ const Home = () => {
   const [data, setData] = useState([])
   // console.log(data, 'Home page')
   const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
-  console.log(data, 'Home')
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/blogs`
