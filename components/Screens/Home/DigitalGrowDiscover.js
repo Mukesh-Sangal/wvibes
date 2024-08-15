@@ -48,7 +48,7 @@ const DigitalGrowDiscover = ({ data, imgDom }) => {
                         return (
                           <Link
                             key={linkIndex}
-                            href={url}
+                            href={`/technologies/${url}`}
                             className='xl:text-2xl pb-4 hover:text-[#25AAE1] text-left lg:text-1xl text-xl font-bold'
                           >
                             {text}
@@ -67,7 +67,7 @@ const DigitalGrowDiscover = ({ data, imgDom }) => {
                       return (
                         <Link
                           key={linkIndex}
-                          href={url}
+                          href={`/technologies/${url}`}
                           className='xl:text-2xl hover:text-[#25AAE1] text-left lg:text-1xl text-xl font-bold'
                         >
                           {text}

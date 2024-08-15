@@ -4,11 +4,9 @@ import CaseStudy from './CaseStudy'
 import CaseStudyText from './CaseStudyText'
 import axios from 'axios'
 import { Skeleton } from '../../../components/ui/skeleton'
-import Link from 'next/link'
 
 const CaseStudies = ({ data, imgDom }) => {
   const [paragraphData, setParagraphData] = useState([])
-  console.log(paragraphData,'Para');
   const fetchData = async () => {
     try {
       const username = 'growibes' // Replace with your actual username
@@ -22,7 +20,7 @@ const CaseStudies = ({ data, imgDom }) => {
         'X-CSRF-Token': csrfToken,
         Authorization: basicAuth, // Add the Authorization header
       }
-      const promises = data?.field_blog?.map(async (reference) => {
+      const promises = data.field_case_study_ref.map(async (reference) => {
         const response = await axios.get(
           `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
           { headers }
@@ -67,11 +65,6 @@ const CaseStudies = ({ data, imgDom }) => {
           </div>
         </div>
       )}
-      <div className='container mt-12 mb-4'>
-        <Link className='transparent-buttons' href='/contact'>
-          Contact Us
-        </Link>
-      </div>
     </div>
   )
 }
