@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 const CaseStudy = ({ data, imgDom }) => {
   // console.log(data, 'SSS')
@@ -20,13 +20,15 @@ const CaseStudy = ({ data, imgDom }) => {
         Authorization: basicAuth, // Add the Authorization header
       }
 
-      const promises = data?.field_paragraph_reference?.map(async (reference) => {
-        const response = await axios.get(
-          `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
-          { headers }
-        )
-        return response.data
-      })
+      const promises = data?.field_paragraph_reference?.map(
+        async (reference) => {
+          const response = await axios.get(
+            `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
+            { headers }
+          )
+          return response.data
+        }
+      )
 
       const fetchedData = await Promise.all(promises)
       setParagraphData(fetchedData)
@@ -39,20 +41,32 @@ const CaseStudy = ({ data, imgDom }) => {
     fetchData()
   }, [data])
   return (
-    <div className='container lg:my-12 my-8'>
-      <h1 className='lg:text-2xl text-1-xl font-bold text-[#f8cc46] mb-4'>
-        {data?.field_case_study_title[0]?.value}
-      </h1>
-      <h2 className='lg:text-2xl text-1xl font-bold text-dark mb-4'>
-        {data?.field_para_subtitle[0]?.value}
-      </h2>
-      <div className='grid grid-cols-1 pt-7 lg:gap-24 gap-8'>
+    <div className='container my-8 mb-12'>
+      {data?.field_case_study_title[0]?.value && (
+        <h1 className='lg:text-2xl pb-2 text-1-xl font-bold text-[#f8cc46] mb-2'>
+          {data?.field_case_study_title[0]?.value}
+        </h1>
+      )}
+      {data?.field_para_subtitle[0]?.value && (
+        <h2 className='lg:text-2xl text-1xl font-bold text-dark mb-8'>
+          {data?.field_para_subtitle[0]?.value}
+        </h2>
+      )}
+
+      <div className='grid grid-cols-1 gap-6 pt-8'>
         {paragraphData.map((item, index) => (
           <div className='' key={index}>
-            <h2 className='text-dark lg:text-2xl text-1xl font-bold pb-8'>
-              {item?.field_item_title[0]?.value}
-            </h2>
-            {item.field_blog_desc.map((item, index) => (
+            {item?.field_item_title[0]?.value && (
+              <h2 className='text-dark lg:text-1-xl text-1xl font-bold pb-8'>
+                {item?.field_item_title[0]?.value}
+              </h2>
+            )}
+            {item?.field_case_study_desc[0]?.value && (
+              <h3 className='text-dark lg:text-1xl text-lg font-bold pb-8'>
+                {item?.field_case_study_desc[0]?.value}
+              </h3>
+            )}
+            {item?.field_blog_desc?.map((item, index) => (
               <div
                 key={index}
                 className='text-dark lg:text-1xl text-xl pb-5 ml-16 font-medium relative'
@@ -81,8 +95,7 @@ const CaseStudy = ({ data, imgDom }) => {
                   dangerouslySetInnerHTML={{
                     __html: item.value,
                   }}
-                >
-                </span>
+                ></span>
               </div>
             ))}
           </div>

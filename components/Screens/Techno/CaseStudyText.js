@@ -2,7 +2,7 @@ import React from 'react'
 
 const CaseStudyText = ({ data }) => {
   return (
-    <div className='lg:mb-12 mb-8'>
+    <div className='lg:mb-12 mb-12'>
       <div className='container'>
         <div>
           <h2 className='lg:text-2xl text-1-xl text-dark font-bold mb-9'>
@@ -10,7 +10,7 @@ const CaseStudyText = ({ data }) => {
           </h2>
           {data?.field_text_description.map((item, index) => (
             <h3
-              className='text-dark lg:text-1-xl text-xl leading-11'
+              className='text-dark lg:text-1-xl text-xl lg:mt-16 mt-8 leading-11'
               key={index}
               dangerouslySetInnerHTML={{
                 __html: item.value,

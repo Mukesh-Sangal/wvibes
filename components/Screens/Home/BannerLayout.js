@@ -21,14 +21,14 @@ style={{
           <div className='banner_link flex justify-start lg:pt-8 pt-4 gap-9 '>
             <Link
               href='/contact'
-              className='text-white text-center font-light lg:text-[1.25rem] text-lg border hover:border-1    bg-[#DC248B]/0.4 hover:border-white border-white hover:bg-white hover:text-black transition-all duration-200 ease-in p-4 rounded'
+              className='text-white text-center font-light lg:text-[1.25rem] md:text-lg text-base border hover:border-1    bg-[#DC248B]/0.4 hover:border-white border-white hover:bg-white hover:text-black transition-all duration-200 ease-in p-4 rounded'
             >
               {data[0].field_home_banner_link}
               <p className='inline ml-2'>➔</p>
             </Link>
             <Link
               href='/contact'
-              className='text-white text-center border font-light lg:text-[1.25rem] text-lg bg-[#6A5ACD]/0.4 hover:bg-white hover:text-black border-white hover:border-white p-4 transition-all duration-200 ease-in rounded'
+              className='text-white text-center border font-light lg:text-[1.25rem] md:text-lg text-base bg-[#6A5ACD]/0.4 hover:bg-white hover:text-black border-white hover:border-white p-4 transition-all duration-200 ease-in rounded'
             >
               {data[0].field_home_banner_know_more_link}
               <p className='inline ml-2'>➔</p>

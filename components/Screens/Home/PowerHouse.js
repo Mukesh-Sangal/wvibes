@@ -15,7 +15,9 @@ const PowerHouse = ({ data }) => {
           {data.map((item, index) => (
             <Link
               className='font-medium 2xl:text-2xl lg:text-1-xl text-xl text-[#009cde] power hover:text-[#DC248B]'
-              href={urlExtractor(item.field_power_house_items_links)[1]}
+              href={`/technologies/${
+                urlExtractor(item.field_power_house_items_links)[1]
+              }`}
               key={index}
             >
               {urlExtractor(item.field_power_house_items_links)[0]}
