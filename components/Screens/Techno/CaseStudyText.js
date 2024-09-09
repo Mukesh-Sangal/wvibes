@@ -8,9 +8,9 @@ const CaseStudyText = ({ data }) => {
           <h2 className='lg:text-2xl text-1-xl text-dark font-bold mb-9'>
             {data?.field_text_title[0]?.value}
           </h2>
-          {data?.field_text_description.map((item, index) => (
+          {data?.field_text_description?.map((item, index) => (
             <h3
-              className='text-dark lg:text-1-xl text-xl lg:mt-16 mt-8 leading-11'
+              className='text-dark lg:text-1-xl text-xl lg:mt-12 mt-8 leading-11'
               key={index}
               dangerouslySetInnerHTML={{
                 __html: item.value,

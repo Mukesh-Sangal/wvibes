@@ -1,28 +1,29 @@
+import React, { memo } from 'react'
 import Link from 'next/link'
-import React from 'react'
 
 const HireaDrupalDeveloper = ({ data }) => {
+  const { field_cta_section_heading, field_cta_link } = data[0]
+
   return (
-    <div className='container lg:py-28 py-12 justify-between flex lg:flex-nowrap flex-wrap xl:gap-0 gap-6'>
+    <div className='container lg:py-28 py-12 flex lg:flex-nowrap flex-wrap gap-6 xl:gap-0'>
       <div className='flex lg:w-[48%] justify-between flex-wrap items-baseline lg:flex-col'>
         <div className='md:w-auto lg:w-[60%] w-full'>
-          <h1 className='font-bold xl:text-4xl md:text-2xl text-1-xl'>
-            {data[0].field_cta_section_heading}
+          <h1 className='font-bold xl:text-4xl md:text-2xl text-xl'>
+            {field_cta_section_heading}
           </h1>
         </div>
         <div className='lg:mt-0 mt-8 lg:ml-0 md:ml-12'>
           <Link className='transparent-buttons' href='/contact'>
-            {data[0].field_cta_link}
+            {field_cta_link}
           </Link>
         </div>
       </div>
-      <div className='grid grid-cols-2 lg:w-[48%] w-full content-between lg:gap-y-8 2xl:gap-x-14 md:gap-y-8 gap-y-4 gap-x-8 lg:pt-0 pt-8'>
+      <div className='grid grid-cols-2 lg:w-[48%] w-full gap-x-8 lg:gap-x-14 md:gap-y-8 gap-y-4 lg:pt-0 pt-8'>
         {data.map((item, index) => (
-          <div
-            className='font-medium xl:text-1-xl lg:text-1xl md:text-1xl text-lg items-start'
-            key={index}
-          >
-            {item.field_cta_subheading}
+          <div key={index}>
+            <p className='font-medium xl:text-xl lg:text-xl md:text-xl text-lg'>
+              {item.field_cta_subheading}
+            </p>
           </div>
         ))}
       </div>
@@ -30,4 +31,5 @@ const HireaDrupalDeveloper = ({ data }) => {
   )
 }
 
-export default HireaDrupalDeveloper
+// Use React.memo to optimize rendering
+export default memo(HireaDrupalDeveloper)

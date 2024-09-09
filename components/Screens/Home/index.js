@@ -1,22 +1,25 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
 import getPageData from '../../../utils/ApiMapWithType'
-import BannerLayout from './BannerLayout'
-import DrupalProjects from './DrupalProjects'
-import PowerHouse from './PowerHouse'
-import LetsBuild from './LetsBuild'
-import CounterUp from './CounterUp'
-import LinkWithTitle from './LinkWithTitle'
-import HireaDrupalDeveloper from './HireaDrupalDeveloper'
-import DigitalGrowDiscover from './DigitalGrowDiscover'
-import TopFooter from '../../TopFooter/TopFooter'
-import SlideComponent from './SlideComponent'
-import OurClients from './OurClients'
 import { Skeleton } from '../../../components/ui/skeleton'
+
+const BannerLayout = React.lazy(() => import('./BannerLayout'))
+const DrupalProjects = React.lazy(() => import('./DrupalProjects'))
+const PowerHouse = React.lazy(() => import('./PowerHouse'))
+const LetsBuild = React.lazy(() => import('./LetsBuild'))
+const CounterUp = React.lazy(() => import('./CounterUp'))
+const LinkWithTitle = React.lazy(() => import('./LinkWithTitle'))
+const HireaDrupalDeveloper = React.lazy(() => import('./HireaDrupalDeveloper'))
+const DigitalGrowDiscover = React.lazy(() => import('./DigitalGrowDiscover'))
+const TopFooter = React.lazy(() => import('../../TopFooter/TopFooter'))
+const SlideComponent = React.lazy(() => import('./SlideComponent'))
+const OurClients = React.lazy(() => import('./OurClients'))
+
 const Home = () => {
   const [data, setData] = useState([])
   const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
   console.log(data, 'Home')
+
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/home%20page`
@@ -25,87 +28,92 @@ const Home = () => {
     }
     fetchData()
   }, [])
+
   return (
     <div>
       {data?.length ? (
         data.map((item, index) => {
-          // Assuming each sub-array has only one object
-          // console.log(item, 'items')
           const dataToShow = item[0]?.type
           switch (dataToShow) {
             case 'Home Page Banner':
               return (
-                <div key={index}>
-                  <BannerLayout data={item} imgDom={backend_url} />
-                </div>
+                <Suspense fallback={<Skeleton />}>
+                  <BannerLayout key={index} data={item} imgDom={backend_url} />
+                </Suspense>
               )
             case 'Our Clients':
               return (
-                <div key={index}>
-                  <OurClients data={item} imgDom={backend_url} />
-                </div>
+                <Suspense fallback={<Skeleton />}>
+                  <OurClients key={index} data={item} imgDom={backend_url} />
+                </Suspense>
               )
             case 'Home Portfolio':
               return (
-                <div key={index}>
-                  <DrupalProjects data={item} />
-                </div>
+                <Suspense fallback={<Skeleton />}>
+                  <DrupalProjects key={index} data={item} />
+                </Suspense>
               )
             case 'Drupal  Power  House  Customizations':
               return (
-                <div key={index}>
-                  <PowerHouse data={item} />
-                </div>
+                <Suspense fallback={<Skeleton />}>
+                  <PowerHouse key={index} data={item} />
+                </Suspense>
               )
             case 'Lets Build head subhead img':
               return (
-                <div key={index}>
-                  <LetsBuild data={item} imgDom={backend_url} />
-                </div>
+                <Suspense fallback={<Skeleton />}>
+                  <LetsBuild key={index} data={item} imgDom={backend_url} />
+                </Suspense>
               )
             case 'Slider Component':
               return (
-                <div key={index}>
-                  <SlideComponent data={item} imgDom={backend_url} />
-                </div>
+                <Suspense fallback={<Skeleton />}>
+                  <SlideComponent
+                    key={index}
+                    data={item}
+                    imgDom={backend_url}
+                  />
+                </Suspense>
               )
             case 'Improve':
               return (
-                <div key={index}>
-                  <CounterUp data={item} imgDom={backend_url} />
-                </div>
+                <Suspense fallback={<Skeleton />}>
+                  <CounterUp key={index} data={item} imgDom={backend_url} />
+                </Suspense>
               )
             case 'Home Page We Help Agencies':
               return (
-                <div key={index}>
-                  <LinkWithTitle data={item} />
-                </div>
+                <Suspense fallback={<Skeleton />}>
+                  <LinkWithTitle key={index} data={item} />
+                </Suspense>
               )
             case 'Title Heading With Cta':
               return (
-                <div key={index}>
-                  <HireaDrupalDeveloper data={item} />
-                </div>
+                <Suspense fallback={<Skeleton />}>
+                  <HireaDrupalDeveloper key={index} data={item} />
+                </Suspense>
               )
             case 'Home Cta Services':
               return (
-                <div key={index}>
+                <Suspense fallback={<Skeleton />}>
                   <DigitalGrowDiscover
+                    key={index}
                     data={item}
                     imgDom={backend_url}
                     towCol='two-col'
                   />
-                </div>
+                </Suspense>
               )
             case 'Cta Heading Link Image':
               return (
-                <div key={index}>
+                <Suspense fallback={<Skeleton />}>
                   <TopFooter
+                    key={index}
                     title={item[0].field_cta_head}
                     link={item[0].field_cta_image_link}
                     imgurl={`${backend_url}${item[0].field_cta_bg_image}`}
                   />
-                </div>
+                </Suspense>
               )
             default:
               return null // Render nothing for unknown data-to-show values

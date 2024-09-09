@@ -52,7 +52,6 @@ const CaseStudy = ({ data, imgDom }) => {
           {data?.field_para_subtitle[0]?.value}
         </h2>
       )}
-
       <div className='grid grid-cols-1 gap-6 pt-8'>
         {paragraphData.map((item, index) => (
           <div className='' key={index}>
