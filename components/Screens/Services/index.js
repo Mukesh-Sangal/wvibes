@@ -135,18 +135,21 @@ const Services = () => {
                 </div>
               )
             case 'faq':
+              const sortedFaqItems = item.sort(
+                (a, b) => a.field_faq_o - b.field_faq_o
+              )
               return (
-                <div className='container text-left spacing' key={index}>
-                  <h2 className='lg:text-center xl:mb-20 mb-12 font-bold lg:text-4xl text-1-xl'>
-                    {item[0].field_faq_title}
+                <div className='container text-left spacing'>
+                  <h2 className='lg:text-center xl:mb-20 mb-12 font-bold lg:text-4xl text-xl'>
+                    {sortedFaqItems[0]?.field_faq_title}
                   </h2>
                   <Accordion
                     type='single'
                     collapsible
                     className='w-full lg:w-4/6 mx-auto'
                   >
-                    {item.map((el, i) => (
-                      <AccordionItem value={`item-${i}`} key={`item-${i}`}>
+                    {sortedFaqItems.map((el, i) => (
+                      <AccordionItem value={`item-${i}`} key={`faq-item-${i}`}>
                         <AccordionTrigger>{el.field_question}</AccordionTrigger>
                         <AccordionContent>{el.field_answer}</AccordionContent>
                       </AccordionItem>
