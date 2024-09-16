@@ -1,72 +1,125 @@
-import React, { useEffect, useState } from 'react'
-import Banner from './Banner'
-import CaseStudy from './CaseStudy'
-import CaseStudyText from './CaseStudyText'
+import React, { useEffect, useState, useMemo, useCallback } from 'react'
+import dynamic from 'next/dynamic'
 import axios from 'axios'
 import { Skeleton } from '../../../components/ui/skeleton'
 import Link from 'next/link'
 
-const CaseStudies = ({ data, imgDom }) => {
+// Dynamically import components to split the bundle
+const Banner = dynamic(() => import('./Banner'))
+const CaseStudy = dynamic(() => import('./CaseStudy'))
+const CaseStudyText = dynamic(() => import('./CaseStudyText'))
+
+const Blogs = ({ data, imgDom }) => {
   const [paragraphData, setParagraphData] = useState([])
-  console.log(paragraphData,'Para');
-  const fetchData = async () => {
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  // Fetch CSRF token and headers only once
+  const getHeaders = async () => {
     try {
-      const username = 'growibes' // Replace with your actual username
-      const password = 'Jaibholenath@1989' // Replace with your actual password
-      const basicAuth = 'Basic ' + btoa(username + ':' + password)
       const csrfResponse = await fetch(`${imgDom}/session/token`)
       const csrfToken = await csrfResponse.text()
-      const headers = {
+      const username = 'growibes' // Replace with actual username
+      const password = 'Jaibholenath@1989' // Replace with actual password
+      const basicAuth = 'Basic ' + btoa(username + ':' + password)
+
+      return {
         Accept: 'application/json',
         'Content-Type': 'application/json',
         'X-CSRF-Token': csrfToken,
-        Authorization: basicAuth, // Add the Authorization header
+        Authorization: basicAuth,
       }
-      const promises = data?.field_blog?.map(async (reference) => {
+    } catch (err) {
+      throw new Error('Failed to fetch headers')
+    }
+  }
+
+  // Fetch the paragraph data
+  const fetchData = useCallback(async () => {
+    try {
+      if (!data?.field_blog?.length) {
+        setParagraphData([])
+        setLoading(false)
+        return
+      }
+
+      const headers = await getHeaders()
+
+      const promises = data.field_blog.map(async (reference) => {
         const response = await axios.get(
           `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
           { headers }
         )
         return response.data
       })
+
       const fetchedData = await Promise.all(promises)
       setParagraphData(fetchedData)
     } catch (error) {
+      setError(error.message || 'An error occurred while fetching data')
       console.error('Error fetching data:', error)
+    } finally {
+      setLoading(false)
     }
-  }
+  }, [data, imgDom])
 
+  // Call fetchData when the component mounts or data changes
   useEffect(() => {
     fetchData()
-  }, [data])
+  }, [fetchData])
 
-  return (
-    <div>
-      {/* Render child components */}
-      {paragraphData.length ? (
-        paragraphData.map((paragraph, index) => {
-          switch (paragraph.type[0].target_id) {
-            case 'case_study_banner':
-              return <Banner key={index} data={paragraph} imgDom={imgDom} />
-            case 'case_study':
-              return <CaseStudy key={index} data={paragraph} imgDom={imgDom} />
-            case 'case_study_text_and_disc':
-              return (
-                <CaseStudyText key={index} data={paragraph} imgDom={imgDom} />
-              )
-            default:
-              return null
-          }
-        })
-      ) : (
-        <div className='flex items-center justify-center space-x-4 h-[70vh] '>
+  // Memoize the rendering logic to prevent unnecessary re-renders
+  const renderParagraphs = useMemo(() => {
+    if (loading) {
+      return (
+        <div className='flex items-center justify-center space-x-4 h-[70vh]'>
           <Skeleton className='h-12 w-12 rounded-full' />
           <div className='space-y-2'>
             <Skeleton className='h-4 w-[250px]' />
             <Skeleton className='h-4 w-[200px]' />
           </div>
         </div>
-      )}
+      )
+    }
+
+    if (error) {
+      return (
+        <div className='flex items-center justify-center h-[70vh]'>
+          <p className='text-red-500'>Error loading data: {error}</p>
+        </div>
+      )
+    }
+
+    if (!paragraphData.length) {
+      return (
+        <div className='flex items-center justify-center space-x-4 h-[70vh]'>
+          <Skeleton className='h-12 w-12 rounded-full' />
+          <div className='space-y-2'>
+            <Skeleton className='h-4 w-[250px]' />
+            <Skeleton className='h-4 w-[200px]' />
+          </div>
+        </div>
+      )
+    }
+
+    // Render paragraphs based on their type
+    return paragraphData.map((paragraph, index) => {
+      switch (paragraph?.type?.[0]?.target_id) {
+        case 'case_study_banner':
+          return <Banner key={index} data={paragraph} imgDom={imgDom} />
+        case 'case_study':
+          return <CaseStudy key={index} data={paragraph} imgDom={imgDom} />
+        case 'case_study_text_and_disc':
+          return <CaseStudyText key={index} data={paragraph} imgDom={imgDom} />
+        default:
+          return null
+      }
+    })
+  }, [loading, error, paragraphData, imgDom])
+
+  return (
+    <div>
+      {renderParagraphs}
       <div className='container mt-12 mb-4'>
         <Link className='transparent-buttons' href='/contact'>
           Contact Us
@@ -76,4 +129,4 @@ const CaseStudies = ({ data, imgDom }) => {
   )
 }
 
-export default CaseStudies
+export default Blogs

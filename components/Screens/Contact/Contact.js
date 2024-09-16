@@ -75,6 +75,7 @@ const Contact = () => {
               src='/digital.png'
               width={1920}
               height={100}
+              unoptimized={true}
               className='h-full object-cover'
               alt='contact us Image'
             />

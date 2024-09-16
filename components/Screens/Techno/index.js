@@ -1,12 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import Banner from './Banner'
-import CaseStudy from './CaseStudy'
-import CaseStudyText from './CaseStudyText'
+'use client'
+import React, { useEffect, useState, useMemo } from 'react'
 import axios from 'axios'
 import { Skeleton } from '../../../components/ui/skeleton'
+import dynamic from 'next/dynamic'
+
+// Dynamically import components
+const Banner = dynamic(() => import('./Banner'))
+const CaseStudy = dynamic(() => import('./CaseStudy'))
+const CaseStudyText = dynamic(() => import('./CaseStudyText'))
 
 const CaseStudies = ({ data, imgDom }) => {
   const [paragraphData, setParagraphData] = useState([])
+
   const fetchData = async () => {
     try {
       const username = 'growibes' // Replace with your actual username
@@ -36,26 +41,28 @@ const CaseStudies = ({ data, imgDom }) => {
 
   useEffect(() => {
     fetchData()
-  }, [data])
+  }, [data, imgDom]) // Include imgDom in dependency array
+
+  // Memoize the component rendering
+  const renderedParagraphs = useMemo(() => {
+    return paragraphData.map((paragraph, index) => {
+      switch (paragraph.type[0].target_id) {
+        case 'case_study_banner':
+          return <Banner key={index} data={paragraph} imgDom={imgDom} />
+        case 'case_study':
+          return <CaseStudy key={index} data={paragraph} imgDom={imgDom} />
+        case 'case_study_text_and_disc':
+          return <CaseStudyText key={index} data={paragraph} imgDom={imgDom} />
+        default:
+          return null
+      }
+    })
+  }, [paragraphData, imgDom]) // Dependency array to re-render when data changes
 
   return (
     <div>
-      {/* Render child components */}
       {paragraphData.length ? (
-        paragraphData.map((paragraph, index) => {
-          switch (paragraph.type[0].target_id) {
-            case 'case_study_banner':
-              return <Banner key={index} data={paragraph} imgDom={imgDom} />
-            case 'case_study':
-              return <CaseStudy key={index} data={paragraph} imgDom={imgDom} />
-            case 'case_study_text_and_disc':
-              return (
-                <CaseStudyText key={index} data={paragraph} imgDom={imgDom} />
-              )
-            default:
-              return null
-          }
-        })
+        renderedParagraphs
       ) : (
         <div className='flex items-center justify-center space-x-4 h-[70vh] '>
           <Skeleton className='h-12 w-12 rounded-full' />
