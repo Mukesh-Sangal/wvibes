@@ -1,22 +1,17 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-const ServicesSections = (props) => {
+const ServicesSections = memo(({ bgColor, color, desColor, title, desc }) => {
   return (
     <div
-      className={`lg:p-10 p-7 ${props.bgColor} flex flex-col justify-start flex-wrap`}
+      className={`lg:p-10 p-7 ${bgColor} flex flex-col justify-start flex-wrap`}
     >
       <h3
-        className={`lg:text-[38px] text-1-xl ${props.color} lg:mb-10 mb-4 font-semibold`}
-        dangerouslySetInnerHTML={{
-          __html: props.title,
-        }}
-      >
-      </h3>
-      <p className={`md:text-1xl text-xl ${props.desColor} lg:mb-10 mb-4 `}>
-        {props.desc}
-      </p>
+        className={`lg:text-[38px] text-xl ${color} lg:mb-10 mb-4 font-semibold`}
+        dangerouslySetInnerHTML={{ __html: title }} // Be sure to sanitize if needed
+      />
+      <p className={`md:text-1xl text-xl ${desColor} lg:mb-10 mb-4`}>{desc}</p>
     </div>
   )
-}
+})
 
 export default ServicesSections
