@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Link from 'next/link'
 import urlExtractor from 'utils/urlExtractor'
 
 const DigitalGrowDiscover = ({ data, imgDom }) => {
+  // Memoize URL extraction and split to avoid recalculating on every render
+  const extractLinks = (linkString) => {
+    return linkString.split(',').map((link) => {
+      const [text, url] = urlExtractor(link.trim())
+      return { text, url }
+    })
+  }
+
+  const backgroundImage = `${imgDom}${data[0]?.field_home_cta_bg_image}`
+
   return (
     <div
       className='bg-cover relative w-full bg-fixed digital-grow'
-      style={{
-        backgroundImage: `url(${imgDom}${data[0]?.field_home_cta_bg_image})`,
-      }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className='spacing'>
         <h1
@@ -16,7 +24,7 @@ const DigitalGrowDiscover = ({ data, imgDom }) => {
           dangerouslySetInnerHTML={{
             __html: data[0]?.field_home_service_title,
           }}
-        ></h1>
+        />
         <div className='items-container relative flex justify-between flex-wrap'>
           {data.map((item, index) => (
             <div
@@ -34,45 +42,39 @@ const DigitalGrowDiscover = ({ data, imgDom }) => {
                     dangerouslySetInnerHTML={{
                       __html: item.field_home_service_heading,
                     }}
-                  ></h1>
+                  />
                 </div>
               </div>
               <div className='xl:text-xl lg:self-center lg:text-lg text-xl pt-4 text-left'>
                 {item?.field_home_cta_subheading_link_i && (
                   <div className='flex flex-wrap flex-col'>
-                    {item.field_home_cta_subheading_link_i
-                      .split(',')
-                      .map((link, linkIndex) => {
-                        const [text, url] = urlExtractor(link.trim())
-                        return (
-                          <Link
-                            key={linkIndex}
-                            href={`/technologies/${url}`}
-                            className='xl:text-2xl pb-4 hover:text-[#25AAE1] text-left lg:text-xl text-xl font-bold'
-                          >
-                            {text}
-                          </Link>
-                        )
-                      })}
+                    {extractLinks(item.field_home_cta_subheading_link_i).map(
+                      ({ text, url }, linkIndex) => (
+                        <Link
+                          key={linkIndex}
+                          href={`/technologies/${url}`}
+                          className='xl:text-2xl pb-4 hover:text-[#25AAE1] text-left lg:text-xl text-xl font-bold'
+                        >
+                          {text}
+                        </Link>
+                      )
+                    )}
                   </div>
                 )}
               </div>
               {item?.field_text_subhead_link_item && (
                 <div className='xl:text-2xl lg:text-xl lg:self-center text-xl'>
-                  {item.field_text_subhead_link_item
-                    .split(',')
-                    .map((link, linkIndex) => {
-                      const [text, url] = urlExtractor(link.trim())
-                      return (
-                        <Link
-                          key={linkIndex}
-                          href={`/technologies/${url}`}
-                          className='xl:text-2xl hover:text-[#25AAE1] text-left lg:text-xl text-xl font-bold'
-                        >
-                          {text}
-                        </Link>
-                      )
-                    })}
+                  {extractLinks(item.field_text_subhead_link_item).map(
+                    ({ text, url }, linkIndex) => (
+                      <Link
+                        key={linkIndex}
+                        href={`/technologies/${url}`}
+                        className='xl:text-2xl hover:text-[#25AAE1] text-left lg:text-xl text-xl font-bold'
+                      >
+                        {text}
+                      </Link>
+                    )
+                  )}
                 </div>
               )}
             </div>
@@ -88,4 +90,4 @@ const DigitalGrowDiscover = ({ data, imgDom }) => {
   )
 }
 
-export default DigitalGrowDiscover
+export default memo(DigitalGrowDiscover)

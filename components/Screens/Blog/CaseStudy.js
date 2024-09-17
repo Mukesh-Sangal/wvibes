@@ -1,61 +1,74 @@
-import React, {useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import axios from 'axios'
+
 const CaseStudy = ({ data, imgDom }) => {
-
   const [paragraphData, setParagraphData] = useState([])
-  const fetchData = async () => {
-    try {
-      const username = 'growibes'
-      const password = 'Jaibholenath@1989'
-      const basicAuth = 'Basic ' + btoa(username + ':' + password)
 
-      // Fetch CSRF token dynamically
+  // Memoize API URL and authentication details to avoid recalculating
+  const basicAuth = useMemo(() => {
+    const username = 'growibes'
+    const password = 'Jaibholenath@1989'
+    return 'Basic ' + btoa(username + ':' + password)
+  }, [])
+
+  // Fetch data using useCallback to prevent function recreation
+  const fetchData = useCallback(async () => {
+    if (!data?.field_paragraph_reference?.length) return
+
+    try {
+      // Fetch CSRF token
       const csrfResponse = await fetch(`${imgDom}/session/token`)
       const csrfToken = await csrfResponse.text()
+
       const headers = {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        'X-CSRF-Token': csrfToken, // Use the fetched CSRF token
-        Authorization: basicAuth, // Add the Authorization header
+        'X-CSRF-Token': csrfToken,
+        Authorization: basicAuth,
       }
 
-      const promises = data?.field_paragraph_reference?.map(
-        async (reference) => {
-          const response = await axios.get(
-            `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
-            { headers }
-          )
-          return response.data
-        }
+      // Fetch all paragraphs in parallel
+      const promises = data.field_paragraph_reference.map((reference) =>
+        axios.get(
+          `${imgDom}/entity/paragraph/${reference.target_id}?_format=json`,
+          { headers }
+        )
       )
 
       const fetchedData = await Promise.all(promises)
-      setParagraphData(fetchedData)
+      setParagraphData(fetchedData.map((res) => res.data))
     } catch (error) {
       console.error('Error fetching data:', error)
     }
-  }
+  }, [data?.field_paragraph_reference, imgDom, basicAuth])
 
   useEffect(() => {
     fetchData()
-  }, [data])
+  }, [fetchData])
+
   return (
     <div className='container lg:my-8 my-4'>
-      <h1 className='lg:text-2xl text-xl font-bold text-[#f8cc46] mb-4'>
-        {data?.field_case_study_title[0]?.value}
-      </h1>
-      <h2 className='lg:text-2xl text-1xl font-bold text-dark mb-4'>
-        {data?.field_para_subtitle[0]?.value}
-      </h2>
-      <div className='grid grid-cols-1 pt-7 lg:gap-32 gap-12'>
-        {paragraphData?.map((item, index) => (
-          <div className='' key={index}>
-            <h2 className='text-dark text-1-xl font-bold pb-12'>
-              {item?.field_item_title[0].value}
-            </h2>
-            {item?.field_blog_desc.map((item, index) => (
+      {data?.field_case_study_title?.[0]?.value && (
+        <h1 className='lg:text-2xl text-1-xl font-bold text-[#f8cc46] mb-4'>
+          {data.field_case_study_title[0].value}
+        </h1>
+      )}
+      {data?.field_para_subtitle?.[0]?.value && (
+        <h2 className='lg:text-1-xl text-1xl text-dark mb-4'>
+          {data.field_para_subtitle[0].value}
+        </h2>
+      )}
+      <div className='grid grid-cols-1 lg:gap-8 gap-8'>
+        {paragraphData.map((item, index) => (
+          <div key={index}>
+            {item?.field_item_title?.[0]?.value && (
+              <h2 className='text-dark lg:text-1-xl text-1xl font-bold pb-12'>
+                {item.field_item_title[0].value}
+              </h2>
+            )}
+            {item?.field_blog_desc?.map((descItem, descIndex) => (
               <div
-                key={index}
+                key={descIndex}
                 className='text-dark text-1xl pb-5 ml-16 font-medium relative'
               >
                 <svg
@@ -79,9 +92,7 @@ const CaseStudy = ({ data, imgDom }) => {
                   </g>
                 </svg>
                 <span
-                  dangerouslySetInnerHTML={{
-                    __html: item.value,
-                  }}
+                  dangerouslySetInnerHTML={{ __html: descItem.value }}
                 ></span>
               </div>
             ))}
@@ -92,4 +103,4 @@ const CaseStudy = ({ data, imgDom }) => {
   )
 }
 
-export default CaseStudy
+export default React.memo(CaseStudy) // Memoize component to prevent unnecessary re-renders

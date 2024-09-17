@@ -37,7 +37,7 @@ const DrupalProjects = ({ data }) => {
                   <span
                     className={`font-bold ${
                       index === data.length - 1
-                        ? '2xl:text-3xl-1 lg:text-3xl text-xl'
+                        ? '2xl:text-4xl text-2xl'
                         : '2xl:text-4xl text-2xl'
                     }`}
                     ref={countUpRef}

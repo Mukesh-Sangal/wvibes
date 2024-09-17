@@ -1,8 +1,13 @@
-import Image from 'next/image';
-import React from 'react'
+import Image from 'next/image'
+import React, { memo, useMemo } from 'react'
 
-const OurClients = ({data, imgDom}) => {
- const imagePaths = data[0]?.field_clients_logos.split(', ')
+const OurClients = ({ data, imgDom }) => {
+  // Use useMemo to avoid recalculating the image paths on every render
+  const imagePaths = useMemo(
+    () => data[0]?.field_clients_logos.split(', '),
+    [data]
+  )
+
   return (
     <div className='bg-[#009CDE] bg-opacity-50 text-center lg:py-8 py-4'>
       <div className='container'>
@@ -15,6 +20,9 @@ const OurClients = ({data, imgDom}) => {
               width={100} // Adjust width as needed
               height={100} // Adjust height as needed
               className='object-contain'
+              sizes='(max-width: 1024px) 50px, 100px' // Responsive sizes
+              loading='lazy' // Ensure lazy loading
+              quality={75} // Reduce image quality slightly for faster loading
             />
           ))}
         </div>
@@ -23,4 +31,5 @@ const OurClients = ({data, imgDom}) => {
   )
 }
 
-export default OurClients
+// Use React.memo to optimize re-renders
+export default memo(OurClients)
