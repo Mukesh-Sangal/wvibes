@@ -14,7 +14,7 @@ const ServicesBanner = ({ data, imgDom }) => {
             width={100}
             height={100}
             className='mb-4 lg:mt-8 mt-24'
-          ></Image>
+          />
           <div className='desc'>
             <h1 className='lg:text-[50px] text-[36px] text-white font-bold mb-8 '>
               {data[0].field_banner_title}

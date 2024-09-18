@@ -79,7 +79,7 @@ function Header() {
           <div className='flex justify-between'>
             <Link href='/' aria-label='Homepage' onClick={closeMenu}>
               <Image
-                src='/logo.png'
+                src='/logoo.webp'
                 className='h-14 image'
                 alt='logo'
                 height={200}
@@ -128,7 +128,7 @@ function Header() {
           >
             <Link href='/' onClick={closeMenu}>
               <Image
-                src='/logo1.png'
+                src='/logo01.webp'
                 className='lg:hidden mx-1 my-5 pl-3'
                 alt='logo'
                 height={200}

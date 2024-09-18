@@ -72,7 +72,7 @@ const Contact = () => {
         <div className='grid md:grid-cols-2 grid-cols-1'>
           <article className='w-full h-full'>
             <Image
-              src='/digital.png'
+              src='/digital.webp'
               width={1920}
               height={100}
               unoptimized={true}
