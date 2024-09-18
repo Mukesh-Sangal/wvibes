@@ -2,11 +2,15 @@ import './globals.css'
 import { Outfit } from '@next/font/google'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
-import CookieConsent from '../components/CookieConsent'
+import dynamic from 'next/dynamic'
 const outfit = Outfit({
   subsets: ['latin'], // Specify the subsets you need
   weight: ['400', '600', '700', '900'], // Specify the weights you need
   style: ['normal'],
+  display: 'swap'
+})
+const CookieConsent = dynamic(() => import('../components/CookieConsent'), {
+  ssr: false,
 })
 export async function generateMetadata() {
   // Generate a random cache-busting query parameter
@@ -46,12 +50,12 @@ export async function generateMetadata() {
 }
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'  className={`{ ${outfit.className}`} >
+    <html lang='en' className={outfit.className}>
       <body>
-        <Header/>
+        <Header />
         <main>{children}</main>
         <CookieConsent />
-        <Footer/>
+        <Footer />
       </body>
     </html>
   )
