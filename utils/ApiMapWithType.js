@@ -1,7 +1,10 @@
 import axios from 'axios'
+
 async function getPageData(apiPageUrl) {
   const result = await axios.get(apiPageUrl)
   const backendUrl = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
+
+  // API Map
   const apiMap = {
     Banner: `${backendUrl}/innerbanner/`,
     'Box Container': `${backendUrl}/what-we-do/`,
@@ -10,8 +13,8 @@ async function getPageData(apiPageUrl) {
     'Lets Build head subhead img': `${backendUrl}/lets-build/`,
     'Home Portfolio': `${backendUrl}/home-page-section-1/`,
     'Home Page Banner': `${backendUrl}/home-banner/`,
-    'Drupal  Power  House  Customizations': `${backendUrl}/home-page-section-2/`,
-    'Home Page We Help Agencies': `${backendUrl}/help-agencies section-4/`,
+    'Drupal Power House Customizations': `${backendUrl}/home-page-section-2/`,
+    'Home Page We Help Agencies': `${backendUrl}/help-agencies-section-4/`,
     'Title Heading With Cta': `${backendUrl}/cta-section/`,
     'Home Cta Services': `${backendUrl}/home-services/`,
     'Cta Heading Link Image': `${backendUrl}/cta-with-image/`,
@@ -33,24 +36,25 @@ async function getPageData(apiPageUrl) {
     BlogItems: `${backendUrl}/blogs/`,
     'Our Clients': `${backendUrl}/our-clients/`,
   }
-  //  console.log(result.data,'result')
+
   let { data } = result
-  const results = []
-  for (let i = 0; i < data.length; i++) {
-    const apiUrl = `${apiMap[data[i].type]}${data[i].id}`
+  const fetchPromises = data.map(async (item) => {
+    const apiUrl = `${apiMap[item.type]}${item.id}`
     try {
-      const response = await axios.get(apiUrl)
-      results.push(response.data)
+      const response = await axios
+        .get(apiUrl)
+      return response.data
     } catch (error) {
       console.error(
-        `Error fetching data for type: ${data[i].type}, ID: ${data[i].id}`
+        `Error fetching data for type: ${item.type}, ID: ${item.id}`
       )
-      // Handle the error as needed
+      return null // Return null in case of an error to continue
+        
     }
-  }
-  // console.log(results);
-  return results
-  // Now 'results' array contains the data for each object
-  // console.log('Fetched data:', results)
+  })
+
+  const results = await Promise.all(fetchPromises)
+  return results.filter(Boolean) // Filter out null values (errors)
 }
+
 export default getPageData
