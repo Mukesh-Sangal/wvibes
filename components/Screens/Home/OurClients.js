@@ -9,7 +9,7 @@ const OurClients = ({ data, imgDom }) => {
   )
 
   return (
-    <div className='bg-[#009CDE] bg-opacity-50 text-center lg:py-8 py-4'>
+    <div className=' text-center lg:py-8 py-4'>
       <div className='container'>
         <div className='lg:grid lg:grid-cols-4 gap-8 items-center flex justify-center flex-wrap'>
           {imagePaths?.map((path, index) => (

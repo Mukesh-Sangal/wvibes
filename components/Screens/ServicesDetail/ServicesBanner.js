@@ -4,17 +4,10 @@ import Image from 'next/image';
 const ServicesBanner = ({ data, imgDom }) => {
   return (
     <div
-      className='service-bef lg:p-12 lg:pl-8 relative'
+      className='service-bef lg:p-12 lg:pl-8 relative mt-[72px]'
     >
       <div className='container flex flex-wrap justify-between relative'>
-        <div className='xl:basis-[33%] lg:basis-[45%] w-full lg:order-1 order-2'>
-          <Image
-            src={`${imgDom}${data[0].field_banner_icon}`}
-            alt={data[0].title}
-            width={100}
-            height={100}
-            className='mb-4 lg:mt-8 mt-24'
-          />
+        <div className='xl:basis-[33%] lg:basis-[45%] w-full lg:order-1 order-2 lg:mt-12 mt-16'>
           <div className='desc'>
             <h1 className='lg:text-[50px] text-[36px] text-white font-bold mb-8 '>
               {data[0].field_banner_title}

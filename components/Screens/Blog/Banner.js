@@ -16,7 +16,7 @@ const Banner = ({ data }) => {
 
   return (
     <div
-      className='innerBanner bg-cover lg:h-[400px] h-[125px] bg-no-repeat bg-center'
+      className='innerBanner bg-cover lg:h-[400px] h-[125px] bg-no-repeat bg-center mt-[72px]'
       style={{ backgroundImage: `url(${bannerImage})` }} // Ensure the full URL is used here
     >
       <div className='container spacing flex items-center h-full'>

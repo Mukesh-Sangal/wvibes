@@ -3,7 +3,7 @@ import React from 'react'
 const InnerBanner = ({data, imgDom}) => {
   return (
     <div
-      className='innerBanner bg-cover lg:h-[600px] h-[300px] mt-[72px]  bg-no-repeat bg-center'
+      className='innerBanner bg-cover lg:h-[400px] h-[220px] mt-[72px]  bg-no-repeat bg-center'
       style={{
         backgroundImage: `url(${imgDom}/${data[0].field_banner_image})`
       }}

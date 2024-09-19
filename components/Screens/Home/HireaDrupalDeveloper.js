@@ -25,7 +25,7 @@ const HireaDrupalDeveloper = ({ data }) => {
       <div className='grid grid-cols-2 lg:w-[48%] w-full gap-x-8 lg:gap-x-14 md:gap-y-8 gap-y-4 lg:pt-0 pt-8'>
         {data.map((item, index) => (
           <div key={index}>
-            <p className='font-medium xl:text-1xl lg:text-1xl md:text-xl text-lg'>
+            <p className='font-medium xl:text-1-xl md:text-1xl text-xl'>
               {item.field_cta_subheading}
             </p>
           </div>

@@ -10,7 +10,7 @@ const outfit = Outfit({
   display: 'swap'
 })
 const CookieConsent = dynamic(() => import('../components/CookieConsent'), {
-  ssr: false,
+  ssr: false
 })
 export async function generateMetadata() {
   // Generate a random cache-busting query parameter

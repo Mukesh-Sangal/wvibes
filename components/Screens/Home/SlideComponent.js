@@ -85,7 +85,7 @@ const SlideComponent = ({ data, imgDom }) => {
         <div className='swiper-button-prev slider-arrow lg:hidden'>
           <GrPrevious size={70} color={'yellow'} />
         </div>
-        <div className='swiper-button-next slider-arrow'>
+        <div className='swiper-button-next slider-arrow lg:hidden'>
           <GrNext size={70} color={'yellow'} />
         </div>
         <div className='swiper-pagination'></div>
