@@ -9,7 +9,7 @@ const dynamicComponentMap = {
   'Home Page Banner': () => import('./BannerLayout'),
   'Our Clients': () => import('./OurClients'),
   'Home Portfolio': () => import('./DrupalProjects'),
-  'Drupal Power House Customizations': () => import('./PowerHouse'),
+  'Drupal  Power  House  Customizations': () => import('./PowerHouse'),
   'Lets Build head subhead img': () => import('./LetsBuild'),
   'Slider Component': () => import('./SlideComponent'),
   Improve: () => import('./CounterUp'),
@@ -30,7 +30,7 @@ const loadComponent = (componentName) => {
 const Home = () => {
   const [data, setData] = useState([])
   const backend_url = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
-
+  // console.log(data, 'Home page')
   useEffect(() => {
     const fetchData = async () => {
       const apiPageUrl = `${backend_url}/node_title/home%20page`

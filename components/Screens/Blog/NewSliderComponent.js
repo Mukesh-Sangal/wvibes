@@ -65,7 +65,7 @@ const BlogListing = ({ data, imgDom }) => {
               alt={blog.field_slider_title || 'Blog Image'}
               width={600}
               height={500}
-              className='w-full lg:h-[400px] object-cover'
+              className='w-full h-auto object-cover'
               priority
             />
             <h2 className='lg:text-1xl text-xl font-medium text-black mt-8'>

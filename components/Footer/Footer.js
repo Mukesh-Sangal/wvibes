@@ -33,7 +33,7 @@ const Footer = () => {
    },
    {
      title: 'Linkedin',
-     url: '/linkedin',
+     url: 'https://www.linkedin.com/company/growibes-digital/posts/?feedView=all',
    },
  ]
   return (

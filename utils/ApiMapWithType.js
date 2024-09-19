@@ -13,7 +13,7 @@ async function getPageData(apiPageUrl) {
     'Lets Build head subhead img': `${backendUrl}/lets-build/`,
     'Home Portfolio': `${backendUrl}/home-page-section-1/`,
     'Home Page Banner': `${backendUrl}/home-banner/`,
-    'Drupal Power House Customizations': `${backendUrl}/home-page-section-2/`,
+    'Drupal  Power  House  Customizations': `${backendUrl}/home-page-section-2/`,
     'Home Page We Help Agencies': `${backendUrl}/help-agencies-section-4/`,
     'Title Heading With Cta': `${backendUrl}/cta-section/`,
     'Home Cta Services': `${backendUrl}/home-services/`,
