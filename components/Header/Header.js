@@ -139,7 +139,7 @@ function Header() {
             <ul className='flex  camelcase lg:px-0 px-3 mobile '>
               {menu.map((item, index) => (
                 <li
-                  className={`hover:bg-white mobiles-icon mx-1 xl:px-2 px-[0.3rem] relative group`}
+                  className={`mobiles-icon mx-1 xl:px-2 px-[0.3rem] relative group`}
                   key={index}
                 >
                   {item.url ? (
