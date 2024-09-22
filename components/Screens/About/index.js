@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import dynamic from 'next/dynamic'
 import getPageData from '../../../utils/ApiMapWithType'
-import { Skeleton } from '../../../components/ui/skeleton'
+import Loader from '../../Loader'
 
 // Dynamic imports for components
 const InnerBanner = dynamic(() => import('./InnerBanner'))
@@ -84,13 +84,9 @@ const About = () => {
       {data.length ? (
         renderedContent
       ) : (
-        <div className='flex items-center justify-center space-x-4 h-[70vh]'>
-          <Skeleton className='h-12 w-12 rounded-full' />
-          <div className='space-y-2'>
-            <Skeleton className='h-4 w-[250px]' />
-            <Skeleton className='h-4 w-[200px]' />
-          </div>
-        </div>
+        <>
+        <Loader/>
+        </>
       )}
     </div>
   )

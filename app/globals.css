@@ -37,7 +37,6 @@ html {
 main.__className_e66fe9 {
   margin-top: 73px;
 }
-
 .image-bg {
   @apply before:content-[''] w-full h-full absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:opacity-['0.75'];
 }

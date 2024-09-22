@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react'
 import dynamic from 'next/dynamic'
 import axios from 'axios'
-import { Skeleton } from '../../../components/ui/skeleton'
+import Loader from '../../Loader'
 import Link from 'next/link'
 
 // Dynamically import components to split the bundle
@@ -72,13 +72,9 @@ const Blogs = ({ data, imgDom }) => {
   const renderParagraphs = useMemo(() => {
     if (loading) {
       return (
-        <div className='flex items-center justify-center space-x-4 h-[70vh]'>
-          <Skeleton className='h-12 w-12 rounded-full' />
-          <div className='space-y-2'>
-            <Skeleton className='h-4 w-[250px]' />
-            <Skeleton className='h-4 w-[200px]' />
-          </div>
-        </div>
+        <>
+        <Loader/>
+        </>
       )
     }
 
@@ -92,13 +88,9 @@ const Blogs = ({ data, imgDom }) => {
 
     if (!paragraphData.length) {
       return (
-        <div className='flex items-center justify-center space-x-4 h-[70vh]'>
-          <Skeleton className='h-12 w-12 rounded-full' />
-          <div className='space-y-2'>
-            <Skeleton className='h-4 w-[250px]' />
-            <Skeleton className='h-4 w-[200px]' />
-          </div>
-        </div>
+        <>
+          <Loader />
+        </>
       )
     }
 

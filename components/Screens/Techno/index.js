@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState, useMemo } from 'react'
 import axios from 'axios'
-import { Skeleton } from '../../../components/ui/skeleton'
+import Loader from '../../Loader'
 import dynamic from 'next/dynamic'
 
 // Dynamically import components
@@ -64,13 +64,9 @@ const CaseStudies = ({ data, imgDom }) => {
       {paragraphData.length ? (
         renderedParagraphs
       ) : (
-        <div className='flex items-center justify-center space-x-4 h-[70vh] '>
-          <Skeleton className='h-12 w-12 rounded-full' />
-          <div className='space-y-2'>
-            <Skeleton className='h-4 w-[250px]' />
-            <Skeleton className='h-4 w-[200px]' />
-          </div>
-        </div>
+        <>
+        <Loader/>
+        </>
       )}
     </div>
   )

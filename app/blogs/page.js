@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo } from 'react'
 import getPageData from '../../utils/ApiMapWithType'
 import InnerBanner from '../../components/Screens/Blog/InnerBanner'
 import NewSliderComponent from '../../components/Screens/Blog/NewSliderComponent'
-import { Skeleton } from '../../components/ui/skeleton'
+import Loader from '../../components/Loader'
 
 const Blog = () => {
   const [data, setData] = useState(null)
@@ -33,13 +33,9 @@ const Blog = () => {
 
   if (loading) {
     return (
-      <div className='flex items-center justify-center space-x-4 h-[70vh] '>
-        <Skeleton className='h-12 w-12 rounded-full' />
-        <div className='space-y-2'>
-          <Skeleton className='h-4 w-[250px]' />
-          <Skeleton className='h-4 w-[200px]' />
-        </div>
-      </div>
+      <>
+      <Loader/>
+      </>
     )
   }
 

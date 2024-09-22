@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react'
 import dynamic from 'next/dynamic'
 import getPageData from '../../../utils/ApiMapWithType'
 import Link from 'next/link'
-import { Skeleton } from '../../../components/ui/skeleton'
+import Loader from '../../Loader'
 import {
   Accordion,
   AccordionContent,
@@ -186,13 +186,9 @@ const Services = () => {
   return (
     <div>
       {loading ? (
-        <div className='flex items-center justify-center space-x-4 h-[70vh]'>
-          <Skeleton className='h-12 w-12 rounded-full' />
-          <div className='space-y-2'>
-            <Skeleton className='h-4 w-[250px]' />
-            <Skeleton className='h-4 w-[200px]' />
-          </div>
-        </div>
+        <>
+        <Loader/>
+        </>
       ) : (
         data?.length && data.map(renderSection)
       )}

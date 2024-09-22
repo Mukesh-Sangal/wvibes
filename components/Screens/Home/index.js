@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, Suspense } from 'react'
 import getPageData from '../../../utils/ApiMapWithType'
-import { Skeleton } from '../../../components/ui/skeleton'
+import Loader from '../../Loader'
 
 // Mapping component names to dynamic imports
 const dynamicComponentMap = {
@@ -49,7 +49,7 @@ const Home = () => {
 
           if (DynamicComponent) {
             return (
-              <Suspense fallback={<Skeleton />} key={index}>
+              <Suspense fallback={<Loader />} key={index}>
                 <DynamicComponent
                   key={index}
                   data={item}
@@ -61,13 +61,7 @@ const Home = () => {
           return null // If no matching component is found
         })
       ) : (
-        <div className='flex items-center justify-center space-x-4 h-[70vh]'>
-          <Skeleton className='h-12 w-12 rounded-full' />
-          <div className='space-y-2'>
-            <Skeleton className='h-4 w-[250px]' />
-            <Skeleton className='h-4 w-[200px]' />
-          </div>
-        </div>
+        <><Loader/></>
       )}
     </div>
   )
