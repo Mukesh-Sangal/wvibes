@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'spin-logo': 'rotateLogo 2s linear infinite',
+        'spin-logo': 'rotateLogo 4s linear infinite',
       },
       fontFamily: {
         poppins: ['"Poppins"', 'sans-serif'],

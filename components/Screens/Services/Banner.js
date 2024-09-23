@@ -1,34 +1,39 @@
-import React, { memo } from 'react'
-import Image from 'next/image'
+import React from 'react'
 import Link from 'next/link'
 
-const Banner = memo(({ title, imgurl }) => {
+const Banner = ({ title, imgurl }) => {
   return (
-    <div className='container md:pt-24 pt-16 lg:min-h-[600px] lg:h-[600px] h-auto lg:mb-12 mb-4'>
-      <div className='grid grid-cols-2 h-full place-items-center lg:mt-0 mt-8'>
-        <div className='lg:pr-24 pr-4'>
-          <h1 className='xl:text-4xl md:text-3xl text-xl font-bold text-black mb-4'>
+    <div
+      className='relative innerBanner bg-cover h-auto lg:p-12 lg:pl-8 mt-[72px] bg-no-repeat bg-center '
+      style={{
+        backgroundImage: `url(${imgurl})`,
+      }}
+    >
+      <div className='absolute inset-0 bg-black opacity-50'></div>
+      <div className='relative container spacing items-center h-full'>
+        <div className='md:w-[500px]'>
+          <h1 className='font-bold text-white lg:text-[50px] md:text-[36px] text-[28px]'>
             {title}
           </h1>
-        </div>
-        <div>
-          <Image
-            src={imgurl}
-            alt={title}
-            width={1920}
-            height={500}
-            priority // Use priority for important images
-          />
+          <hr />
+          <h2 className='lg:text-[24px] text-[22px] lg:leading-[31.32px] text-white font-bold'>
+            Drive Digital Innovation with Elite Drupal Solutions
+          </h2>
+          <h3 className='lg:text-[24px] text-[20px] text-white mb-4'>
+            Partner with us for unparalleled Drupal expertise, delivering
+            scalable solutions and proactive support that elevate and empower
+            your digital success.
+          </h3>
+          <Link
+            href='/contact'
+            className='service-expertise lg:text-1xl inline-block font-light text-sm '
+          >
+            Get in Touch
+          </Link>
         </div>
       </div>
-      <Link
-        href='/contact'
-        className='service-expertise lg:text-1xl font-light text-sm '
-      >
-        Get in Touch
-      </Link>
     </div>
   )
-})
+}
 
 export default Banner

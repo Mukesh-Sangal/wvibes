@@ -1,36 +1,44 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
+
 const TechBanner = ({ data, imgDom }) => {
   return (
-    <div className='container lg:py-24 py-16'>
-      <div className='grid grid-cols-2 h-full place-items-center lg:mt-0 mt-8'>
-        <div className='lg:pr-24 pr-4 '>
-          <h1 className='lg:text-4xl md:text-3xl text-xl font-bold text-black mb-4'>
+    <div
+      className='relative innerBanner bg-cover h-auto lg:p-12 lg:pl-8 mt-[72px] bg-no-repeat bg-center '
+      style={{
+        backgroundImage: `url(${imgDom}${data[0].field_home_banner_image})`,
+      }}
+    >
+      <div className='absolute inset-0 bg-black opacity-50'></div>
+      <div className='relative container spacing'>
+        <div className='md:w-[500px]'>
+          <h1 className='font-bold text-white  lg:w-[500px] md:w-[300px] w-full  lg:text-[50px] md:text-[36px] text-[28px]'>
             {data[0].field_home_banner_title}
           </h1>
-          <div className='flex w-full items-start text-center flex-wrap lg:gap-8 gap-2'>
-            <Link
-              className='md:p-4 p-2 lg:text-[20px] inline-block lg:w-52 w-40 text-base font-bold text-white bg-[#5856d6] rounded border-[#5856d6] border-2 hover:bg-white hover:border-[#5856d6] hover:text-[#5856d6] transition-all duration-500 ease-in-out'
-              href='/contact'
-            >
-              {data[0].field_home_banner_link}
-            </Link>
-            <Link
-              className='md:p-4 p-2 lg:text-[20px] text-base inline-block lg:w-52 w-40 font-bold bg-[#bcbbe07f] rounded border-2 hover:border-[#bcbbe07f] hover:bg-white transition-all duration-500 ease-in-out'
-              href='/contact'
-            >
-              {data[0].field_home_banner_know_more_link}
-            </Link>
-          </div>
+          <hr />
+          <h2 className='lg:text-[px] text-[22px] lg:leading-[31.32px] text-white font-bold'>
+            Tailored Strategies to ensure your success at each Digital Touch
+            point
+          </h2>
+          <h3 className='lg:text-[24px] text-[20px] text-white mb-4'>
+            We assist you Discover ,Innovate and Build robust tech solutions to
+            excel in your industry using latest of AI technology to ensure 10x
+            Growth
+          </h3>
         </div>
-        <div>
-          <Image
-            src={`${imgDom}${data[0].field_home_banner_image}`}
-            width={1920}
-            height={500}
-            alt={data[0].field_home_banner_title}
-          />
+        <div className='flex w-full items-start text-center flex-wrap lg:mt-8 lg:gap-8 gap-2'>
+          <Link
+            className='md:p-4 p-2 lg:text-[20px] inline-block text-sm font-bold text-white bg-[#5856d6] rounded border-[#5856d6] border-2 hover:bg-white hover:border-[#5856d6] hover:text-[#5856d6] transition-all duration-500 ease-in-out'
+            href='/contact'
+          >
+            {data[0].field_home_banner_link}
+          </Link>
+          {/* <Link
+            className='md:p-4 p-2 lg:text-[20px] text-base inline-block lg:w-52 w-40 font-bold bg-[#bcbbe07f] rounded border-2 hover:border-[#bcbbe07f] hover:bg-white transition-all duration-500 ease-in-out'
+            href='/contact'
+          >
+            {data[0].field_home_banner_know_more_link}
+          </Link> */}
         </div>
       </div>
     </div>

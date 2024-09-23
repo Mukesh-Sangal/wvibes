@@ -424,7 +424,7 @@ hr {
   @apply text-center bg-blue border-blue text-white transition-all ease-out duration-500 hover:border-blue border hover:bg-white hover:text-blue lg:text-lg text-base lg:px-4 lg:py-4 px-3 py-3 rounded font-bold;
 }
 .service-expertise {
-  @apply text-center bg-sky-600 border-sky-600 text-white transition-all ease-out duration-500 hover:border-sky-600 border hover:bg-white hover:text-sky-600 lg:text-xl text-sm lg:px-3 lg:py-3 px-2 py-2 rounded font-medium;
+  @apply text-center bg-sky-600 border-sky-600 text-white transition-all ease-out duration-500 hover:border-sky-600 border hover:bg-white hover:text-sky-600 lg:text-xl text-sm lg:px-3 lg:py-3 px-3 py-2 rounded font-medium;
 }
 .brand-expertise-reverse {
   @apply text-center bg-white border-white text-blue transition-all ease-out duration-500 hover:border-white border hover:bg-blue hover:text-white lg:text-lg text-base lg:px-4 lg:py-4 px-3 py-3 rounded font-bold;
