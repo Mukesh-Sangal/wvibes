@@ -5,12 +5,14 @@ import '../../app/loader.css'
 const Loading = () => {
   return (
     <div className='flex items-center justify-center h-[70vh]'>
-      <div className='animate-spin-logo'>
+      {/* animate-spin-logo */}
+      <div className='animate-scale-up-down'>
         <Image
           src='/logoo.webp'
           alt='Site Logo'
           width={200}
           height={200}
+          unoptimized={true}
           className='rounded-full'
         />
       </div>

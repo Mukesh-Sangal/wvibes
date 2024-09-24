@@ -7,8 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // animation: {
+      //   'spin-logo': 'rotateLogo 4s linear infinite',
+      // },
       animation: {
-        'spin-logo': 'rotateLogo 4s linear infinite',
+        'scale-up-down': 'scale-up-down 2s ease-in-out infinite', // Defines the animation name, duration, and easing
       },
       fontFamily: {
         poppins: ['"Poppins"', 'sans-serif'],

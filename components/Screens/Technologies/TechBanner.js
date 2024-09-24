@@ -20,17 +20,14 @@ const TechBanner = ({ data, imgDom }) => {
             Tailored Strategies to ensure your success at each Digital Touch
             point
           </h2>
-          <h3 className='lg:text-[24px] text-[20px] text-white mb-4'>
+          <h3 className='lg:text-[24px] text-[20px] text-white mb-6'>
             We assist you Discover ,Innovate and Build robust tech solutions to
             excel in your industry using latest of AI technology to ensure 10x
             Growth
           </h3>
         </div>
-        <div className='flex w-full items-start text-center flex-wrap lg:mt-8 lg:gap-8 gap-2'>
-          <Link
-            className='md:p-4 p-2 lg:text-[20px] inline-block text-sm font-bold text-white bg-[#5856d6] rounded border-[#5856d6] border-2 hover:bg-white hover:border-[#5856d6] hover:text-[#5856d6] transition-all duration-500 ease-in-out'
-            href='/contact'
-          >
+        <div className='flex w-full items-start text-center flex-wrap lg:gap-8 gap-2'>
+          <Link className='technologies-expertise' href='/contact'>
             {data[0].field_home_banner_link}
           </Link>
           {/* <Link

@@ -19,14 +19,14 @@ const Banner = ({ title, imgurl }) => {
           <h2 className='lg:text-[24px] text-[22px] lg:leading-[31.32px] text-white font-bold'>
             Drive Digital Innovation with Elite Drupal Solutions
           </h2>
-          <h3 className='lg:text-[24px] text-[20px] text-white mb-4'>
+          <h3 className='lg:text-[24px] text-[20px] text-white mb-6'>
             Partner with us for unparalleled Drupal expertise, delivering
             scalable solutions and proactive support that elevate and empower
             your digital success.
           </h3>
           <Link
             href='/contact'
-            className='service-expertise lg:text-1xl inline-block font-light text-sm '
+            className='service-expertise'
           >
             Get in Touch
           </Link>
